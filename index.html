@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sprint Dashboard</title>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:#fcfcfb; --surface-2:#f9f9f7;
+    --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#898781;
+    --gridline:#e1e0d9; --baseline:#c3c2b7; --border:rgba(11,11,11,0.10);
+    --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a;
+    --series-4:#eda100; --series-5:#e87ba4; --series-6:#008300;
+    --series-7:#4a3aa7; --series-8:#e34948;
+    --status-good:#0ca30c; --status-critical:#d03b3b;
+    --deemph:#c3c2b7;
+  }
+  @media (prefers-color-scheme:dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme:dark;
+      --surface-1:#1a1a19; --surface-2:#0d0d0d;
+      --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#898781;
+      --gridline:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,0.10);
+      --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
+      --series-4:#c98500; --series-5:#d55181; --series-6:#008300;
+      --series-7:#9085e9; --series-8:#e66767;
+      --deemph:#383835;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme:dark;
+    --surface-1:#1a1a19; --surface-2:#0d0d0d;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#898781;
+    --gridline:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,0.10);
+    --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
+    --series-4:#c98500; --series-5:#d55181; --series-6:#008300;
+    --series-7:#9085e9; --series-8:#e66767;
+    --deemph:#383835;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--surface-2);color:var(--text-primary);line-height:1.5}
+  .dashboard{max-width:1280px;margin:0 auto;padding:32px 24px}
+  .dashboard-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+  .dashboard-header h1{font-size:24px;font-weight:600}
+  .dashboard-header .meta{font-size:13px;color:var(--text-muted)}
+  .theme-toggle{background:none;border:1px solid var(--baseline);border-radius:6px;padding:4px 10px;font-size:13px;color:var(--text-secondary);cursor:pointer}
+  .project-tabs{display:flex;gap:2px;margin-bottom:24px;background:var(--gridline);border-radius:8px;padding:2px}
+  .project-tab{flex:1;padding:8px 16px;border:none;background:transparent;border-radius:6px;font-size:14px;font-weight:500;color:var(--text-muted);cursor:pointer;text-align:center;transition:background .15s,color .15s}
+  .project-tab:hover{color:var(--text-primary)}
+  .project-tab.active{background:var(--surface-1);color:var(--text-primary);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .section-title{font-size:18px;font-weight:600;margin:40px 0 16px;padding-top:16px;border-top:1px solid var(--gridline)}
+  .kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-bottom:32px}
+  .stat-tile{background:var(--surface-1);border:1px solid var(--border);border-radius:8px;padding:20px}
+  .stat-tile .label{font-size:13px;color:var(--text-muted);margin-bottom:4px}
+  .stat-tile .value{font-size:32px;font-weight:600;line-height:1.1}
+  .stat-tile .value.small{font-size:24px}
+  .stat-tile .delta{font-size:13px;margin-top:4px;font-weight:500}
+  .delta-up{color:var(--status-good)} .delta-down{color:var(--status-critical)} .delta-neutral{color:var(--text-muted)}
+  .kpi-progress{width:100%;height:6px;background:var(--gridline);border-radius:3px;margin-top:8px;overflow:hidden}
+  .kpi-progress-fill{height:100%;border-radius:3px;transition:width .3s}
+  .chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
+  .chart-grid.full{grid-template-columns:1fr}
+  .chart-card{background:var(--surface-1);border:1px solid var(--border);border-radius:8px;padding:24px}
+  .chart-card h2{font-size:15px;font-weight:600;margin-bottom:4px}
+  .chart-card .subtitle{font-size:13px;color:var(--text-muted);margin-bottom:16px}
+  .chart-wrap{position:relative}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+  .legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-secondary)}
+  .legend-swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0}
+  .legend-line{width:16px;height:2px;flex-shrink:0;border-radius:1px}
+  table.data-table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
+  .data-table th{text-align:left;font-weight:500;color:var(--text-muted);padding:8px 12px;border-bottom:1px solid var(--gridline)}
+  .data-table td{padding:8px 12px;border-bottom:1px solid var(--gridline)}
+  .data-table tr:last-child td{border-bottom:none}
+  .avail-bar-track{width:100%;height:8px;background:var(--gridline);border-radius:4px;overflow:hidden}
+  .avail-bar-fill{height:100%;border-radius:4px;transition:width .3s}
+  .ooo-badge{display:inline-block;background:var(--series-2);color:#fff;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:600;min-width:24px;text-align:center}
+  .scroll-table-wrap{max-height:320px;overflow-y:auto}
+  .mono{font-variant-numeric:tabular-nums}
+  .data-table a{color:var(--series-1);text-decoration:none}
+  .data-table a:hover{text-decoration:underline}
+  .section-nav{position:sticky;top:0;z-index:10;display:flex;gap:4px;padding:10px 0;margin-bottom:24px;background:var(--surface-2);border-bottom:1px solid var(--gridline)}
+  .section-nav a{padding:6px 14px;border-radius:6px;font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;white-space:nowrap;transition:background .15s,color .15s}
+  .section-nav a:hover{color:var(--text-primary);background:var(--gridline)}
+  .section-nav a.active{color:var(--text-primary);background:var(--surface-1);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .card-tabs{display:flex;gap:2px;margin-bottom:16px;background:var(--gridline);border-radius:6px;padding:2px}
+  .card-tab{flex:0 1 auto;padding:6px 14px;border:none;background:transparent;border-radius:4px;font-size:13px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:background .15s,color .15s;white-space:nowrap}
+  .card-tab:hover{color:var(--text-primary)}
+  .card-tab.active{background:var(--surface-1);color:var(--text-primary);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .tab-panel{display:none}
+  .tab-panel.active{display:block}
+  .collapsible summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px}
+  .collapsible summary::-webkit-details-marker{display:none}
+  .collapsible summary::before{content:'';display:inline-block;width:0;height:0;border-style:solid;border-width:5px 0 5px 8px;border-color:transparent transparent transparent var(--text-muted);transition:transform .2s}
+  .collapsible[open] summary::before{transform:rotate(90deg)}
+  .collapsible summary h2{margin-bottom:0}
+  .collapsible .collapse-body{margin-top:16px}
+  @media(max-width:768px){.chart-grid{grid-template-columns:1fr}.kpi-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body class="viz-root">
+<div class="dashboard" id="app">
+  <div class="dashboard-header">
+    <div><h1>Sprint Dashboard</h1><span class="meta" id="generated-at"></span></div>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle dark mode</button>
+  </div>
+  <div class="project-tabs" id="project-tabs"></div>
+
+  <nav class="section-nav" id="section-nav">
+    <a href="#sec-overview" class="active">Sprint Overview</a>
+    <a href="#sec-capacity">Capacity</a>
+    <a href="#sec-contributors">Contributors</a>
+    <a href="#sec-pr">PR Metrics</a>
+  </nav>
+
+  <!-- Sprint Overview -->
+  <div id="sec-overview"></div>
+  <div class="kpi-row" id="kpi-row"></div>
+  <div class="chart-grid full">
+    <div class="chart-card"><h2>Issues by Status</h2><p class="subtitle">Current and next sprint</p><div class="chart-wrap"><canvas id="chart-status" height="260"></canvas></div><div class="legend" id="legend-status"></div></div>
+  </div>
+  <div class="chart-grid">
+    <div class="chart-card"><h2>Team Capacity</h2><p class="subtitle">Available vs Out of Office days</p><div class="chart-wrap"><canvas id="chart-capacity" height="260"></canvas></div><div class="legend" id="legend-capacity"></div></div>
+    <div class="chart-card"><h2>Velocity vs Capacity</h2><p class="subtitle">Done issues per available person-day</p><div class="chart-wrap"><canvas id="chart-velocity" height="260"></canvas></div></div>
+  </div>
+  <div class="chart-grid">
+    <div class="chart-card"><h2 id="goals-title">Sprint Goal Breakdown</h2><p class="subtitle" id="goals-subtitle"></p><div class="chart-wrap"><canvas id="chart-goals" height="280"></canvas></div></div>
+    <div class="chart-card"><h2>Priority Distribution</h2><p class="subtitle">Current sprint</p><div class="chart-wrap"><canvas id="chart-priority" height="280"></canvas></div></div>
+  </div>
+  <div id="sec-capacity"></div>
+  <div class="chart-grid full">
+    <div class="chart-card">
+      <h2>Team Capacity</h2>
+      <p class="subtitle" id="capacity-card-subtitle"></p>
+      <div class="card-tabs" id="capacity-tabs">
+        <button class="card-tab active" data-tab="cap-availability">Availability</button>
+        <button class="card-tab" data-tab="cap-team">By Team</button>
+        <button class="card-tab" data-tab="cap-ooo">Out of Office</button>
+        <button class="card-tab" data-tab="cap-projected" id="cap-projected-tab" style="display:none">Projected</button>
+      </div>
+      <div class="tab-panel active" id="cap-availability"><div id="avail-table-container"></div></div>
+      <div class="tab-panel" id="cap-team"><div id="team-capacity-container"></div></div>
+      <div class="tab-panel" id="cap-ooo"><div class="scroll-table-wrap" id="ooo-table-container"></div></div>
+      <div class="tab-panel" id="cap-projected"><div id="projected-table-container"></div></div>
+    </div>
+  </div>
+  <div id="sec-contributors"></div>
+  <div class="chart-grid full">
+    <div class="chart-card"><h2>Top Contributors</h2><p class="subtitle">Issues assigned per sprint (top 10)</p><div class="chart-wrap"><canvas id="chart-contributors" height="320"></canvas></div><div class="legend" id="legend-contributors"></div></div>
+  </div>
+
+  <!-- PR Metrics -->
+  <div id="sec-pr"></div>
+  <h3 class="section-title">Pull Request Metrics</h3>
+  <div class="kpi-row" id="pr-kpi-row"></div>
+  <div class="chart-grid">
+    <div class="chart-card"><h2>PR Cycle Time Trend</h2><p class="subtitle">Hours (median) across sprints</p><div class="chart-wrap"><canvas id="chart-pr-cycle" height="260"></canvas></div><div class="legend" id="legend-pr-cycle"></div></div>
+    <div class="chart-card"><h2>Reviewer Activity</h2><p class="subtitle" id="reviewer-subtitle">Approvals per developer, current sprint</p><div class="chart-wrap"><canvas id="chart-reviewer" height="260"></canvas></div></div>
+  </div>
+  <div class="chart-grid">
+    <div class="chart-card"><h2>PRs per Domain</h2><p class="subtitle" id="domain-pr-subtitle">Total vs authored by domain owner, current sprint</p><div class="chart-wrap"><canvas id="chart-domain-prs" height="260"></canvas></div><div class="legend" id="legend-domain-prs"></div></div>
+    <div class="chart-card"><h2>Avg Time to Approval by Domain</h2><p class="subtitle">Hours, current sprint</p><div class="chart-wrap"><canvas id="chart-domain-time" height="260"></canvas></div></div>
+  </div>
+  <div class="chart-grid full">
+    <div class="chart-card"><details class="collapsible"><summary><h2>Avg Time to Approval by Engineer</h2><span class="subtitle" style="margin-bottom:0" id="eng-approval-subtitle">Hours from PR creation to approval, current sprint</span></summary><div class="collapse-body"><div class="chart-wrap" id="eng-approval-wrap"><canvas id="chart-eng-approval"></canvas></div></div></details></div>
+  </div>
+  <div class="chart-grid full">
+    <div class="chart-card"><details class="collapsible"><summary><h2>Domain Approval Ownership</h2><span class="subtitle" style="margin-bottom:0">Rolling 3 months &mdash; share of approvals per reviewer within each domain</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-secondary);margin-bottom:12px;cursor:pointer"><input type="checkbox" id="bot-toggle"> Include bot PRs</label><div id="domain-ownership-container"></div></div></details></div>
+  </div>
+  <div class="chart-grid">
+    <div class="chart-card"><h2>Draft PRs</h2><p class="subtitle">Open draft PRs by developer</p><div class="scroll-table-wrap" id="draft-prs-container"></div></div>
+    <div class="chart-card"><h2>Weekly PR Extremes</h2><p class="subtitle" id="extremes-subtitle">Current sprint</p><div class="scroll-table-wrap" id="weekly-extremes-container"></div></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script>
+const DEEMPH = '#c3c2b7';
+let DATA = null, activeProject = null;
+const charts = {};
+
+function toggleTheme() {
+  const c = document.documentElement.getAttribute('data-theme');
+  document.documentElement.setAttribute('data-theme', c === 'dark' ? 'light' : 'dark');
+  if (DATA) renderProject(activeProject);
+}
+
+function gc() {
+  const s = getComputedStyle(document.querySelector('.viz-root'));
+  return {
+    text: s.getPropertyValue('--text-primary').trim(),
+    muted: s.getPropertyValue('--text-muted').trim(),
+    grid: s.getPropertyValue('--gridline').trim(),
+    surface: s.getPropertyValue('--surface-1').trim(),
+    series: Array.from({length:8},(_,i)=>s.getPropertyValue(`--series-${i+1}`).trim()),
+  };
+}
+
+function dOpts(c) {
+  return {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{backgroundColor:c.surface,titleColor:c.muted,bodyColor:c.text,borderColor:c.grid,borderWidth:1,padding:10,cornerRadius:6,bodyFont:{family:'system-ui,sans-serif',size:12},titleFont:{family:'system-ui,sans-serif',size:12}}},
+    scales:{x:{ticks:{color:c.muted,font:{size:12}},grid:{color:c.grid,lineWidth:1},border:{color:c.grid}},y:{ticks:{color:c.muted,font:{size:12}},grid:{color:c.grid,lineWidth:1},border:{color:c.grid},beginAtZero:true}}
+  };
+}
+
+function dc(id){if(charts[id]){charts[id].destroy();delete charts[id]}}
+function ml(id,items){const el=document.getElementById(id);if(!el)return;el.innerHTML=items.map(({color,label,type})=>`<span class="legend-item">${type==='line'?`<span class="legend-line" style="background:${color}"></span>`:`<span class="legend-swatch" style="background:${color}"></span>`}<span>${label}</span></span>`).join('')}
+function ms(raw,target){return raw.toLowerCase().replace(/[^a-z ]/g,'').trim().includes(target.toLowerCase())}
+function mp(raw,target){return raw.toLowerCase().replace(/[^a-z0-9 ]/g,'').trim().includes(target.toLowerCase())}
+function fmtHours(h){if(h<1)return Math.round(h*60)+'m';if(h<24)return Math.round(h*10)/10+'h';return Math.round(h/24*10)/10+'d'}
+
+function selectProject(name){
+  activeProject=name;
+  document.querySelectorAll('.project-tab').forEach(t=>t.classList.toggle('active',t.dataset.project===name));
+  renderProject(name);
+}
+
+function renderProject(pn) {
+  const c = gc();
+  const proj = DATA.projects[pn];
+  const sprints = proj.sprints;
+  const ghOrg = proj.github_org || '';
+  const prm = proj.pr_metrics || {};
+  const prSprints = prm.sprints || {};
+  const sprintNames = Object.keys(sprints).sort();
+  const latest = sprintNames[sprintNames.length-1];
+  const prevN = sprintNames.length>1 ? sprintNames[sprintNames.length-2] : null;
+
+  document.getElementById('generated-at').textContent = 'Last updated: '+new Date(DATA.generated_at).toLocaleString();
+
+  const curr = sprints[latest], prev = prevN ? sprints[prevN] : null;
+  const currAvail = DATA.availability[latest];
+  function delta(cv,pv,s){if(pv==null)return'';const d=cv-pv;return`<div class="delta ${d>0?'delta-up':d<0?'delta-down':'delta-neutral'}">${d>0?'+':''}${d}${s} vs prev</div>`}
+
+  const cp = curr.total_items ? Math.round(curr.done_items/curr.total_items*100) : 0;
+  const progressColor = cp>=75?'var(--status-good)':cp>=50?'var(--series-4)':'var(--status-critical)';
+  let inProgress=0,inReview=0;
+  for(const[k,v]of Object.entries(curr.statuses)){if(ms(k,'in progress'))inProgress+=v;if(ms(k,'in review'))inReview+=v}
+  const activeCount=inProgress+inReview;
+
+  const pp = prev ? (prev.total_items ? Math.round(prev.done_items/prev.total_items*100) : 0) : 0;
+  const prevProgressColor = pp>=75?'var(--status-good)':pp>=50?'var(--series-4)':'var(--status-critical)';
+
+  document.getElementById('kpi-row').innerHTML = `
+    ${prev?`
+    <div class="stat-tile"><div class="label">Total Issues (${prevN})</div><div class="value">${prev.total_items}</div></div>
+    <div class="stat-tile"><div class="label">Done (${prevN})</div><div class="value">${prev.done_items}</div><div class="delta delta-neutral">${pp}% completion</div><div class="kpi-progress"><div class="kpi-progress-fill" style="width:${pp}%;background:${prevProgressColor}"></div></div></div>
+    `:''}
+    <div class="stat-tile"><div class="label">Total Issues (${latest})</div><div class="value">${curr.total_items}</div>${delta(curr.total_items,prev?.total_items,'')}</div>
+    <div class="stat-tile"><div class="label">Done</div><div class="value">${curr.done_items}</div><div class="delta delta-neutral">${cp}% completion</div><div class="kpi-progress"><div class="kpi-progress-fill" style="width:${cp}%;background:${progressColor}"></div></div></div>
+    <div class="stat-tile"><div class="label">Active</div><div class="value">${activeCount}</div><div class="delta delta-neutral">${inProgress} in progress, ${inReview} in review</div></div>
+    <div class="stat-tile"><div class="label">Team Capacity</div><div class="value">${currAvail?currAvail.capacity_pct+'%':'N/A'}</div>${currAvail?`<div class="delta delta-neutral">${currAvail.total_ooo_days} Out of Office days</div>`:''}</div>
+  `;
+
+  // Status stacked bar (current + next sprint)
+  const stNames=sprintNames.slice(-2);
+  const stOrd=['Done','In Review','In Progress','Planned','On Hold','Backlog','Postponed','Deferred'];
+  const stCol=[c.series[2],c.series[0],c.series[1],c.series[3],DEEMPH,c.series[4],c.series[6],c.series[7]];
+  const stDS=stOrd.map((st,i)=>({label:st,data:stNames.map(sn=>{let n=0;for(const[k,v]of Object.entries(sprints[sn].statuses))if(ms(k,st))n+=v;return n}),backgroundColor:stCol[i],borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:24}));
+  dc('chart-status');
+  charts['chart-status']=new Chart(document.getElementById('chart-status'),{type:'bar',data:{labels:stNames,datasets:stDS},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index'}},scales:{...dOpts(c).scales,x:{...dOpts(c).scales.x,stacked:true},y:{...dOpts(c).scales.y,stacked:true}}}});
+  ml('legend-status',stOrd.map((s,i)=>stDS[i].data.some(v=>v>0)?{color:stCol[i],label:s,type:'rect'}:null).filter(Boolean));
+
+  // Capacity
+  dc('chart-capacity');
+  charts['chart-capacity']=new Chart(document.getElementById('chart-capacity'),{type:'bar',data:{labels:sprintNames,datasets:[{label:'Available',data:sprintNames.map(sn=>DATA.availability[sn]?.total_available_days||0),backgroundColor:c.series[2],borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:24},{label:'OOO',data:sprintNames.map(sn=>DATA.availability[sn]?.total_ooo_days||0),backgroundColor:c.series[1],borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:24}]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index'}},scales:{...dOpts(c).scales,x:{...dOpts(c).scales.x,stacked:true},y:{...dOpts(c).scales.y,stacked:true}}}});
+  ml('legend-capacity',[{color:c.series[2],label:'Available',type:'rect'},{color:c.series[1],label:'Out of Office',type:'rect'}]);
+
+  // Velocity
+  dc('chart-velocity');
+  charts['chart-velocity']=new Chart(document.getElementById('chart-velocity'),{type:'line',data:{labels:sprintNames,datasets:[{label:'Issues/person-day',data:sprintNames.map(sn=>{const a=DATA.availability[sn]?.total_available_days;return a?Math.round(sprints[sn].done_items/a*100)/100:null}),borderColor:c.series[0],backgroundColor:c.series[0]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[0],pointBorderColor:c.surface,pointBorderWidth:2,fill:true,tension:.3}]},options:dOpts(c)});
+
+  // Sprint Goals
+  const goals=sprints[latest].goals;
+  const gE=Object.entries(goals).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  document.getElementById('goals-title').textContent=gE.length>1||gE[0]?.[0]!=='Uncategorized'?'Sprint Goal Breakdown':'Category Breakdown';
+  document.getElementById('goals-subtitle').textContent=latest;
+  dc('chart-goals');
+  if(gE.length)charts['chart-goals']=new Chart(document.getElementById('chart-goals'),{type:'bar',data:{labels:gE.map(([k])=>k),datasets:[{data:gE.map(([,v])=>v),backgroundColor:c.series[0],borderRadius:4,barThickness:18}]},options:{...dOpts(c),indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true},y:{...dOpts(c).scales.y,ticks:{...dOpts(c).scales.y.ticks,font:{size:11}},grid:{display:false}}}}});
+
+  // Priority
+  const prOrd=['Critical','P0','Urgent','P1','High','P2','Medium','Low','None'];
+  const prCol=[c.series[7],c.series[7],c.series[1],c.series[1],c.series[3],c.series[3],c.series[0],c.series[2],DEEMPH];
+  const prios=sprints[latest].priorities;
+  const pE=prOrd.map((p,i)=>{let n=0;for(const[k,v]of Object.entries(prios))if(mp(k,p))n+=v;return n>0?{label:p,count:n,color:prCol[i]}:null}).filter(Boolean);
+  dc('chart-priority');
+  if(pE.length)charts['chart-priority']=new Chart(document.getElementById('chart-priority'),{type:'bar',data:{labels:pE.map(e=>e.label),datasets:[{data:pE.map(e=>e.count),backgroundColor:pE.map(e=>e.color),borderRadius:4,barThickness:18}]},options:{...dOpts(c),indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true},y:{...dOpts(c).scales.y,grid:{display:false}}}}});
+
+  // Availability table
+  let th='<table class="data-table"><thead><tr><th>Sprint</th><th>Engineers</th><th>Working Days</th><th>Out of Office Days</th><th>Capacity</th><th></th></tr></thead><tbody>';
+  for(const sn of sprintNames){const a=DATA.availability[sn];if(!a)continue;const p=a.capacity_pct;const bc=p>=90?c.series[2]:p>=80?c.series[3]:c.series[1];th+=`<tr><td style="font-weight:500">${sn}</td><td>${a.engineer_count}</td><td>${a.total_working_days}</td><td>${a.total_ooo_days}</td><td style="font-weight:600">${p}%</td><td style="width:120px"><div class="avail-bar-track"><div class="avail-bar-fill" style="width:${p}%;background:${bc}"></div></div></td></tr>`}
+  th+='</tbody></table>';
+  document.getElementById('avail-table-container').innerHTML=th;
+
+  // Helper: render team capacity table from availability data
+  function renderTeamTable(availData,workingDays){
+    const teams=availData.teams||{};
+    const teamOrder=['Podman Desktop','Red Hat build of Podman Desktop','Kaiden','QE','Other'];
+    const sorted=teamOrder.filter(t=>teams[t]).concat(Object.keys(teams).filter(t=>!teamOrder.includes(t)));
+    let h='<table class="data-table"><thead><tr><th>Team</th><th>Members</th><th>Out of Office Days</th><th>Capacity</th><th></th></tr></thead><tbody>';
+    for(const t of sorted){
+      const td=teams[t];
+      const p=td.capacity_pct;const bc=p>=90?c.series[2]:p>=80?c.series[3]:c.series[1];
+      h+=`<tr><td style="font-weight:500">${t}</td><td>${td.member_count}</td><td>${td.ooo_days}</td><td style="font-weight:600">${p}%</td><td style="width:120px"><div class="avail-bar-track"><div class="avail-bar-fill" style="width:${p}%;background:${bc}"></div></div></td></tr>`;
+    }
+    h+='</tbody></table>';
+    return h;
+  }
+
+  // Helper: render OOO grouped by team
+  function renderTeamOOO(availData){
+    const teams=availData.teams||{};
+    const engineers=availData.engineers||{};
+    const wd=availData.total_working_days;
+    const teamOrder=['Podman Desktop','Red Hat build of Podman Desktop','Kaiden','QE','Other'];
+    const sorted=teamOrder.filter(t=>teams[t]).concat(Object.keys(teams).filter(t=>!teamOrder.includes(t)));
+    let h='';
+    for(const t of sorted){
+      const td=teams[t];
+      if(td.ooo_days===0) continue;
+      const members=td.members.map(m=>({name:m,...engineers[m]})).filter(m=>m.ooo_days>0).sort((a,b)=>b.ooo_days-a.ooo_days);
+      if(!members.length) continue;
+      h+=`<h3 style="font-size:14px;font-weight:600;margin:${h?'20':'0'}px 0 8px;color:var(--text-secondary)">${t} <span style="font-weight:400;color:var(--text-muted)">(${td.capacity_pct}% capacity)</span></h3>`;
+      h+='<table class="data-table"><thead><tr><th>Engineer</th><th>Out of Office Days</th><th>Available</th></tr></thead><tbody>';
+      for(const m of members) h+=`<tr><td>${m.name}</td><td><span class="ooo-badge">${m.ooo_days}</span></td><td>${m.available_days}/${wd}</td></tr>`;
+      h+='</tbody></table>';
+    }
+    if(!h) h='<p style="color:var(--text-muted);font-size:13px">No Out of Office recorded</p>';
+    return h;
+  }
+
+  // Team Capacity — current sprint
+  const la=DATA.availability[latest];
+  document.getElementById('capacity-card-subtitle').textContent=latest;
+  if(la) document.getElementById('team-capacity-container').innerHTML=renderTeamTable(la,la.total_working_days);
+
+  // OOO by Team — current sprint
+  if(la) document.getElementById('ooo-table-container').innerHTML=renderTeamOOO(la);
+
+  // Projected Capacity by Team
+  const projAvail = DATA.projected_availability || {};
+  const upcoming = DATA.upcoming_sprints || [];
+  const projTab = document.getElementById('cap-projected-tab');
+  if(upcoming.length){
+    projTab.style.display='';
+    let pt='';
+    for(const us of upcoming){
+      const sn=us.title;
+      const a=projAvail[sn];
+      const startD=new Date(us.start_date+'T00:00:00');
+      const endD=new Date(startD.getTime()+us.duration*86400000);
+      const dateRange=`${startD.toLocaleDateString('en-US',{month:'short',day:'numeric'})} – ${endD.toLocaleDateString('en-US',{month:'short',day:'numeric'})}`;
+      pt+=`<h3 style="font-size:14px;font-weight:600;margin:${pt?'28':'0'}px 0 8px">${sn} <span style="font-weight:400;color:var(--text-muted)">${dateRange} — ${a?a.capacity_pct+'% overall':'No sheet data'}</span></h3>`;
+      if(a){
+        pt+=renderTeamTable(a,a.total_working_days);
+        pt+=renderTeamOOO(a);
+      }
+    }
+    document.getElementById('projected-table-container').innerHTML=pt;
+  } else {
+    projTab.style.display='none';
+  }
+
+  // Top contributors
+  const allA=new Map();for(const sn of sprintNames)for(const[a,n]of Object.entries(sprints[sn].assignees||{}))allA.set(a,(allA.get(a)||0)+n);
+  const topC=[...allA.entries()].sort((a,b)=>b[1]-a[1]).slice(0,10).map(([k])=>k);
+  dc('chart-contributors');
+  charts['chart-contributors']=new Chart(document.getElementById('chart-contributors'),{type:'bar',data:{labels:topC,datasets:sprintNames.map((sn,i)=>({label:sn,data:topC.map(a=>sprints[sn].assignees?.[a]||0),backgroundColor:c.series[i%8],borderRadius:4,barThickness:14}))},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index'}}}});
+  ml('legend-contributors',sprintNames.map((sn,i)=>({color:c.series[i%8],label:sn,type:'rect'})));
+
+  // ===== PR METRICS =====
+  const prSprintNames = sprintNames.filter(sn => (prSprints[sn]?.total_prs||0) > 0);
+  const latestPRName = prSprintNames.length ? prSprintNames[prSprintNames.length-1] : latest;
+  const prevPRName = prSprintNames.length>1 ? prSprintNames[prSprintNames.length-2] : null;
+  const latestPR = prSprints[latestPRName] || {};
+  const prevPR = prevPRName ? prSprints[prevPRName] : null;
+
+  // PR KPIs
+  const tfr = latestPR.time_to_first_review || {avg:0,median:0};
+  const ttm = latestPR.time_to_merge || {avg:0,median:0};
+  const tfc = latestPR.time_to_first_comment || {avg:0,median:0};
+  const tta = latestPR.time_to_address_comments || {avg:0,median:0};
+  const prevTfr = prevPR?.time_to_first_review || null;
+  const prevTtm = prevPR?.time_to_merge || null;
+
+  function deltaH(cv,pv){if(!pv)return'';const d=Math.round((cv-pv)*10)/10;const cls=d<0?'delta-up':d>0?'delta-down':'delta-neutral';return`<div class="delta ${cls}">${d>0?'+':''}${fmtHours(d)} vs prev</div>`}
+
+  document.getElementById('pr-kpi-row').innerHTML = `
+    <div class="stat-tile"><div class="label">PRs (${latestPRName})</div><div class="value">${latestPR.total_prs||0}</div><div class="delta delta-neutral">${latestPR.merged_prs||0} merged</div></div>
+    <div class="stat-tile"><div class="label">Median First Review</div><div class="value small">${fmtHours(tfr.median)}</div>${deltaH(tfr.median,prevTfr?.median)}</div>
+    <div class="stat-tile"><div class="label">Median Time to Merge</div><div class="value small">${fmtHours(ttm.median)}</div>${deltaH(ttm.median,prevTtm?.median)}</div>
+    <div class="stat-tile"><div class="label">Median Comment Response</div><div class="value small">${fmtHours(tta.median)}</div><div class="delta delta-neutral">${tta.count} PRs w/ changes requested</div></div>
+    <div class="stat-tile"><div class="label">Draft PRs Open</div><div class="value">${Object.values(prm.draft_prs||{}).reduce((s,v)=>s+v.length,0)}</div><div class="delta delta-neutral">${Object.keys(prm.draft_prs||{}).length} developers</div></div>
+  `;
+
+  // PR Cycle Time Trend (line chart)
+  dc('chart-pr-cycle');
+  charts['chart-pr-cycle']=new Chart(document.getElementById('chart-pr-cycle'),{type:'line',data:{labels:sprintNames,datasets:[
+    {label:'First Review',data:sprintNames.map(sn=>prSprints[sn]?.time_to_first_review?.median||null),borderColor:c.series[0],backgroundColor:c.series[0]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[0],pointBorderColor:c.surface,pointBorderWidth:2,tension:.3},
+    {label:'Time to Merge',data:sprintNames.map(sn=>prSprints[sn]?.time_to_merge?.median||null),borderColor:c.series[1],backgroundColor:c.series[1]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[1],pointBorderColor:c.surface,pointBorderWidth:2,tension:.3},
+  ]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{label:ctx=>`${ctx.dataset.label}: ${fmtHours(ctx.parsed.y)}`}}}}});
+  ml('legend-pr-cycle',[{color:c.series[0],label:'First Review (median)',type:'line'},{color:c.series[1],label:'Time to Merge (median)',type:'line'}]);
+
+  // Reviewer Activity
+  document.getElementById('reviewer-subtitle').textContent = `Approvals per developer, ${latest}`;
+  const revAppr = latestPR.reviewer_approvals || {};
+  const topRev = Object.entries(revAppr).sort((a,b)=>b[1]-a[1]).slice(0,15);
+  dc('chart-reviewer');
+  if(topRev.length)charts['chart-reviewer']=new Chart(document.getElementById('chart-reviewer'),{type:'bar',data:{labels:topRev.map(([k])=>k),datasets:[{data:topRev.map(([,v])=>v),backgroundColor:c.series[0],borderRadius:4,barThickness:18}]},options:{...dOpts(c),indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true},y:{...dOpts(c).scales.y,grid:{display:false}}}}});
+
+  // PRs per Domain (stacked: owner-authored vs others)
+  document.getElementById('domain-pr-subtitle').textContent = latest;
+  const domPrs = latestPR.domain_pr_count || {};
+  const domOwnAuth = latestPR.domain_owner_authored || {};
+  const domEntries = Object.entries(domPrs).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  dc('chart-domain-prs');
+  if(domEntries.length)charts['chart-domain-prs']=new Chart(document.getElementById('chart-domain-prs'),{type:'bar',data:{labels:domEntries.map(([k])=>k),datasets:[
+    {label:'By Domain Owner',data:domEntries.map(([k])=>domOwnAuth[k]||0),backgroundColor:c.series[0],borderRadius:0,barThickness:18},
+    {label:'By Others',data:domEntries.map(([k,v])=>v-(domOwnAuth[k]||0)),backgroundColor:c.series[0]+'33',borderRadius:{topLeft:0,topRight:4,bottomLeft:0,bottomRight:4},barThickness:18},
+  ]},options:{...dOpts(c),indexAxis:'y',plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{afterBody:(items)=>{const i=items[0].dataIndex;const[dom,total]=domEntries[i];const own=domOwnAuth[dom]||0;return `${total} total • ${total?Math.round(own/total*100):0}% by owner`}}}},scales:{x:{...dOpts(c).scales.x,stacked:true,beginAtZero:true},y:{...dOpts(c).scales.y,stacked:true,grid:{display:false}}}}});
+  ml('legend-domain-prs',[{color:c.series[0],label:'By Domain Owner',type:'rect'},{color:c.series[0]+'33',label:'By Others',type:'rect'}]);
+
+  // Domain Avg Approval Time
+  const domTime = latestPR.domain_avg_approval_hours || {};
+  const dtEntries = Object.entries(domTime).sort((a,b)=>a[1]-b[1]).slice(0,12);
+  dc('chart-domain-time');
+  if(dtEntries.length)charts['chart-domain-time']=new Chart(document.getElementById('chart-domain-time'),{type:'bar',data:{labels:dtEntries.map(([k])=>k),datasets:[{data:dtEntries.map(([,v])=>v),backgroundColor:c.series[3],borderRadius:4,barThickness:18}]},options:{...dOpts(c),indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true,title:{display:true,text:'Hours',color:c.muted}},y:{...dOpts(c).scales.y,grid:{display:false}}}}});
+
+  // Avg Time to Approval by Engineer (rolling average across all sprints, business days)
+  document.getElementById('eng-approval-subtitle').textContent = `Business days from PR creation to approval, rolling avg across ${sprintNames.length} sprints`;
+  const engRolling = {};
+  for(const sn of sprintNames){
+    const sp = prSprints[sn]||{};
+    const avgBd = sp.engineer_avg_approval_bdays||{};
+    const counts = sp.reviewer_approvals||{};
+    for(const[eng,avg] of Object.entries(avgBd)){
+      const cnt = counts[eng]||0;
+      if(!cnt) continue;
+      if(!engRolling[eng]) engRolling[eng]={totalBd:0,totalN:0};
+      engRolling[eng].totalBd += avg*cnt;
+      engRolling[eng].totalN += cnt;
+    }
+  }
+  function fmtBd(d){if(d<1)return Math.round(d*8)+'h';return Math.round(d*10)/10+'d'}
+  const engEntries = Object.entries(engRolling).map(([k,v])=>[k,Math.round(v.totalBd/v.totalN*100)/100,v.totalN]).sort((a,b)=>a[1]-b[1]);
+  dc('chart-eng-approval');
+  const engWrap=document.getElementById('eng-approval-wrap');
+  const engCanvas=document.getElementById('chart-eng-approval');
+  const engH=Math.max(300,engEntries.length*32+40);
+  engWrap.style.height=engH+'px';
+  engCanvas.style.height=engH+'px';
+  if(engEntries.length)charts['chart-eng-approval']=new Chart(engCanvas,{type:'bar',data:{labels:engEntries.map(([k])=>k),datasets:[{data:engEntries.map(([,v])=>v),backgroundColor:engEntries.map(([,v])=>v<=1?c.series[2]:v<=3?c.series[3]:c.series[1]),borderRadius:4,barThickness:18}]},options:{...dOpts(c),maintainAspectRatio:false,indexAxis:'y',plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,callbacks:{label:ctx=>{const[eng,avg,cnt]=engEntries[ctx.dataIndex];return`${fmtBd(avg)} avg (${cnt} approvals across ${sprintNames.length} sprints)`}}}},scales:{x:{...dOpts(c).scales.x,beginAtZero:true,title:{display:true,text:'Business Days',color:c.muted}},y:{...dOpts(c).scales.y,grid:{display:false}}}}});
+
+  // Domain Approval Ownership table (rolling 3 months)
+  function renderDomainOwnership(own, prCounts) {
+    const names = Object.keys(own).sort();
+    if(!names.length){ document.getElementById('domain-ownership-container').innerHTML='<p style="color:var(--text-muted);font-size:13px">No domain labels found on PRs</p>'; return; }
+    let h='<table class="data-table"><thead><tr><th>Domain</th><th>PRs</th><th>Reviewer</th><th>Share</th><th></th></tr></thead><tbody>';
+    for(const d of names){
+      const reviewers=Object.entries(own[d]).sort((a,b)=>b[1]-a[1]);
+      const prCount=prCounts[d]||0;
+      for(let ri=0;ri<reviewers.length;ri++){
+        const[rev,pct]=reviewers[ri];
+        const barColor=c.series[ri%8];
+        h+=`<tr>${ri===0?`<td rowspan="${reviewers.length}" style="font-weight:500;vertical-align:top">${d}</td><td rowspan="${reviewers.length}" class="mono" style="vertical-align:top;font-weight:600">${prCount}</td>`:''}
+          <td>${rev}</td><td class="mono" style="font-weight:600">${pct}%</td>
+          <td style="width:120px"><div class="avail-bar-track"><div class="avail-bar-fill" style="width:${pct}%;background:${barColor}"></div></div></td></tr>`;
+      }
+    }
+    h+='</tbody></table>';
+    document.getElementById('domain-ownership-container').innerHTML=h;
+  }
+  const rollingOwn = prm.rolling_domain_ownership || {};
+  const rollingOwnAll = prm.rolling_domain_ownership_all || {};
+  const rollingPrCount = prm.rolling_domain_pr_count || {};
+  const rollingPrCountAll = prm.rolling_domain_pr_count_all || {};
+  renderDomainOwnership(rollingOwn, rollingPrCount);
+  document.getElementById('bot-toggle').onchange = function() {
+    if(this.checked) renderDomainOwnership(rollingOwnAll, rollingPrCountAll);
+    else renderDomainOwnership(rollingOwn, rollingPrCount);
+  };
+
+  // Draft PRs table
+  const drafts = prm.draft_prs || {};
+  const draftEntries = Object.entries(drafts).sort((a,b)=>b[1].length-a[1].length);
+  if(draftEntries.length){
+    let dh='<table class="data-table"><thead><tr><th>Developer</th><th>Count</th><th>PRs</th></tr></thead><tbody>';
+    for(const[dev,prs]of draftEntries){
+      const prList=prs.map(p=>`<a href="https://github.com/${ghOrg}/${p.repo}/pull/${p.number}" target="_blank" rel="noopener">${p.repo}#${p.number}</a>`).join(', ');
+      dh+=`<tr><td style="font-weight:500">${dev}</td><td><span class="ooo-badge" style="background:var(--series-7)">${prs.length}</span></td><td style="font-size:12px;color:var(--text-secondary)">${prList}</td></tr>`;
+    }
+    dh+='</tbody></table>';
+    document.getElementById('draft-prs-container').innerHTML=dh;
+  } else {
+    document.getElementById('draft-prs-container').innerHTML='<p style="color:var(--text-muted);font-size:13px">No open draft PRs</p>';
+  }
+
+  // Weekly PR Extremes
+  document.getElementById('extremes-subtitle').textContent = latestPRName;
+  const wk = latestPR.weekly_extremes || {};
+  const weeks = Object.keys(wk).sort();
+  if(weeks.length){
+    let wh='<table class="data-table"><thead><tr><th>Week</th><th>Longest</th><th>Time</th><th>Shortest</th><th>Time</th></tr></thead><tbody>';
+    for(const w of weeks){
+      const e=wk[w];
+      const ln=e.longest, sh=e.shortest;
+      wh+=`<tr><td class="mono">${w}</td>
+        <td style="font-size:12px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${ln?.title||''}"><a href="https://github.com/${ghOrg}/${ln?.repo}/pull/${ln?.number}" target="_blank" rel="noopener">${ln?.repo||''}#${ln?.number||''}</a></td>
+        <td class="mono" style="font-weight:600">${fmtHours(ln?.hours||0)}</td>
+        <td style="font-size:12px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${sh?.title||''}"><a href="https://github.com/${ghOrg}/${sh?.repo}/pull/${sh?.number}" target="_blank" rel="noopener">${sh?.repo||''}#${sh?.number||''}</a></td>
+        <td class="mono" style="font-weight:600">${fmtHours(sh?.hours||0)}</td></tr>`;
+    }
+    wh+='</tbody></table>';
+    document.getElementById('weekly-extremes-container').innerHTML=wh;
+  } else {
+    document.getElementById('weekly-extremes-container').innerHTML='<p style="color:var(--text-muted);font-size:13px">No data</p>';
+  }
+}
+
+async function loadData(){
+  try{
+    const r=await fetch('sprint_data.json');
+    DATA=await r.json();
+    const pn=Object.keys(DATA.projects);
+    document.getElementById('project-tabs').innerHTML=pn.map(n=>`<button class="project-tab" data-project="${n}" onclick="selectProject('${n}')">${n}</button>`).join('');
+    selectProject(pn[0]);
+  }catch(e){
+    document.getElementById('app').innerHTML=`<div style="padding:40px;text-align:center;color:var(--text-muted)"><p>Could not load sprint_data.json</p><p style="font-size:13px;margin-top:8px">Run <code>python3 fetch_data.py</code> first.</p></div>`;
+  }
+}
+loadData();
+
+// Card tabs
+document.querySelectorAll('.card-tabs').forEach(tabBar=>{
+  tabBar.addEventListener('click',e=>{
+    const btn=e.target.closest('.card-tab');
+    if(!btn)return;
+    const card=tabBar.closest('.chart-card');
+    tabBar.querySelectorAll('.card-tab').forEach(t=>t.classList.remove('active'));
+    btn.classList.add('active');
+    card.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    const panel=card.querySelector('#'+btn.dataset.tab);
+    if(panel)panel.classList.add('active');
+  });
+});
+
+// Section nav: smooth scroll + scroll-spy
+document.querySelectorAll('.section-nav a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target){
+      const navH=document.getElementById('section-nav').offsetHeight;
+      window.scrollTo({top:target.offsetTop-navH-8,behavior:'smooth'});
+    }
+  });
+});
+const secIds=['sec-overview','sec-capacity','sec-contributors','sec-pr'];
+window.addEventListener('scroll',()=>{
+  const navH=document.getElementById('section-nav').offsetHeight+16;
+  let active='sec-overview';
+  for(const id of secIds){
+    const el=document.getElementById(id);
+    if(el&&el.offsetTop-navH<=window.scrollY) active=id;
+  }
+  document.querySelectorAll('.section-nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+active));
+},{passive:true});
+</script>
+</body>
+</html>

@@ -1,0 +1,3516 @@
+{
+  "generated_at": "2026-08-12T13:58:38.801891",
+  "projects": {
+    "Podman Desktop": {
+      "github_org": "podman-desktop",
+      "sprints": {
+        "Sprint 296": {
+          "start_date": "2026-08-12",
+          "duration": 21,
+          "total_items": 154,
+          "done_items": 6,
+          "total_story_points": 195.0,
+          "done_story_points": 7.0,
+          "statuses": {
+            "\ud83d\udea7 In Progress": 14,
+            "\u23f3On Hold": 8,
+            "\ud83d\udcc5 Planned": 62,
+            "\ud83d\udea5 In Review": 35,
+            "\ud83d\udccb Backlog": 27,
+            "\u2714\ufe0f Done": 6,
+            "None": 2
+          },
+          "goals": {
+            "QE": 51,
+            "Bug Fix": 15,
+            "Uncategorized": 76,
+            "Documentation": 6,
+            "UI/UX": 1,
+            "Technical Debt": 4,
+            "Dashboard": 1
+          },
+          "priorities": {
+            "Critical": 10,
+            "\ud83c\udfd4 High": 25,
+            "\ud83c\udfd5 Medium": 45,
+            "\ud83c\udfdd Low": 10,
+            "None": 55,
+            "\ud83c\udf0b Urgent": 9
+          },
+          "assignees": {
+            "vancura": 13,
+            "odockal": 12,
+            "ScrewTSW": 11,
+            "amisskii": 11,
+            "simonrey1": 10,
+            "cdrage": 10,
+            "danivilla9": 10,
+            "cbr7": 8,
+            "JustMell0": 8,
+            "0xKalasi": 7,
+            "SoniaSandler": 7,
+            "gastoner": 6,
+            "dgolovin": 5,
+            "axel7083": 5,
+            "rohit-redhat": 4
+          },
+          "repos": {
+            "podman-desktop": 104,
+            "podman-desktop-internal": 29,
+            "e2e": 9,
+            "extension-kubernetes-dashboard": 6,
+            "extension-bootc": 2,
+            "podman-desktop-hummingbird-ext": 2,
+            "podman-desktop-redhat-account-ext": 1,
+            "podman-desktop-catalog": 1
+          }
+        },
+        "Sprint 295": {
+          "start_date": "2026-07-22",
+          "duration": 21,
+          "total_items": 193,
+          "done_items": 104,
+          "total_story_points": 240.0,
+          "done_story_points": 102.0,
+          "statuses": {
+            "\u2714\ufe0f Done": 104,
+            "\ud83d\udcc5 Planned": 28,
+            "\ud83d\udea7 In Progress": 18,
+            "\ud83d\udea5 In Review": 32,
+            "\u23f3On Hold": 7,
+            "\ud83d\udccb Backlog": 3,
+            "None": 1
+          },
+          "goals": {
+            "Uncategorized": 103,
+            "Bug Fix": 21,
+            "QE": 60,
+            "Podman Feature": 2,
+            "Documentation": 4,
+            "Technical Debt": 2,
+            "Dashboard": 1
+          },
+          "priorities": {
+            "\ud83c\udfdd Low": 19,
+            "\ud83c\udfd4 High": 25,
+            "\ud83c\udfd5 Medium": 56,
+            "Critical": 19,
+            "None": 67,
+            "\ud83c\udf0b Urgent": 7
+          },
+          "assignees": {
+            "dgolovin": 18,
+            "cbr7": 15,
+            "odockal": 15,
+            "vancura": 14,
+            "axel7083": 14,
+            "danivilla9": 13,
+            "amisskii": 12,
+            "gastoner": 11,
+            "ScrewTSW": 11,
+            "cdrage": 9,
+            "JustMell0": 9,
+            "SoniaSandler": 8,
+            "0xKalasi": 8,
+            "benoitf": 8,
+            "simonrey1": 5
+          },
+          "repos": {
+            "podman-desktop": 108,
+            "podman-desktop-internal": 38,
+            "e2e": 12,
+            "extension-kubernetes-dashboard": 7,
+            "podman-desktop-hummingbird-ext": 7,
+            "podman-desktop-redhat-account-ext": 5,
+            "podman-desktop-sandbox-ext": 5,
+            "extension-grype": 3,
+            "extension-bootc": 1,
+            "podman-desktop-extension-ai-lab": 1,
+            "podman-desktop-catalog": 1,
+            "extension-podman-quadlet": 1,
+            "crc-extension": 1,
+            "podman-desktop-rhel-ext": 1,
+            "extension-kubernetes-contexts": 1,
+            "minc-extension": 1
+          },
+          "frozen_at": "2026-08-11T13:11:42.588370"
+        },
+        "Sprint 294": {
+          "start_date": "2026-07-01",
+          "duration": 21,
+          "total_items": 99,
+          "done_items": 99,
+          "total_story_points": 118.0,
+          "done_story_points": 118.0,
+          "statuses": {
+            "\u2714\ufe0f Done": 99
+          },
+          "goals": {
+            "Uncategorized": 57,
+            "Documentation": 1,
+            "Bug Fix": 9,
+            "QE": 27,
+            "UI/UX": 2,
+            "Technical Debt": 2,
+            "Podman Feature": 1
+          },
+          "priorities": {
+            "\ud83c\udfd5 Medium": 19,
+            "\ud83c\udfdd Low": 20,
+            "\ud83c\udf0b Urgent": 7,
+            "None": 33,
+            "\ud83c\udfd4 High": 15,
+            "Critical": 5
+          },
+          "assignees": {
+            "axel7083": 23,
+            "odockal": 13,
+            "SoniaSandler": 12,
+            "vancura": 9,
+            "simonrey1": 8,
+            "cbr7": 6,
+            "gastoner": 6,
+            "JustMell0": 5,
+            "amisskii": 5,
+            "cdrage": 3,
+            "dgolovin": 2,
+            "0xKalasi": 2,
+            "ScrewTSW": 1,
+            "feloy": 1,
+            "serbangeorge-m": 1
+          },
+          "repos": {
+            "podman-desktop": 64,
+            "podman-desktop-internal": 13,
+            "podman-desktop-hummingbird-ext": 9,
+            "podman-desktop-redhat-account-ext": 5,
+            "extension-kubernetes-dashboard": 2,
+            "e2e": 2,
+            "podman-desktop-sandbox-ext": 1,
+            "extension-grype": 1,
+            "extension-bootc": 1,
+            "crc-extension": 1
+          },
+          "frozen_at": "2026-08-11T13:11:42.588420"
+        },
+        "Sprint 293": {
+          "start_date": "2026-06-10",
+          "duration": 21,
+          "total_items": 34,
+          "done_items": 34,
+          "total_story_points": 56.0,
+          "done_story_points": 56.0,
+          "statuses": {
+            "\u2714\ufe0f Done": 34
+          },
+          "goals": {
+            "Uncategorized": 22,
+            "QE": 7,
+            "Technical Debt": 1,
+            "Bug Fix": 3,
+            "Onboarding": 1
+          },
+          "priorities": {
+            "\ud83c\udfdd Low": 7,
+            "\ud83c\udfd5 Medium": 11,
+            "None": 6,
+            "Critical": 2,
+            "\ud83c\udf0b Urgent": 3,
+            "\ud83c\udfd4 High": 5
+          },
+          "assignees": {
+            "vancura": 7,
+            "ScrewTSW": 5,
+            "simonrey1": 4,
+            "SoniaSandler": 3,
+            "benoitf": 3,
+            "cdrage": 2,
+            "odockal": 2,
+            "dgolovin": 2,
+            "danivilla9": 2,
+            "JustMell0": 1,
+            "axel7083": 1,
+            "gastoner": 1,
+            "jeffmaury": 1
+          },
+          "repos": {
+            "podman-desktop": 25,
+            "podman-desktop-internal": 5,
+            "podman-desktop-rhel-ext": 1,
+            "extension-kubernetes-dashboard": 1,
+            "podman-desktop-extension-ai-lab": 1,
+            "minc-extension": 1
+          },
+          "frozen_at": "2026-08-11T13:11:42.588455"
+        },
+        "Sprint 297": {
+          "start_date": "2026-09-02",
+          "duration": 21,
+          "total_items": 23,
+          "done_items": 1,
+          "total_story_points": 16.0,
+          "done_story_points": 0,
+          "statuses": {
+            "\ud83d\udcc5 Planned": 10,
+            "\ud83d\udea5 In Review": 1,
+            "\u2714\ufe0f Done": 1,
+            "\u23f3On Hold": 4,
+            "None": 1,
+            "\ud83d\udccb Backlog": 6
+          },
+          "goals": {
+            "Uncategorized": 19,
+            "Bug Fix": 1,
+            "QE": 2,
+            "Dashboard": 1
+          },
+          "priorities": {
+            "None": 15,
+            "\ud83c\udfd5 Medium": 4,
+            "\ud83c\udfd4 High": 3,
+            "\ud83c\udfdd Low": 1
+          },
+          "assignees": {
+            "bmahabirbu": 4,
+            "axel7083": 4,
+            "odockal": 2,
+            "gastoner": 2,
+            "amisskii": 2,
+            "cdrage": 1,
+            "jeffmaury": 1,
+            "simonrey1": 1,
+            "SoniaSandler": 1
+          },
+          "repos": {
+            "podman-desktop": 19,
+            "e2e": 2,
+            "podman-desktop-extension-ai-lab": 1,
+            "podman-desktop-internal": 1
+          }
+        }
+      },
+      "pr_metrics": {
+        "sprints": {
+          "Sprint 293": {
+            "total_prs": 210,
+            "merged_prs": 185,
+            "time_to_first_review": {
+              "avg": 50.1,
+              "median": 1.5,
+              "count": 191
+            },
+            "time_to_first_comment": {
+              "avg": 102.9,
+              "median": 13.8,
+              "count": 56
+            },
+            "time_to_merge": {
+              "avg": 104.8,
+              "median": 17.9,
+              "count": 185
+            },
+            "time_to_address_comments": {
+              "avg": 74.8,
+              "median": 14.9,
+              "count": 16
+            },
+            "weekly_extremes": {
+              "2026-W23": {
+                "longest": {
+                  "title": "chore(pnpm): set minimumReleaseAge",
+                  "repo": "podman-desktop",
+                  "number": 17830,
+                  "hours": 49.72
+                },
+                "shortest": {
+                  "title": "fix(ci): bump redhat-actions/podman-install",
+                  "repo": "extension-podman-quadlet",
+                  "number": 1541,
+                  "hours": 0.42
+                }
+              },
+              "2026-W24": {
+                "longest": {
+                  "title": "test(e2e): fix failing/outdated e2e tests",
+                  "repo": "extension-kubernetes-dashboard",
+                  "number": 1043,
+                  "hours": 163.45
+                },
+                "shortest": {
+                  "title": "fix: resolve CVE-2026-48779 in ws",
+                  "repo": "tool-release-notes",
+                  "number": 135,
+                  "hours": 0.02
+                }
+              },
+              "2026-W25": {
+                "longest": {
+                  "title": "chore(ci): extract reusable managed configuration workflow",
+                  "repo": "podman-desktop",
+                  "number": 17816,
+                  "hours": 287.33
+                },
+                "shortest": {
+                  "title": "fix: resolve GHSA-cmwh-pvxp-8882 in dompurify",
+                  "repo": "extension-podman-quadlet",
+                  "number": 1578,
+                  "hours": 0.14
+                }
+              },
+              "2026-W26": {
+                "longest": {
+                  "title": "test(visual-testing): logic scaffold",
+                  "repo": "podman-desktop",
+                  "number": 17903,
+                  "hours": 427.21
+                },
+                "shortest": {
+                  "title": "chore: fix lock file",
+                  "repo": "extension-bootc",
+                  "number": 2595,
+                  "hours": 0.38
+                }
+              },
+              "2026-W27": {
+                "longest": {
+                  "title": "feat(pde2e-image): add podman-compose install scripts for RHEL",
+                  "repo": "e2e",
+                  "number": 581,
+                  "hours": 522.23
+                },
+                "shortest": {
+                  "title": "chore: remove ssh2 & cpu-features from built dependencies",
+                  "repo": "podman-desktop",
+                  "number": 18116,
+                  "hours": 169.02
+                }
+              },
+              "2026-W28": {
+                "longest": {
+                  "title": "chore(logging): show stderr in exec output by default",
+                  "repo": "podman-desktop",
+                  "number": 17921,
+                  "hours": 747.49
+                },
+                "shortest": {
+                  "title": "feat(ui): persist table expanded/collapsed state across remounts",
+                  "repo": "podman-desktop",
+                  "number": 18124,
+                  "hours": 304.86
+                }
+              },
+              "2026-W29": {
+                "longest": {
+                  "title": "refactor(agents): rewrite mcp-testing skill with operation references and single-agent architecture",
+                  "repo": "podman-desktop",
+                  "number": 17901,
+                  "hours": 835.76
+                },
+                "shortest": {
+                  "title": "feat(certificate-sync): sync local CA certs when creating podman vm",
+                  "repo": "podman-desktop",
+                  "number": 18114,
+                  "hours": 537.83
+                }
+              },
+              "2026-W30": {
+                "longest": {
+                  "title": "feat: add warning severity to preflight checks",
+                  "repo": "podman-desktop",
+                  "number": 17989,
+                  "hours": 937.56
+                },
+                "shortest": {
+                  "title": "feat: add warning severity to preflight checks",
+                  "repo": "podman-desktop",
+                  "number": 17989,
+                  "hours": 937.56
+                }
+              },
+              "2026-W31": {
+                "longest": {
+                  "title": "test(e2e): system overview with k8s resource",
+                  "repo": "podman-desktop",
+                  "number": 18066,
+                  "hours": 963.69
+                },
+                "shortest": {
+                  "title": "test(e2e): system overview with k8s resource",
+                  "repo": "podman-desktop",
+                  "number": 18066,
+                  "hours": 963.69
+                }
+              }
+            },
+            "reviewer_approvals": {
+              "benoitf": 78,
+              "axel7083": 48,
+              "feloy": 29,
+              "simonrey1": 26,
+              "cdrage": 22,
+              "deboer-tim": 20,
+              "jeffmaury": 18,
+              "vancura": 14,
+              "danivilla9": 13,
+              "serbangeorge-m": 9,
+              "odockal": 9,
+              "cbr7": 7,
+              "amisskii": 5,
+              "kyetter": 5,
+              "SoniaSandler": 4,
+              "dgolovin": 3,
+              "ScrewTSW": 2,
+              "copilot-pull-request-reviewer": 1,
+              "MarsKubeX": 1,
+              "gastoner": 1
+            },
+            "domain_pr_count": {
+              "foundations": 48,
+              "kubernetes-dashboard": 21,
+              "qe": 17,
+              "containers": 15,
+              "extensibility": 14,
+              "ui-components": 13,
+              "podman-quadlet": 11,
+              "kreate": 9,
+              "kubernetes-context": 8,
+              "kubernetes": 7,
+              "bootc": 5,
+              "github": 5,
+              "kind": 4,
+              "minikube": 3,
+              "postgresql": 3,
+              "apple-container": 3,
+              "docs": 2,
+              "technical-debt": 2,
+              "grype": 2,
+              "layers-explorer": 1
+            },
+            "domain_owner_authored": {
+              "foundations": 22,
+              "podman-quadlet": 11,
+              "qe": 9,
+              "ui-components": 7,
+              "kind": 4,
+              "github": 3,
+              "apple-container": 3,
+              "technical-debt": 2,
+              "minikube": 2,
+              "bootc": 2,
+              "kubernetes": 1,
+              "extensibility": 1,
+              "containers": 1
+            },
+            "domain_approval_ownership": {
+              "foundations": {
+                "benoitf": 56.4,
+                "deboer-tim": 43.6
+              },
+              "ui-components": {
+                "benoitf": 70.6,
+                "vancura": 29.4
+              },
+              "extensibility": {
+                "benoitf": 100.0
+              },
+              "containers": {
+                "axel7083": 52.6,
+                "benoitf": 47.4
+              },
+              "qe": {
+                "serbangeorge-m": 33.3,
+                "danivilla9": 27.8,
+                "odockal": 22.2,
+                "amisskii": 11.1,
+                "ScrewTSW": 5.6
+              },
+              "kubernetes": {
+                "cdrage": 100.0
+              },
+              "docs": {
+                "cdrage": 50.0,
+                "kyetter": 50.0
+              },
+              "technical-debt": {},
+              "minikube": {
+                "jeffmaury": 66.7,
+                "benoitf": 33.3
+              },
+              "bootc": {
+                "cdrage": 60.0,
+                "deboer-tim": 40.0
+              },
+              "layers-explorer": {},
+              "postgresql": {
+                "jeffmaury": 100.0
+              },
+              "kreate": {
+                "cdrage": 100.0
+              },
+              "podman-quadlet": {
+                "axel7083": 72.7,
+                "benoitf": 27.3
+              },
+              "kubernetes-dashboard": {
+                "jeffmaury": 100.0
+              },
+              "github": {
+                "SoniaSandler": 50.0,
+                "dgolovin": 50.0
+              },
+              "kubernetes-context": {
+                "jeffmaury": 100.0
+              },
+              "kind": {
+                "SoniaSandler": 100.0
+              },
+              "grype": {
+                "simonrey1": 50.0,
+                "axel7083": 50.0
+              }
+            },
+            "domain_avg_approval_hours": {
+              "foundations": 63.8,
+              "ui-components": 91.1,
+              "extensibility": 209.0,
+              "containers": 196.0,
+              "qe": 80.4,
+              "kubernetes": 30.7,
+              "docs": 140.5,
+              "technical-debt": 21.1,
+              "minikube": 9.7,
+              "bootc": 15.3,
+              "layers-explorer": 0.1,
+              "postgresql": 13.2,
+              "kreate": 78.3,
+              "podman-quadlet": 13.4,
+              "kubernetes-dashboard": 137.0,
+              "github": 10.0,
+              "kubernetes-context": 23.9,
+              "kind": 55.5,
+              "grype": 7.0
+            },
+            "engineer_avg_approval_bdays": {
+              "cbr7": 0.22,
+              "deboer-tim": 0.5,
+              "serbangeorge-m": 0.74,
+              "copilot-pull-request-reviewer": 0.87,
+              "simonrey1": 0.88,
+              "SoniaSandler": 1.32,
+              "dgolovin": 1.7,
+              "feloy": 2.38,
+              "axel7083": 2.6,
+              "jeffmaury": 2.74,
+              "cdrage": 2.77,
+              "benoitf": 3.1,
+              "danivilla9": 3.14,
+              "vancura": 3.26,
+              "gastoner": 3.94,
+              "odockal": 5.13,
+              "kyetter": 5.97,
+              "MarsKubeX": 9.06,
+              "ScrewTSW": 11.12,
+              "amisskii": 16.96
+            }
+          },
+          "Sprint 294": {
+            "total_prs": 145,
+            "merged_prs": 105,
+            "time_to_first_review": {
+              "avg": 28.0,
+              "median": 4.2,
+              "count": 130
+            },
+            "time_to_first_comment": {
+              "avg": 52.6,
+              "median": 5.2,
+              "count": 52
+            },
+            "time_to_merge": {
+              "avg": 69.9,
+              "median": 24.1,
+              "count": 105
+            },
+            "time_to_address_comments": {
+              "avg": 78.1,
+              "median": 1.5,
+              "count": 10
+            },
+            "weekly_extremes": {
+              "2026-W26": {
+                "longest": {
+                  "title": "chore(test): refactoring some tests for better performance",
+                  "repo": "podman-desktop",
+                  "number": 18150,
+                  "hours": 27.11
+                },
+                "shortest": {
+                  "title": "chore: fix lock file",
+                  "repo": "podman-desktop",
+                  "number": 18165,
+                  "hours": 0.07
+                }
+              },
+              "2026-W27": {
+                "longest": {
+                  "title": "test(e2e): update serial declaration - part 1",
+                  "repo": "podman-desktop",
+                  "number": 18155,
+                  "hours": 146.57
+                },
+                "shortest": {
+                  "title": "fix(tests): address vitest eslint plugin rule violations",
+                  "repo": "extension-kubernetes-dashboard",
+                  "number": 1143,
+                  "hours": 0.37
+                }
+              },
+              "2026-W28": {
+                "longest": {
+                  "title": "fix: add 'New Cluster' button to navigate to NoContextPage",
+                  "repo": "extension-kubernetes-dashboard",
+                  "number": 1135,
+                  "hours": 299.08
+                },
+                "shortest": {
+                  "title": "chore(blog): change blog date to today",
+                  "repo": "podman-desktop",
+                  "number": 18335,
+                  "hours": 0.15
+                }
+              },
+              "2026-W29": {
+                "longest": {
+                  "title": "chore(test): update e2e workflow",
+                  "repo": "extension-bootc",
+                  "number": 2632,
+                  "hours": 393.71
+                },
+                "shortest": {
+                  "title": "chore: update pnpm to v1.15.1",
+                  "repo": "podman-desktop",
+                  "number": 18362,
+                  "hours": 0.52
+                }
+              },
+              "2026-W30": {
+                "longest": {
+                  "title": "fix(ui): change incorrect/misleading proxy settings update dialog message + add test coverage",
+                  "repo": "podman-desktop",
+                  "number": 18357,
+                  "hours": 165.27
+                },
+                "shortest": {
+                  "title": "fix(ui): set release notes image to full height of parent",
+                  "repo": "podman-desktop",
+                  "number": 18384,
+                  "hours": 151.31
+                }
+              },
+              "2026-W31": {
+                "longest": {
+                  "title": "test(e2e): detect podman machine from system overview exp feature",
+                  "repo": "podman-desktop",
+                  "number": 18141,
+                  "hours": 836.33
+                },
+                "shortest": {
+                  "title": "docs(website): add compose to kubernetes migration blog post",
+                  "repo": "podman-desktop",
+                  "number": 18361,
+                  "hours": 406.14
+                }
+              }
+            },
+            "reviewer_approvals": {
+              "benoitf": 63,
+              "axel7083": 28,
+              "simonrey1": 19,
+              "cdrage": 17,
+              "vancura": 13,
+              "jeffmaury": 10,
+              "amisskii": 8,
+              "feloy": 8,
+              "odockal": 8,
+              "cbr7": 7,
+              "danivilla9": 5,
+              "serbangeorge-m": 5,
+              "deboer-tim": 4,
+              "kyetter": 3,
+              "slemeur": 1,
+              "gastoner": 1,
+              "adameska": 1
+            },
+            "domain_pr_count": {
+              "extensibility": 31,
+              "foundations": 28,
+              "containers": 24,
+              "qe": 19,
+              "kubernetes-dashboard": 10,
+              "ui-components": 6,
+              "kubernetes": 5,
+              "podman-quadlet": 5,
+              "docs": 3,
+              "bootc": 3,
+              "grype": 3,
+              "dependency-remove": 1,
+              "postgresql": 1,
+              "kreate": 1,
+              "kubernetes-context": 1,
+              "dependency-update-minor": 1
+            },
+            "domain_owner_authored": {
+              "qe": 11,
+              "containers": 8,
+              "foundations": 5,
+              "podman-quadlet": 4,
+              "ui-components": 2,
+              "grype": 2
+            },
+            "domain_approval_ownership": {
+              "containers": {
+                "benoitf": 61.1,
+                "axel7083": 38.9
+              },
+              "foundations": {
+                "benoitf": 84.2,
+                "deboer-tim": 15.8
+              },
+              "extensibility": {
+                "benoitf": 100.0
+              },
+              "qe": {
+                "odockal": 30.0,
+                "danivilla9": 25.0,
+                "amisskii": 25.0,
+                "serbangeorge-m": 20.0
+              },
+              "kubernetes": {},
+              "docs": {
+                "cdrage": 66.7,
+                "kyetter": 33.3
+              },
+              "ui-components": {
+                "benoitf": 62.5,
+                "vancura": 37.5
+              },
+              "dependency-remove": {
+                "benoitf": 100.0
+              },
+              "bootc": {
+                "cdrage": 66.7,
+                "deboer-tim": 33.3
+              },
+              "postgresql": {
+                "jeffmaury": 100.0
+              },
+              "kreate": {
+                "cdrage": 100.0
+              },
+              "podman-quadlet": {
+                "benoitf": 100.0
+              },
+              "kubernetes-dashboard": {
+                "jeffmaury": 100.0
+              },
+              "kubernetes-context": {
+                "jeffmaury": 100.0
+              },
+              "dependency-update-minor": {
+                "jeffmaury": 100.0
+              },
+              "grype": {
+                "simonrey1": 100.0
+              }
+            },
+            "domain_avg_approval_hours": {
+              "containers": 36.3,
+              "foundations": 96.0,
+              "extensibility": 90.7,
+              "qe": 40.8,
+              "kubernetes": 28.9,
+              "docs": 83.8,
+              "ui-components": 59.5,
+              "dependency-remove": 0.4,
+              "bootc": 108.0,
+              "postgresql": 4.8,
+              "kreate": 28.7,
+              "podman-quadlet": 76.4,
+              "kubernetes-dashboard": 76.6,
+              "kubernetes-context": 24.4,
+              "dependency-update-minor": 3.1,
+              "grype": 2.2
+            },
+            "engineer_avg_approval_bdays": {
+              "adameska": 0.03,
+              "serbangeorge-m": 0.2,
+              "danivilla9": 0.31,
+              "slemeur": 0.85,
+              "deboer-tim": 0.99,
+              "axel7083": 1.0,
+              "jeffmaury": 1.22,
+              "benoitf": 1.72,
+              "simonrey1": 1.84,
+              "amisskii": 1.85,
+              "cbr7": 1.99,
+              "feloy": 2.79,
+              "vancura": 3.08,
+              "odockal": 3.34,
+              "gastoner": 3.89,
+              "cdrage": 5.34,
+              "kyetter": 7.61
+            }
+          },
+          "Sprint 295": {
+            "total_prs": 314,
+            "merged_prs": 196,
+            "time_to_first_review": {
+              "avg": 14.8,
+              "median": 0.6,
+              "count": 259
+            },
+            "time_to_first_comment": {
+              "avg": 20.3,
+              "median": 0.3,
+              "count": 87
+            },
+            "time_to_merge": {
+              "avg": 30.5,
+              "median": 9.7,
+              "count": 196
+            },
+            "time_to_address_comments": {
+              "avg": 34.9,
+              "median": 1.0,
+              "count": 5
+            },
+            "weekly_extremes": {
+              "2026-W29": {
+                "longest": {
+                  "title": "chore: embed podman 6 installers",
+                  "repo": "podman-desktop",
+                  "number": 18408,
+                  "hours": 30.9
+                },
+                "shortest": {
+                  "title": "fix: broken pnpm-lockfile",
+                  "repo": "extension-grype",
+                  "number": 251,
+                  "hours": 0.03
+                }
+              },
+              "2026-W30": {
+                "longest": {
+                  "title": "fix(release.yaml): use PODMAN_DESKTOP_BOT_TOKEN to push tag",
+                  "repo": "extension-grype",
+                  "number": 254,
+                  "hours": 118.44
+                },
+                "shortest": {
+                  "title": "chore: apply prettier formatter",
+                  "repo": "podman-desktop",
+                  "number": 18481,
+                  "hours": 0.23
+                }
+              },
+              "2026-W31": {
+                "longest": {
+                  "title": "fix(container-registry): use memAvailable for accurate podman memory usage",
+                  "repo": "podman-desktop",
+                  "number": 18418,
+                  "hours": 356.93
+                },
+                "shortest": {
+                  "title": "refactor(openapi): support hermetic build",
+                  "repo": "extension-grype",
+                  "number": 284,
+                  "hours": 0.05
+                }
+              },
+              "2026-W32": {
+                "longest": {
+                  "title": "refactor(renderer): update store instead of local pod copy",
+                  "repo": "podman-desktop",
+                  "number": 18435,
+                  "hours": 437.3
+                },
+                "shortest": {
+                  "title": "test(connection): update tooltip queries for ui-svelte 1.29.1",
+                  "repo": "extension-kubernetes-dashboard",
+                  "number": 1263,
+                  "hours": 0.28
+                }
+              }
+            },
+            "reviewer_approvals": {
+              "benoitf": 88,
+              "axel7083": 84,
+              "vancura": 32,
+              "feloy": 25,
+              "simonrey1": 25,
+              "gastoner": 22,
+              "deboer-tim": 20,
+              "cbr7": 16,
+              "cdrage": 15,
+              "jeffmaury": 12,
+              "serbangeorge-m": 6,
+              "amisskii": 5,
+              "kyetter": 3,
+              "odockal": 3,
+              "danivilla9": 3,
+              "slemeur": 1,
+              "ScrewTSW": 1,
+              "SoniaSandler": 1
+            },
+            "domain_pr_count": {
+              "foundations": 88,
+              "containers": 38,
+              "ui-components": 29,
+              "kubernetes-dashboard": 27,
+              "extensibility": 22,
+              "kubernetes": 16,
+              "bootc": 10,
+              "grype": 10,
+              "qe": 7,
+              "postgresql": 7,
+              "podman-quadlet": 7,
+              "docs": 6,
+              "kreate": 5,
+              "apple-container": 5,
+              "layers-explorer": 3,
+              "kubernetes-context": 3,
+              "kind": 3,
+              "minikube": 2
+            },
+            "domain_owner_authored": {
+              "foundations": 18,
+              "podman-quadlet": 6,
+              "grype": 6,
+              "ui-components": 5,
+              "apple-container": 5,
+              "kubernetes": 4,
+              "containers": 4,
+              "docs": 2,
+              "minikube": 2,
+              "kind": 2,
+              "qe": 1,
+              "extensibility": 1,
+              "bootc": 1
+            },
+            "domain_approval_ownership": {
+              "extensibility": {
+                "benoitf": 100.0
+              },
+              "containers": {
+                "axel7083": 96.4,
+                "benoitf": 3.6
+              },
+              "kubernetes": {
+                "gastoner": 100.0
+              },
+              "ui-components": {
+                "vancura": 52.2,
+                "benoitf": 47.8
+              },
+              "foundations": {
+                "benoitf": 77.1,
+                "deboer-tim": 22.9
+              },
+              "qe": {
+                "serbangeorge-m": 100.0
+              },
+              "docs": {
+                "cdrage": 80.0,
+                "slemeur": 20.0
+              },
+              "minikube": {
+                "jeffmaury": 100.0
+              },
+              "bootc": {
+                "deboer-tim": 55.6,
+                "cdrage": 44.4
+              },
+              "layers-explorer": {
+                "jeffmaury": 100.0
+              },
+              "postgresql": {
+                "jeffmaury": 100.0
+              },
+              "kreate": {
+                "cdrage": 100.0
+              },
+              "podman-quadlet": {
+                "axel7083": 80.0,
+                "benoitf": 20.0
+              },
+              "kubernetes-dashboard": {
+                "jeffmaury": 100.0
+              },
+              "kubernetes-context": {
+                "jeffmaury": 100.0
+              },
+              "kind": {
+                "SoniaSandler": 100.0
+              },
+              "grype": {
+                "axel7083": 71.4,
+                "simonrey1": 28.6
+              }
+            },
+            "domain_avg_approval_hours": {
+              "extensibility": 44.8,
+              "containers": 57.5,
+              "kubernetes": 16.1,
+              "ui-components": 28.2,
+              "foundations": 15.4,
+              "qe": 10.8,
+              "docs": 19.9,
+              "minikube": 9.1,
+              "bootc": 1.8,
+              "layers-explorer": 5.1,
+              "postgresql": 1.8,
+              "kreate": 2.3,
+              "podman-quadlet": 20.2,
+              "kubernetes-dashboard": 5.2,
+              "kubernetes-context": 0.6,
+              "kind": 0.1,
+              "grype": 23.5
+            },
+            "engineer_avg_approval_bdays": {
+              "SoniaSandler": 0.01,
+              "slemeur": 0.2,
+              "gastoner": 0.21,
+              "serbangeorge-m": 0.21,
+              "jeffmaury": 0.21,
+              "deboer-tim": 0.27,
+              "simonrey1": 0.33,
+              "axel7083": 0.5,
+              "vancura": 0.5,
+              "feloy": 0.63,
+              "danivilla9": 0.65,
+              "benoitf": 1.07,
+              "cdrage": 1.19,
+              "ScrewTSW": 1.2,
+              "odockal": 1.73,
+              "cbr7": 2.0,
+              "amisskii": 2.09,
+              "kyetter": 3.35
+            }
+          },
+          "Sprint 296": {
+            "total_prs": 14,
+            "merged_prs": 2,
+            "time_to_first_review": {
+              "avg": 4.1,
+              "median": 1.8,
+              "count": 7
+            },
+            "time_to_first_comment": {
+              "avg": 1.1,
+              "median": 1.1,
+              "count": 2
+            },
+            "time_to_merge": {
+              "avg": 5.4,
+              "median": 5.4,
+              "count": 2
+            },
+            "time_to_address_comments": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "weekly_extremes": {
+              "2026-W32": {
+                "longest": {
+                  "title": "fix(agent): guard PostToolUse hooks against empty CLAUDE_FILE_PATH",
+                  "repo": "extension-kubernetes-dashboard",
+                  "number": 1268,
+                  "hours": 7.06
+                },
+                "shortest": {
+                  "title": "refactor(renderer): migrate Prune to Svelte 5 ",
+                  "repo": "podman-desktop",
+                  "number": 18776,
+                  "hours": 3.66
+                }
+              }
+            },
+            "reviewer_approvals": {
+              "axel7083": 2,
+              "simonrey1": 2,
+              "kyetter": 1,
+              "jeffmaury": 1
+            },
+            "domain_pr_count": {
+              "foundations": 8,
+              "kubernetes-dashboard": 3,
+              "containers": 1,
+              "qe": 1
+            },
+            "domain_owner_authored": {
+              "qe": 1
+            },
+            "domain_approval_ownership": {
+              "containers": {
+                "axel7083": 100.0
+              },
+              "foundations": {},
+              "qe": {},
+              "kubernetes-dashboard": {
+                "jeffmaury": 100.0
+              }
+            },
+            "domain_avg_approval_hours": {
+              "containers": 1.4,
+              "foundations": 3.2,
+              "qe": 13.8,
+              "kubernetes-dashboard": 6.5
+            },
+            "engineer_avg_approval_bdays": {
+              "simonrey1": 0.06,
+              "axel7083": 0.12,
+              "jeffmaury": 0.27,
+              "kyetter": 0.58
+            }
+          },
+          "Sprint 297": {
+            "total_prs": 0,
+            "merged_prs": 0,
+            "time_to_first_review": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "time_to_first_comment": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "time_to_merge": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "time_to_address_comments": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "weekly_extremes": {},
+            "reviewer_approvals": {},
+            "domain_pr_count": {},
+            "domain_owner_authored": {},
+            "domain_approval_ownership": {},
+            "domain_avg_approval_hours": {},
+            "engineer_avg_approval_bdays": {}
+          }
+        },
+        "draft_prs": {
+          "ShiranHi": [
+            {
+              "repo": "podman-desktop",
+              "number": 18619,
+              "title": "feat(website): enterprise support page and downloads redesign prototype",
+              "created_at": "2026-08-06T12:37:47Z"
+            },
+            {
+              "repo": "podman-desktop",
+              "number": 18297,
+              "title": "Extensions UX redesign proposal: Catalog tab, Installed list, Custom/local tab and lifecycle status",
+              "created_at": "2026-07-15T07:59:21Z"
+            }
+          ],
+          "axel7083": [
+            {
+              "repo": "podman-desktop",
+              "number": 18590,
+              "title": "chore(workflows): bump linux runner to ubuntu-26.04",
+              "created_at": "2026-08-05T08:19:27Z"
+            },
+            {
+              "repo": "podman-desktop",
+              "number": 18523,
+              "title": "refactor(core): replace `got` by native fetch in image-registry",
+              "created_at": "2026-07-29T12:33:28Z"
+            },
+            {
+              "repo": "podman-desktop",
+              "number": 18421,
+              "title": "test(e2e): adding secrets smoke",
+              "created_at": "2026-07-22T15:57:01Z"
+            },
+            {
+              "repo": "podman-desktop",
+              "number": 18411,
+              "title": "test(e2e): proxy with custom ca",
+              "created_at": "2026-07-22T10:05:48Z"
+            },
+            {
+              "repo": "podman-desktop",
+              "number": 18252,
+              "title": "feat(core): support extension override",
+              "created_at": "2026-07-10T15:01:44Z"
+            },
+            {
+              "repo": "podman-desktop",
+              "number": 18209,
+              "title": "refactor(RunImage): split tabs in sub-components",
+              "created_at": "2026-07-08T12:14:49Z"
+            },
+            {
+              "repo": "podman-desktop",
+              "number": 18187,
+              "title": "refactor(core): remove win-ca",
+              "created_at": "2026-07-07T12:41:52Z"
+            },
+            {
+              "repo": "extension-podman-quadlet",
+              "number": 1683,
+              "title": "feat: hermetic tentative",
+              "created_at": "2026-08-05T14:56:10Z"
+            },
+            {
+              "repo": "extension-podman-quadlet",
+              "number": 1660,
+              "title": "chore(pnpm): migrate to v11",
+              "created_at": "2026-07-22T13:54:34Z"
+            },
+            {
+              "repo": "extension-grype",
+              "number": 247,
+              "title": "chore(pnpm): migrate to pnpm v11",
+              "created_at": "2026-07-22T13:43:08Z"
+            },
+            {
+              "repo": "gh-extensions-actions",
+              "number": 14,
+              "title": "feat: hermetic action WIP",
+              "created_at": "2026-08-05T14:41:32Z"
+            },
+            {
+              "repo": "eslint-config",
+              "number": 2,
+              "title": "feat: basic config",
+              "created_at": "2026-07-02T11:50:41Z"
+            }
+          ],
+          "gastoner": [
+            {
+              "repo": "podman-desktop",
+              "number": 18579,
+              "title": "refactor(ui): replaced ThemedIcon by Icon component ",
+              "created_at": "2026-08-04T06:34:55Z"
+            },
+            {
+              "repo": "podman-desktop",
+              "number": 18433,
+              "title": "feat(navigation): allow 'pinning' navigation items to the main navigation",
+              "created_at": "2026-07-24T06:31:19Z"
+            }
+          ],
+          "SoniaSandler": [
+            {
+              "repo": "podman-desktop",
+              "number": 18486,
+              "title": "chore: add update channel support from product.json",
+              "created_at": "2026-07-27T22:37:40Z"
+            }
+          ],
+          "ScrewTSW": [
+            {
+              "repo": "podman-desktop",
+              "number": 18226,
+              "title": "fix(e2e): investigate and fix windows update e2e test flake (preload/renderer race)",
+              "created_at": "2026-07-09T14:36:03Z"
+            }
+          ],
+          "bmahabirbu": [
+            {
+              "repo": "podman-desktop",
+              "number": 18003,
+              "title": "feat(images): add image update action",
+              "created_at": "2026-06-23T06:05:21Z"
+            }
+          ],
+          "amisskii": [
+            {
+              "repo": "e2e",
+              "number": 625,
+              "title": "feat(ai-eval): add E2E failure evaluation skill and Slack formatter",
+              "created_at": "2026-08-06T12:28:22Z"
+            }
+          ]
+        },
+        "rolling_domain_ownership": {
+          "containers": {
+            "axel7083": 68.6,
+            "benoitf": 31.4
+          },
+          "foundations": {
+            "benoitf": 71.8,
+            "deboer-tim": 28.2
+          },
+          "qe": {
+            "serbangeorge-m": 31.7,
+            "danivilla9": 24.4,
+            "odockal": 24.4,
+            "amisskii": 17.1,
+            "ScrewTSW": 2.4
+          },
+          "extensibility": {
+            "benoitf": 100.0
+          },
+          "kubernetes": {
+            "gastoner": 75.0,
+            "cdrage": 25.0
+          },
+          "ui-components": {
+            "benoitf": 54.9,
+            "vancura": 45.1
+          },
+          "docs": {
+            "cdrage": 66.7,
+            "kyetter": 25.0,
+            "slemeur": 8.3
+          },
+          "dependency-remove": {
+            "benoitf": 100.0
+          },
+          "technical-debt": {},
+          "minikube": {
+            "jeffmaury": 80.0,
+            "benoitf": 20.0
+          },
+          "bootc": {
+            "cdrage": 52.9,
+            "deboer-tim": 47.1
+          },
+          "layers-explorer": {
+            "jeffmaury": 100.0
+          },
+          "postgresql": {
+            "jeffmaury": 100.0
+          },
+          "kreate": {
+            "cdrage": 100.0
+          },
+          "podman-quadlet": {
+            "axel7083": 66.7,
+            "benoitf": 33.3
+          },
+          "kubernetes-dashboard": {
+            "jeffmaury": 100.0
+          },
+          "github": {
+            "SoniaSandler": 50.0,
+            "dgolovin": 50.0
+          },
+          "kubernetes-context": {
+            "jeffmaury": 100.0
+          },
+          "dependency-update-minor": {
+            "jeffmaury": 100.0
+          },
+          "kind": {
+            "SoniaSandler": 100.0
+          },
+          "grype": {
+            "axel7083": 50.0,
+            "simonrey1": 50.0
+          }
+        },
+        "rolling_domain_pr_count": {
+          "foundations": 172,
+          "containers": 79,
+          "extensibility": 68,
+          "kubernetes-dashboard": 61,
+          "ui-components": 48,
+          "qe": 44,
+          "kubernetes": 28,
+          "podman-quadlet": 23,
+          "bootc": 18,
+          "kreate": 15,
+          "grype": 15,
+          "kubernetes-context": 12,
+          "docs": 11,
+          "postgresql": 11,
+          "apple-container": 8,
+          "kind": 7,
+          "minikube": 5,
+          "github": 5,
+          "layers-explorer": 4,
+          "technical-debt": 2,
+          "dependency-remove": 1,
+          "dependency-update-minor": 1
+        },
+        "rolling_domain_ownership_all": {
+          "containers": {
+            "axel7083": 68.0,
+            "benoitf": 32.0
+          },
+          "foundations": {
+            "benoitf": 78.6,
+            "deboer-tim": 21.4
+          },
+          "qe": {
+            "serbangeorge-m": 31.7,
+            "danivilla9": 24.4,
+            "odockal": 24.4,
+            "amisskii": 17.1,
+            "ScrewTSW": 2.4
+          },
+          "extensibility": {
+            "benoitf": 100.0
+          },
+          "kubernetes": {
+            "gastoner": 75.0,
+            "cdrage": 25.0
+          },
+          "dependency-update-minor": {
+            "benoitf": 31.0,
+            "feloy": 29.3,
+            "jeffmaury": 12.1,
+            "simonrey1": 10.3,
+            "axel7083": 6.9,
+            "dgolovin": 5.2,
+            "deboer-tim": 3.4,
+            "cdrage": 1.7
+          },
+          "ui-components": {
+            "benoitf": 54.9,
+            "vancura": 45.1
+          },
+          "dependency-update-major": {
+            "benoitf": 51.4,
+            "simonrey1": 25.7,
+            "axel7083": 8.6,
+            "dgolovin": 8.6,
+            "jeffmaury": 5.7
+          },
+          "docs": {
+            "cdrage": 66.7,
+            "kyetter": 25.0,
+            "slemeur": 8.3
+          },
+          "dependency-remove": {
+            "benoitf": 100.0
+          },
+          "technical-debt": {},
+          "minikube": {
+            "jeffmaury": 90.0,
+            "benoitf": 10.0
+          },
+          "bootc": {
+            "deboer-tim": 57.1,
+            "cdrage": 42.9
+          },
+          "layers-explorer": {
+            "jeffmaury": 100.0
+          },
+          "postgresql": {
+            "jeffmaury": 100.0
+          },
+          "kreate": {
+            "cdrage": 100.0
+          },
+          "podman-quadlet": {
+            "axel7083": 62.2,
+            "benoitf": 37.8
+          },
+          "kubernetes-dashboard": {
+            "jeffmaury": 100.0
+          },
+          "github": {
+            "dgolovin": 90.9,
+            "SoniaSandler": 9.1
+          },
+          "apple-container": {
+            "benoitf": 100.0
+          },
+          "kubernetes-context": {
+            "jeffmaury": 100.0
+          },
+          "kind": {
+            "SoniaSandler": 50.0,
+            "benoitf": 50.0
+          },
+          "grype": {
+            "axel7083": 52.0,
+            "simonrey1": 48.0
+          }
+        },
+        "rolling_domain_pr_count_all": {
+          "dependency-update-minor": 1027,
+          "foundations": 210,
+          "kubernetes-dashboard": 105,
+          "containers": 83,
+          "extensibility": 70,
+          "podman-quadlet": 50,
+          "ui-components": 48,
+          "kubernetes-context": 47,
+          "qe": 44,
+          "dependency-update-major": 39,
+          "bootc": 38,
+          "kreate": 37,
+          "apple-container": 37,
+          "kind": 29,
+          "grype": 29,
+          "kubernetes": 28,
+          "postgresql": 25,
+          "github": 24,
+          "layers-explorer": 19,
+          "minikube": 14,
+          "docs": 11,
+          "technical-debt": 2,
+          "dependency-remove": 1
+        }
+      }
+    },
+    "Kaiden": {
+      "github_org": "openkaiden",
+      "sprints": {
+        "Sprint 296": {
+          "start_date": "2026-08-12",
+          "duration": 21,
+          "total_items": 64,
+          "done_items": 3,
+          "total_story_points": 0,
+          "done_story_points": 0,
+          "statuses": {
+            "\ud83d\udea5 In Review": 12,
+            "\u23f3On Hold": 4,
+            "\ud83d\udea7 In Progress": 5,
+            "\ud83d\udccb Backlog": 32,
+            "\ud83d\udcc5 Planned": 8,
+            "Done": 3
+          },
+          "goals": {
+            "Uncategorized": 64
+          },
+          "priorities": {
+            "None": 64
+          },
+          "assignees": {
+            "jeffmaury": 12,
+            "serbangeorge-m": 10,
+            "MarsKubeX": 10,
+            "bmahabirbu": 8,
+            "fbricon": 7,
+            "benoitf": 5,
+            "feloy": 3,
+            "Iyamokuma": 1
+          },
+          "repos": {
+            "kaiden": 60,
+            "openshell-image-builder": 3,
+            "kdn": 1
+          }
+        },
+        "Sprint 295": {
+          "start_date": "2026-07-22",
+          "duration": 21,
+          "total_items": 83,
+          "done_items": 42,
+          "total_story_points": 0,
+          "done_story_points": 0,
+          "statuses": {
+            "Done": 42,
+            "\ud83d\udea5 In Review": 11,
+            "\u23f3On Hold": 4,
+            "\ud83d\udea7 In Progress": 5,
+            "\ud83d\udccb Backlog": 19,
+            "\ud83d\udcc5 Planned": 2
+          },
+          "goals": {
+            "Uncategorized": 83
+          },
+          "priorities": {
+            "None": 83
+          },
+          "assignees": {
+            "bmahabirbu": 20,
+            "fbricon": 14,
+            "MarsKubeX": 13,
+            "jeffmaury": 10,
+            "benoitf": 10,
+            "serbangeorge-m": 8,
+            "feloy": 2
+          },
+          "repos": {
+            "kaiden": 80,
+            "openshell-image-builder": 2,
+            "kdn": 1
+          },
+          "frozen_at": "2026-08-11T13:11:42.588526"
+        },
+        "Sprint 294": {
+          "start_date": "2026-07-01",
+          "duration": 21,
+          "total_items": 57,
+          "done_items": 57,
+          "total_story_points": 2.0,
+          "done_story_points": 2.0,
+          "statuses": {
+            "Done": 57
+          },
+          "goals": {
+            "Uncategorized": 57
+          },
+          "priorities": {
+            "None": 57
+          },
+          "assignees": {
+            "jeffmaury": 16,
+            "bmahabirbu": 15,
+            "fbricon": 7,
+            "benoitf": 7,
+            "MarsKubeX": 5,
+            "serbangeorge-m": 3,
+            "gastoner": 2,
+            "feloy": 1,
+            "deboer-tim": 1
+          },
+          "repos": {
+            "kaiden": 56,
+            "openshell-image-builder": 1
+          },
+          "frozen_at": "2026-08-11T13:11:42.588549"
+        },
+        "Sprint 293": {
+          "start_date": "2026-06-10",
+          "duration": 21,
+          "total_items": 70,
+          "done_items": 69,
+          "total_story_points": 0,
+          "done_story_points": 0,
+          "statuses": {
+            "Done": 69,
+            "\ud83d\udccb Backlog": 1
+          },
+          "goals": {
+            "Uncategorized": 70
+          },
+          "priorities": {
+            "None": 70
+          },
+          "assignees": {
+            "jeffmaury": 28,
+            "MarsKubeX": 9,
+            "bmahabirbu": 8,
+            "fbricon": 8,
+            "gastoner": 8,
+            "feloy": 4,
+            "serbangeorge-m": 3,
+            "benoitf": 1
+          },
+          "repos": {
+            "kaiden": 67,
+            "openshell-image-builder": 3
+          },
+          "frozen_at": "2026-08-11T13:11:42.588571"
+        },
+        "Sprint 297": {
+          "start_date": "2026-09-02",
+          "duration": 21,
+          "total_items": 0,
+          "done_items": 0,
+          "total_story_points": 0,
+          "done_story_points": 0,
+          "statuses": {},
+          "goals": {},
+          "priorities": {},
+          "assignees": {},
+          "repos": {}
+        }
+      },
+      "pr_metrics": {
+        "sprints": {
+          "Sprint 293": {
+            "total_prs": 103,
+            "merged_prs": 92,
+            "time_to_first_review": {
+              "avg": 17.8,
+              "median": 3.8,
+              "count": 87
+            },
+            "time_to_first_comment": {
+              "avg": 50.9,
+              "median": 10.6,
+              "count": 42
+            },
+            "time_to_merge": {
+              "avg": 78.3,
+              "median": 18.9,
+              "count": 92
+            },
+            "time_to_address_comments": {
+              "avg": 27.3,
+              "median": 5.7,
+              "count": 13
+            },
+            "weekly_extremes": {
+              "2026-W23": {
+                "longest": {
+                  "title": "feat(openshell): build and create sandbox via openshell-image-builder",
+                  "repo": "kaiden",
+                  "number": 2135,
+                  "hours": 23.75
+                },
+                "shortest": {
+                  "title": "chore: bump version to 0.12.0-next",
+                  "repo": "openshell-image-builder",
+                  "number": 86,
+                  "hours": 0.04
+                }
+              },
+              "2026-W24": {
+                "longest": {
+                  "title": "feat(models): add semantic router create page",
+                  "repo": "kaiden",
+                  "number": 2115,
+                  "hours": 169.8
+                },
+                "shortest": {
+                  "title": "feat(cli): add --with-workspace-config flag",
+                  "repo": "openshell-image-builder",
+                  "number": 100,
+                  "hours": 0.25
+                }
+              },
+              "2026-W25": {
+                "longest": {
+                  "title": "feat(workspaces): add Project step to workspace creation wizard",
+                  "repo": "kaiden",
+                  "number": 2146,
+                  "hours": 335.83
+                },
+                "shortest": {
+                  "title": "chore: initialize fullsend per-repo installation",
+                  "repo": "kaiden",
+                  "number": 2262,
+                  "hours": 0.02
+                }
+              },
+              "2026-W26": {
+                "longest": {
+                  "title": "fix(openshell): upload all filesystem mounts including broad paths",
+                  "repo": "kaiden",
+                  "number": 2271,
+                  "hours": 179.34
+                },
+                "shortest": {
+                  "title": "fix(container): conditionally use --all-providers based on Podman version",
+                  "repo": "kaiden",
+                  "number": 2296,
+                  "hours": 0.44
+                }
+              },
+              "2026-W27": {
+                "longest": {
+                  "title": "feat(openclaw): implement agent configuration for workspace preparation",
+                  "repo": "kaiden",
+                  "number": 2193,
+                  "hours": 535.03
+                },
+                "shortest": {
+                  "title": "feat(openclaw): implement agent configuration for workspace preparation",
+                  "repo": "kaiden",
+                  "number": 2193,
+                  "hours": 535.03
+                }
+              },
+              "2026-W28": {
+                "longest": {
+                  "title": "feat: import kaiden-docs as Docusaurus site with website styling",
+                  "repo": "website",
+                  "number": 12,
+                  "hours": 555.25
+                },
+                "shortest": {
+                  "title": "feat: import kaiden-docs as Docusaurus site with website styling",
+                  "repo": "website",
+                  "number": 12,
+                  "hours": 555.25
+                }
+              },
+              "2026-W30": {
+                "longest": {
+                  "title": "feat(openshell): enable bind mounts for local gateways",
+                  "repo": "kaiden",
+                  "number": 2227,
+                  "hours": 997.45
+                },
+                "shortest": {
+                  "title": "feat(openshell): enable bind mounts for local gateways",
+                  "repo": "kaiden",
+                  "number": 2227,
+                  "hours": 997.45
+                }
+              },
+              "2026-W31": {
+                "longest": {
+                  "title": "fix: show workspaces during creation and deletion",
+                  "repo": "kaiden",
+                  "number": 2119,
+                  "hours": 1300.82
+                },
+                "shortest": {
+                  "title": "fix: show workspaces during creation and deletion",
+                  "repo": "kaiden",
+                  "number": 2119,
+                  "hours": 1300.82
+                }
+              }
+            },
+            "reviewer_approvals": {
+              "benoitf": 41,
+              "jeffmaury": 30,
+              "MarsKubeX": 23,
+              "fbricon": 12,
+              "bmahabirbu": 8,
+              "gastoner": 6,
+              "feloy": 5,
+              "deboer-tim": 1,
+              "serbangeorge-m": 1,
+              "vancura": 1
+            },
+            "domain_pr_count": {},
+            "domain_owner_authored": {},
+            "domain_approval_ownership": {},
+            "domain_avg_approval_hours": {},
+            "engineer_avg_approval_bdays": {
+              "serbangeorge-m": 0.01,
+              "vancura": 0.01,
+              "deboer-tim": 0.03,
+              "fbricon": 0.54,
+              "bmahabirbu": 1.21,
+              "gastoner": 1.39,
+              "feloy": 1.45,
+              "jeffmaury": 1.57,
+              "benoitf": 2.83,
+              "MarsKubeX": 3.08
+            }
+          },
+          "Sprint 294": {
+            "total_prs": 80,
+            "merged_prs": 66,
+            "time_to_first_review": {
+              "avg": 14.9,
+              "median": 2.6,
+              "count": 72
+            },
+            "time_to_first_comment": {
+              "avg": 12.6,
+              "median": 6.7,
+              "count": 19
+            },
+            "time_to_merge": {
+              "avg": 39.7,
+              "median": 20.2,
+              "count": 66
+            },
+            "time_to_address_comments": {
+              "avg": 36.0,
+              "median": 15.9,
+              "count": 6
+            },
+            "weekly_extremes": {
+              "2026-W26": {
+                "longest": {
+                  "title": "feat(openshell-gateway): pin supervisor container image to gateway binary version",
+                  "repo": "kaiden",
+                  "number": 2346,
+                  "hours": 43.86
+                },
+                "shortest": {
+                  "title": "ci(codecov): remove codecov use",
+                  "repo": "kdn",
+                  "number": 568,
+                  "hours": 0.2
+                }
+              },
+              "2026-W27": {
+                "longest": {
+                  "title": "feat(agent-workspace): auto-execute agent command on terminal connect",
+                  "repo": "kaiden",
+                  "number": 2364,
+                  "hours": 117.15
+                },
+                "shortest": {
+                  "title": "fix(agent-workspace): disable mistral extension",
+                  "repo": "kaiden",
+                  "number": 2419,
+                  "hours": 0.29
+                }
+              },
+              "2026-W28": {
+                "longest": {
+                  "title": "fix(agent-workspace): remove runtime preference and default to openshell",
+                  "repo": "kaiden",
+                  "number": 2415,
+                  "hours": 154.98
+                },
+                "shortest": {
+                  "title": "fix(gemini): route Gemini through OpenAI-compatible endpoint for OpenShell",
+                  "repo": "kaiden",
+                  "number": 2440,
+                  "hours": 11.42
+                }
+              },
+              "2026-W29": {
+                "longest": {
+                  "title": "fix(agent-workspace): validate workspace name against hostname limit",
+                  "repo": "kaiden",
+                  "number": 2464,
+                  "hours": 140.4
+                },
+                "shortest": {
+                  "title": "chore: fix lock file",
+                  "repo": "kaiden",
+                  "number": 2490,
+                  "hours": 0.29
+                }
+              },
+              "2026-W31": {
+                "longest": {
+                  "title": "fix(workspaces): resolve tilde and symlinks in workspace paths",
+                  "repo": "kaiden",
+                  "number": 2471,
+                  "hours": 425.68
+                },
+                "shortest": {
+                  "title": "fix(workspaces): resolve tilde and symlinks in workspace paths",
+                  "repo": "kaiden",
+                  "number": 2471,
+                  "hours": 425.68
+                }
+              }
+            },
+            "reviewer_approvals": {
+              "jeffmaury": 36,
+              "benoitf": 22,
+              "MarsKubeX": 17,
+              "bmahabirbu": 14,
+              "fbricon": 6,
+              "gastoner": 5,
+              "serbangeorge-m": 2,
+              "feloy": 1,
+              "slemeur": 1
+            },
+            "domain_pr_count": {},
+            "domain_owner_authored": {},
+            "domain_approval_ownership": {},
+            "domain_avg_approval_hours": {},
+            "engineer_avg_approval_bdays": {
+              "feloy": 0.0,
+              "serbangeorge-m": 0.12,
+              "gastoner": 0.29,
+              "jeffmaury": 0.48,
+              "slemeur": 0.52,
+              "MarsKubeX": 0.66,
+              "benoitf": 0.97,
+              "bmahabirbu": 1.11,
+              "fbricon": 1.15
+            }
+          },
+          "Sprint 295": {
+            "total_prs": 73,
+            "merged_prs": 61,
+            "time_to_first_review": {
+              "avg": 22.2,
+              "median": 3.5,
+              "count": 68
+            },
+            "time_to_first_comment": {
+              "avg": 29.0,
+              "median": 8.2,
+              "count": 33
+            },
+            "time_to_merge": {
+              "avg": 61.5,
+              "median": 22.9,
+              "count": 61
+            },
+            "time_to_address_comments": {
+              "avg": 29.5,
+              "median": 5.3,
+              "count": 9
+            },
+            "weekly_extremes": {
+              "2026-W29": {
+                "longest": {
+                  "title": "fix(#2552): emit workspace update event on creation failure",
+                  "repo": "kaiden",
+                  "number": 2554,
+                  "hours": 26.72
+                },
+                "shortest": {
+                  "title": "docs(#2530): fix typos in CODE-GUIDELINES.md",
+                  "repo": "kaiden",
+                  "number": 2531,
+                  "hours": 0.28
+                }
+              },
+              "2026-W30": {
+                "longest": {
+                  "title": "feat: allow creating empty workspaces without a project folder",
+                  "repo": "kaiden",
+                  "number": 2575,
+                  "hours": 147.59
+                },
+                "shortest": {
+                  "title": "chore: fix fullsend policy paths",
+                  "repo": "kaiden",
+                  "number": 2611,
+                  "hours": 0.01
+                }
+              },
+              "2026-W31": {
+                "longest": {
+                  "title": "fix(#1154): skip loading RAG environments when directory does not exist",
+                  "repo": "kaiden",
+                  "number": 2562,
+                  "hours": 269.4
+                },
+                "shortest": {
+                  "title": "chore: skip Husky DCO when GIT_BOT_EMAIL (fullsend) is detected",
+                  "repo": "kaiden",
+                  "number": 2653,
+                  "hours": 0.35
+                }
+              },
+              "2026-W32": {
+                "longest": {
+                  "title": "feat(copilot): enable GitHub Copilot CLI agent with BYOK and MCP support",
+                  "repo": "kaiden",
+                  "number": 2585,
+                  "hours": 432.11
+                },
+                "shortest": {
+                  "title": "test(e2e): fix workspace names for 19-char OpenShell limit",
+                  "repo": "kaiden",
+                  "number": 2659,
+                  "hours": 1.62
+                }
+              }
+            },
+            "reviewer_approvals": {
+              "bmahabirbu": 25,
+              "fbricon": 21,
+              "MarsKubeX": 19,
+              "benoitf": 15,
+              "jeffmaury": 9,
+              "cbr7": 3,
+              "serbangeorge-m": 2,
+              "vancura": 1,
+              "deboer-tim": 1,
+              "feloy": 1
+            },
+            "domain_pr_count": {},
+            "domain_owner_authored": {},
+            "domain_approval_ownership": {},
+            "domain_avg_approval_hours": {},
+            "engineer_avg_approval_bdays": {
+              "deboer-tim": 0.0,
+              "vancura": 0.01,
+              "feloy": 0.02,
+              "cbr7": 0.03,
+              "jeffmaury": 0.52,
+              "benoitf": 0.74,
+              "fbricon": 1.47,
+              "MarsKubeX": 1.57,
+              "bmahabirbu": 1.6,
+              "serbangeorge-m": 6.7
+            }
+          },
+          "Sprint 296": {
+            "total_prs": 3,
+            "merged_prs": 1,
+            "time_to_first_review": {
+              "avg": 2.1,
+              "median": 2.1,
+              "count": 2
+            },
+            "time_to_first_comment": {
+              "avg": 3.4,
+              "median": 3.4,
+              "count": 1
+            },
+            "time_to_merge": {
+              "avg": 0.8,
+              "median": 0.8,
+              "count": 1
+            },
+            "time_to_address_comments": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "weekly_extremes": {
+              "2026-W32": {
+                "longest": {
+                  "title": "test(knowledge): verify file indexing actually succeeds",
+                  "repo": "kaiden",
+                  "number": 2671,
+                  "hours": 0.81
+                },
+                "shortest": {
+                  "title": "test(knowledge): verify file indexing actually succeeds",
+                  "repo": "kaiden",
+                  "number": 2671,
+                  "hours": 0.81
+                }
+              }
+            },
+            "reviewer_approvals": {
+              "jeffmaury": 1
+            },
+            "domain_pr_count": {},
+            "domain_owner_authored": {},
+            "domain_approval_ownership": {},
+            "domain_avg_approval_hours": {},
+            "engineer_avg_approval_bdays": {
+              "jeffmaury": 0.03
+            }
+          },
+          "Sprint 297": {
+            "total_prs": 0,
+            "merged_prs": 0,
+            "time_to_first_review": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "time_to_first_comment": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "time_to_merge": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "time_to_address_comments": {
+              "avg": 0,
+              "median": 0,
+              "count": 0
+            },
+            "weekly_extremes": {},
+            "reviewer_approvals": {},
+            "domain_pr_count": {},
+            "domain_owner_authored": {},
+            "domain_approval_ownership": {},
+            "domain_avg_approval_hours": {},
+            "engineer_avg_approval_bdays": {}
+          }
+        },
+        "draft_prs": {
+          "MarsKubeX": [
+            {
+              "repo": "kaiden",
+              "number": 2496,
+              "title": "feat(openshell-cli): integrate OpenShell TypeScript SDK with CLI fall",
+              "created_at": "2026-07-20T13:54:42Z"
+            }
+          ]
+        },
+        "rolling_domain_ownership": {},
+        "rolling_domain_pr_count": {},
+        "rolling_domain_ownership_all": {},
+        "rolling_domain_pr_count_all": {}
+      }
+    }
+  },
+  "availability": {
+    "Sprint 293": {
+      "total_working_days": 15,
+      "engineer_count": 26,
+      "total_ooo_days": 24,
+      "total_available_days": 366,
+      "total_capacity_days": 390,
+      "capacity_pct": 93.8,
+      "engineers": {
+        "Anton": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Axel": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "Brian": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "Charlie": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Daniel Villanueva": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Denis": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "DV": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Evzen": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Florent": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "George": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Jeff": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "Jiri": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Marcel": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Nichole": {
+          "ooo_days": 4,
+          "available_days": 11
+        },
+        "Ondrej": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Philippe": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Rujuta": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Shipra": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Simon": {
+          "ooo_days": 3,
+          "available_days": 12
+        },
+        "Sonia": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Stevan": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Tibor": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Tim": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Vaclav": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Vlad": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Vladimir L": {
+          "ooo_days": 3,
+          "available_days": 12
+        }
+      },
+      "teams": {
+        "QE": {
+          "members": [
+            "Anton",
+            "Daniel Villanueva",
+            "Tibor",
+            "Vladimir L"
+          ],
+          "ooo_days": 3,
+          "available_days": 57,
+          "member_count": 4,
+          "capacity_pct": 95.0
+        },
+        "Red Hat build of Podman Desktop": {
+          "members": [
+            "Axel",
+            "Charlie",
+            "Denis",
+            "Ondrej",
+            "Rujuta",
+            "Sonia"
+          ],
+          "ooo_days": 8,
+          "available_days": 82,
+          "member_count": 6,
+          "capacity_pct": 91.1
+        },
+        "Kaiden": {
+          "members": [
+            "Brian",
+            "Evzen",
+            "George",
+            "Jeff",
+            "Marcel"
+          ],
+          "ooo_days": 6,
+          "available_days": 69,
+          "member_count": 5,
+          "capacity_pct": 92.0
+        },
+        "Other": {
+          "members": [
+            "DV",
+            "Nichole"
+          ],
+          "ooo_days": 4,
+          "available_days": 26,
+          "member_count": 2,
+          "capacity_pct": 86.7
+        },
+        "Podman Desktop": {
+          "members": [
+            "Florent",
+            "Jiri",
+            "Philippe",
+            "Shipra",
+            "Simon",
+            "Stevan",
+            "Tim",
+            "Vaclav",
+            "Vlad"
+          ],
+          "ooo_days": 3,
+          "available_days": 132,
+          "member_count": 9,
+          "capacity_pct": 97.8
+        }
+      }
+    },
+    "Sprint 294": {
+      "total_working_days": 15,
+      "engineer_count": 26,
+      "total_ooo_days": 56,
+      "total_available_days": 334,
+      "total_capacity_days": 390,
+      "capacity_pct": 85.6,
+      "engineers": {
+        "Anton": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Axel": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Brian": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "Charlie": {
+          "ooo_days": 8,
+          "available_days": 7
+        },
+        "Daniel Villanueva": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Denis": {
+          "ooo_days": 5,
+          "available_days": 10
+        },
+        "DV": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "Evzen": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Florent": {
+          "ooo_days": 9,
+          "available_days": 6
+        },
+        "George": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Jeff": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Jiri": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Marcel": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Nichole": {
+          "ooo_days": 8,
+          "available_days": 7
+        },
+        "Ondrej": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Philippe": {
+          "ooo_days": 3,
+          "available_days": 12
+        },
+        "Rujuta": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "Shipra": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Simon": {
+          "ooo_days": 4,
+          "available_days": 11
+        },
+        "Sonia": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "Stevan": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Tibor": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Tim": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Vaclav": {
+          "ooo_days": 5,
+          "available_days": 10
+        },
+        "Vlad": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Vladimir L": {
+          "ooo_days": 0,
+          "available_days": 15
+        }
+      },
+      "teams": {
+        "QE": {
+          "members": [
+            "Anton",
+            "Daniel Villanueva",
+            "Tibor",
+            "Vladimir L"
+          ],
+          "ooo_days": 0,
+          "available_days": 60,
+          "member_count": 4,
+          "capacity_pct": 100.0
+        },
+        "Red Hat build of Podman Desktop": {
+          "members": [
+            "Axel",
+            "Charlie",
+            "Denis",
+            "Ondrej",
+            "Rujuta",
+            "Sonia"
+          ],
+          "ooo_days": 17,
+          "available_days": 73,
+          "member_count": 6,
+          "capacity_pct": 81.1
+        },
+        "Kaiden": {
+          "members": [
+            "Brian",
+            "Evzen",
+            "George",
+            "Jeff",
+            "Marcel"
+          ],
+          "ooo_days": 7,
+          "available_days": 68,
+          "member_count": 5,
+          "capacity_pct": 90.7
+        },
+        "Other": {
+          "members": [
+            "DV",
+            "Nichole"
+          ],
+          "ooo_days": 9,
+          "available_days": 21,
+          "member_count": 2,
+          "capacity_pct": 70.0
+        },
+        "Podman Desktop": {
+          "members": [
+            "Florent",
+            "Jiri",
+            "Philippe",
+            "Shipra",
+            "Simon",
+            "Stevan",
+            "Tim",
+            "Vaclav",
+            "Vlad"
+          ],
+          "ooo_days": 23,
+          "available_days": 112,
+          "member_count": 9,
+          "capacity_pct": 83.0
+        }
+      }
+    },
+    "Sprint 295": {
+      "total_working_days": 15,
+      "engineer_count": 26,
+      "total_ooo_days": 63,
+      "total_available_days": 327,
+      "total_capacity_days": 390,
+      "capacity_pct": 83.8,
+      "engineers": {
+        "Anton": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Axel": {
+          "ooo_days": 1,
+          "available_days": 14
+        },
+        "Brian": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Charlie": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Daniel Villanueva": {
+          "ooo_days": 5,
+          "available_days": 10
+        },
+        "Denis": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "DV": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Evzen": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Florent": {
+          "ooo_days": 7,
+          "available_days": 8
+        },
+        "George": {
+          "ooo_days": 2,
+          "available_days": 13
+        },
+        "Jeff": {
+          "ooo_days": 10,
+          "available_days": 5
+        },
+        "Jiri": {
+          "ooo_days": 5,
+          "available_days": 10
+        },
+        "Marcel": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Nichole": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Ondrej": {
+          "ooo_days": 7,
+          "available_days": 8
+        },
+        "Philippe": {
+          "ooo_days": 10,
+          "available_days": 5
+        },
+        "Rujuta": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Shipra": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Simon": {
+          "ooo_days": 6,
+          "available_days": 9
+        },
+        "Sonia": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Stevan": {
+          "ooo_days": 10,
+          "available_days": 5
+        },
+        "Tibor": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Tim": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Vaclav": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Vlad": {
+          "ooo_days": 0,
+          "available_days": 15
+        },
+        "Vladimir L": {
+          "ooo_days": 0,
+          "available_days": 15
+        }
+      },
+      "teams": {
+        "QE": {
+          "members": [
+            "Anton",
+            "Daniel Villanueva",
+            "Tibor",
+            "Vladimir L"
+          ],
+          "ooo_days": 5,
+          "available_days": 55,
+          "member_count": 4,
+          "capacity_pct": 91.7
+        },
+        "Red Hat build of Podman Desktop": {
+          "members": [
+            "Axel",
+            "Charlie",
+            "Denis",
+            "Ondrej",
+            "Rujuta",
+            "Sonia"
+          ],
+          "ooo_days": 8,
+          "available_days": 82,
+          "member_count": 6,
+          "capacity_pct": 91.1
+        },
+        "Kaiden": {
+          "members": [
+            "Brian",
+            "Evzen",
+            "George",
+            "Jeff",
+            "Marcel"
+          ],
+          "ooo_days": 12,
+          "available_days": 63,
+          "member_count": 5,
+          "capacity_pct": 84.0
+        },
+        "Other": {
+          "members": [
+            "DV",
+            "Nichole"
+          ],
+          "ooo_days": 0,
+          "available_days": 30,
+          "member_count": 2,
+          "capacity_pct": 100.0
+        },
+        "Podman Desktop": {
+          "members": [
+            "Florent",
+            "Jiri",
+            "Philippe",
+            "Shipra",
+            "Simon",
+            "Stevan",
+            "Tim",
+            "Vaclav",
+            "Vlad"
+          ],
+          "ooo_days": 38,
+          "available_days": 97,
+          "member_count": 9,
+          "capacity_pct": 71.9
+        }
+      }
+    },
+    "Sprint 296": {
+      "total_working_days": 16,
+      "engineer_count": 26,
+      "total_ooo_days": 69,
+      "total_available_days": 347,
+      "total_capacity_days": 416,
+      "capacity_pct": 83.4,
+      "engineers": {
+        "Anton": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Axel": {
+          "ooo_days": 7,
+          "available_days": 9
+        },
+        "Brian": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Charlie": {
+          "ooo_days": 3,
+          "available_days": 13
+        },
+        "Daniel Villanueva": {
+          "ooo_days": 5,
+          "available_days": 11
+        },
+        "Denis": {
+          "ooo_days": 3,
+          "available_days": 13
+        },
+        "DV": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Evzen": {
+          "ooo_days": 9,
+          "available_days": 7
+        },
+        "Florent": {
+          "ooo_days": 4,
+          "available_days": 12
+        },
+        "George": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Jeff": {
+          "ooo_days": 5,
+          "available_days": 11
+        },
+        "Jiri": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Marcel": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Nichole": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Ondrej": {
+          "ooo_days": 6,
+          "available_days": 10
+        },
+        "Philippe": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Rujuta": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Shipra": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Simon": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Sonia": {
+          "ooo_days": 5,
+          "available_days": 11
+        },
+        "Stevan": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Tibor": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Tim": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Vaclav": {
+          "ooo_days": 6,
+          "available_days": 10
+        },
+        "Vlad": {
+          "ooo_days": 1,
+          "available_days": 15
+        },
+        "Vladimir L": {
+          "ooo_days": 1,
+          "available_days": 15
+        }
+      },
+      "teams": {
+        "QE": {
+          "members": [
+            "Anton",
+            "Daniel Villanueva",
+            "Tibor",
+            "Vladimir L"
+          ],
+          "ooo_days": 8,
+          "available_days": 56,
+          "member_count": 4,
+          "capacity_pct": 87.5
+        },
+        "Red Hat build of Podman Desktop": {
+          "members": [
+            "Axel",
+            "Charlie",
+            "Denis",
+            "Ondrej",
+            "Rujuta",
+            "Sonia"
+          ],
+          "ooo_days": 25,
+          "available_days": 71,
+          "member_count": 6,
+          "capacity_pct": 74.0
+        },
+        "Kaiden": {
+          "members": [
+            "Brian",
+            "Evzen",
+            "George",
+            "Jeff",
+            "Marcel"
+          ],
+          "ooo_days": 17,
+          "available_days": 63,
+          "member_count": 5,
+          "capacity_pct": 78.8
+        },
+        "Other": {
+          "members": [
+            "DV",
+            "Nichole"
+          ],
+          "ooo_days": 2,
+          "available_days": 30,
+          "member_count": 2,
+          "capacity_pct": 93.8
+        },
+        "Podman Desktop": {
+          "members": [
+            "Florent",
+            "Jiri",
+            "Philippe",
+            "Shipra",
+            "Simon",
+            "Stevan",
+            "Tim",
+            "Vaclav",
+            "Vlad"
+          ],
+          "ooo_days": 17,
+          "available_days": 127,
+          "member_count": 9,
+          "capacity_pct": 88.2
+        }
+      }
+    },
+    "Sprint 297": {
+      "total_working_days": 16,
+      "engineer_count": 26,
+      "total_ooo_days": 14,
+      "total_available_days": 402,
+      "total_capacity_days": 416,
+      "capacity_pct": 96.6,
+      "engineers": {
+        "Anton": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Axel": {
+          "ooo_days": 3,
+          "available_days": 13
+        },
+        "Brian": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Charlie": {
+          "ooo_days": 3,
+          "available_days": 13
+        },
+        "Daniel Villanueva": {
+          "ooo_days": 5,
+          "available_days": 11
+        },
+        "Denis": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "DV": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Evzen": {
+          "ooo_days": 3,
+          "available_days": 13
+        },
+        "Florent": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "George": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Jeff": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Jiri": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Marcel": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Nichole": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Ondrej": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Philippe": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Rujuta": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Shipra": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Simon": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Sonia": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Stevan": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Tibor": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Tim": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vaclav": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vlad": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vladimir L": {
+          "ooo_days": 0,
+          "available_days": 16
+        }
+      },
+      "teams": {
+        "QE": {
+          "members": [
+            "Anton",
+            "Daniel Villanueva",
+            "Tibor",
+            "Vladimir L"
+          ],
+          "ooo_days": 5,
+          "available_days": 59,
+          "member_count": 4,
+          "capacity_pct": 92.2
+        },
+        "Red Hat build of Podman Desktop": {
+          "members": [
+            "Axel",
+            "Charlie",
+            "Denis",
+            "Ondrej",
+            "Rujuta",
+            "Sonia"
+          ],
+          "ooo_days": 6,
+          "available_days": 90,
+          "member_count": 6,
+          "capacity_pct": 93.8
+        },
+        "Kaiden": {
+          "members": [
+            "Brian",
+            "Evzen",
+            "George",
+            "Jeff",
+            "Marcel"
+          ],
+          "ooo_days": 3,
+          "available_days": 77,
+          "member_count": 5,
+          "capacity_pct": 96.2
+        },
+        "Other": {
+          "members": [
+            "DV",
+            "Nichole"
+          ],
+          "ooo_days": 0,
+          "available_days": 32,
+          "member_count": 2,
+          "capacity_pct": 100.0
+        },
+        "Podman Desktop": {
+          "members": [
+            "Florent",
+            "Jiri",
+            "Philippe",
+            "Shipra",
+            "Simon",
+            "Stevan",
+            "Tim",
+            "Vaclav",
+            "Vlad"
+          ],
+          "ooo_days": 0,
+          "available_days": 144,
+          "member_count": 9,
+          "capacity_pct": 100.0
+        }
+      }
+    }
+  },
+  "projected_availability": {
+    "Sprint 297": {
+      "total_working_days": 16,
+      "engineer_count": 26,
+      "total_ooo_days": 14,
+      "total_available_days": 402,
+      "total_capacity_days": 416,
+      "capacity_pct": 96.6,
+      "engineers": {
+        "Anton": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Axel": {
+          "ooo_days": 3,
+          "available_days": 13
+        },
+        "Brian": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Charlie": {
+          "ooo_days": 3,
+          "available_days": 13
+        },
+        "Daniel Villanueva": {
+          "ooo_days": 5,
+          "available_days": 11
+        },
+        "Denis": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "DV": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Evzen": {
+          "ooo_days": 3,
+          "available_days": 13
+        },
+        "Florent": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "George": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Jeff": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Jiri": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Marcel": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Nichole": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Ondrej": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Philippe": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Rujuta": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Shipra": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Simon": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Sonia": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Stevan": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Tibor": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Tim": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vaclav": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vlad": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vladimir L": {
+          "ooo_days": 0,
+          "available_days": 16
+        }
+      },
+      "teams": {
+        "QE": {
+          "members": [
+            "Anton",
+            "Daniel Villanueva",
+            "Tibor",
+            "Vladimir L"
+          ],
+          "ooo_days": 5,
+          "available_days": 59,
+          "member_count": 4,
+          "capacity_pct": 92.2
+        },
+        "Red Hat build of Podman Desktop": {
+          "members": [
+            "Axel",
+            "Charlie",
+            "Denis",
+            "Ondrej",
+            "Rujuta",
+            "Sonia"
+          ],
+          "ooo_days": 6,
+          "available_days": 90,
+          "member_count": 6,
+          "capacity_pct": 93.8
+        },
+        "Kaiden": {
+          "members": [
+            "Brian",
+            "Evzen",
+            "George",
+            "Jeff",
+            "Marcel"
+          ],
+          "ooo_days": 3,
+          "available_days": 77,
+          "member_count": 5,
+          "capacity_pct": 96.2
+        },
+        "Other": {
+          "members": [
+            "DV",
+            "Nichole"
+          ],
+          "ooo_days": 0,
+          "available_days": 32,
+          "member_count": 2,
+          "capacity_pct": 100.0
+        },
+        "Podman Desktop": {
+          "members": [
+            "Florent",
+            "Jiri",
+            "Philippe",
+            "Shipra",
+            "Simon",
+            "Stevan",
+            "Tim",
+            "Vaclav",
+            "Vlad"
+          ],
+          "ooo_days": 0,
+          "available_days": 144,
+          "member_count": 9,
+          "capacity_pct": 100.0
+        }
+      }
+    },
+    "Sprint 298": {
+      "total_working_days": 16,
+      "engineer_count": 26,
+      "total_ooo_days": 0,
+      "total_available_days": 416,
+      "total_capacity_days": 416,
+      "capacity_pct": 100.0,
+      "engineers": {
+        "Anton": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Axel": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Brian": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Charlie": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Daniel Villanueva": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Denis": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "DV": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Evzen": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Florent": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "George": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Jeff": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Jiri": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Marcel": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Nichole": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Ondrej": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Philippe": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Rujuta": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Shipra": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Simon": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Sonia": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Stevan": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Tibor": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Tim": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vaclav": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vlad": {
+          "ooo_days": 0,
+          "available_days": 16
+        },
+        "Vladimir L": {
+          "ooo_days": 0,
+          "available_days": 16
+        }
+      },
+      "teams": {
+        "QE": {
+          "members": [
+            "Anton",
+            "Daniel Villanueva",
+            "Tibor",
+            "Vladimir L"
+          ],
+          "ooo_days": 0,
+          "available_days": 64,
+          "member_count": 4,
+          "capacity_pct": 100.0
+        },
+        "Red Hat build of Podman Desktop": {
+          "members": [
+            "Axel",
+            "Charlie",
+            "Denis",
+            "Ondrej",
+            "Rujuta",
+            "Sonia"
+          ],
+          "ooo_days": 0,
+          "available_days": 96,
+          "member_count": 6,
+          "capacity_pct": 100.0
+        },
+        "Kaiden": {
+          "members": [
+            "Brian",
+            "Evzen",
+            "George",
+            "Jeff",
+            "Marcel"
+          ],
+          "ooo_days": 0,
+          "available_days": 80,
+          "member_count": 5,
+          "capacity_pct": 100.0
+        },
+        "Other": {
+          "members": [
+            "DV",
+            "Nichole"
+          ],
+          "ooo_days": 0,
+          "available_days": 32,
+          "member_count": 2,
+          "capacity_pct": 100.0
+        },
+        "Podman Desktop": {
+          "members": [
+            "Florent",
+            "Jiri",
+            "Philippe",
+            "Shipra",
+            "Simon",
+            "Stevan",
+            "Tim",
+            "Vaclav",
+            "Vlad"
+          ],
+          "ooo_days": 0,
+          "available_days": 144,
+          "member_count": 9,
+          "capacity_pct": 100.0
+        }
+      }
+    }
+  },
+  "upcoming_sprints": [
+    {
+      "title": "Sprint 297",
+      "start_date": "2026-09-02",
+      "duration": 21
+    },
+    {
+      "title": "Sprint 298",
+      "start_date": "2026-09-23",
+      "duration": 21
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+config.json
+refresh.sh
+__pycache__/
+*.log
+*.pyc
