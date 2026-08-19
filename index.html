@@ -225,8 +225,14 @@ function renderProject(pn) {
   const prm = proj.pr_metrics || {};
   const prSprints = prm.sprints || {};
   const sprintNames = Object.keys(sprints).sort();
-  const latest = sprintNames[sprintNames.length-1];
-  const prevN = sprintNames.length>1 ? sprintNames[sprintNames.length-2] : null;
+  const today = new Date(); today.setHours(0,0,0,0);
+  let latest = sprintNames[sprintNames.length-1];
+  for(let i=sprintNames.length-1;i>=0;i--){
+    const s=sprints[sprintNames[i]],sd=new Date(s.start_date+'T00:00:00');
+    if(sd<=today){latest=sprintNames[i];break;}
+  }
+  const latestIdx = sprintNames.indexOf(latest);
+  const prevN = latestIdx>0 ? sprintNames[latestIdx-1] : null;
 
   document.getElementById('generated-at').textContent = 'Last updated: '+new Date(DATA.generated_at).toLocaleString();
 
@@ -371,7 +377,7 @@ function renderProject(pn) {
   ml('legend-contributors',sprintNames.map((sn,i)=>({color:c.series[i%8],label:sn,type:'rect'})));
 
   // ===== PR METRICS =====
-  const prSprintNames = sprintNames.filter(sn => (prSprints[sn]?.total_prs||0) > 0);
+  const prSprintNames = sprintNames.slice(0, latestIdx+1).filter(sn => (prSprints[sn]?.total_prs||0) > 0);
   const latestPRName = prSprintNames.length ? prSprintNames[prSprintNames.length-1] : latest;
   const prevPRName = prSprintNames.length>1 ? prSprintNames[prSprintNames.length-2] : null;
   const latestPR = prSprints[latestPRName] || {};
