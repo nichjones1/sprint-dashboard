@@ -170,7 +170,6 @@
   </div>
   <div class="chart-grid">
     <div class="chart-card"><h2>Draft PRs</h2><p class="subtitle">Open draft PRs by developer</p><div class="scroll-table-wrap" id="draft-prs-container"></div></div>
-    <div class="chart-card"><h2>Weekly PR Extremes</h2><p class="subtitle" id="extremes-subtitle">Current sprint</p><div class="scroll-table-wrap" id="weekly-extremes-container"></div></div>
   </div>
 </div>
 
@@ -503,26 +502,6 @@ function renderProject(pn) {
     document.getElementById('draft-prs-container').innerHTML='<p style="color:var(--text-muted);font-size:13px">No open draft PRs</p>';
   }
 
-  // Weekly PR Extremes
-  document.getElementById('extremes-subtitle').textContent = latestPRName;
-  const wk = latestPR.weekly_extremes || {};
-  const weeks = Object.keys(wk).sort();
-  if(weeks.length){
-    let wh='<table class="data-table"><thead><tr><th>Week</th><th>Longest</th><th>Time</th><th>Shortest</th><th>Time</th></tr></thead><tbody>';
-    for(const w of weeks){
-      const e=wk[w];
-      const ln=e.longest, sh=e.shortest;
-      wh+=`<tr><td class="mono">${w}</td>
-        <td style="font-size:12px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${ln?.title||''}"><a href="https://github.com/${ghOrg}/${ln?.repo}/pull/${ln?.number}" target="_blank" rel="noopener">${ln?.repo||''}#${ln?.number||''}</a></td>
-        <td class="mono" style="font-weight:600">${fmtHours(ln?.hours||0)}</td>
-        <td style="font-size:12px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${sh?.title||''}"><a href="https://github.com/${ghOrg}/${sh?.repo}/pull/${sh?.number}" target="_blank" rel="noopener">${sh?.repo||''}#${sh?.number||''}</a></td>
-        <td class="mono" style="font-weight:600">${fmtHours(sh?.hours||0)}</td></tr>`;
-    }
-    wh+='</tbody></table>';
-    document.getElementById('weekly-extremes-container').innerHTML=wh;
-  } else {
-    document.getElementById('weekly-extremes-container').innerHTML='<p style="color:var(--text-muted);font-size:13px">No data</p>';
-  }
 }
 
 async function loadData(){
