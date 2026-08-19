@@ -920,8 +920,6 @@ def main():
             if is_sprint_frozen(sd["start_date"], sd["duration"]):
                 if sn in prev_sprints and not prev_sprints[sn].get("frozen_at"):
                     proj_data["sprints"][sn] = prev_sprints[sn]
-                    if sn in prev_pr_sprints:
-                        proj_data["pr_metrics"]["sprints"][sn] = prev_pr_sprints[sn]
                 proj_data["sprints"][sn]["frozen_at"] = datetime.now().isoformat()
                 print(f"  {sn}: freezing now")
 
