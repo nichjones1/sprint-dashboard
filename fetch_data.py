@@ -694,6 +694,12 @@ def compute_pr_metrics(all_prs, sprint_windows):
             if weekly[iso_week]["shortest"] is None or merge_time < weekly[iso_week]["shortest"]["hours"]:
                 weekly[iso_week]["shortest"] = entry
 
+        # Per-author merged PR count
+        author_merged = {}
+        for pr in merged:
+            a = pr["author"]
+            author_merged[a] = author_merged.get(a, 0) + 1
+
         # Reviewer activity
         reviewer_approvals = {}
         reviewer_approval_bdays = {}
@@ -767,6 +773,9 @@ def compute_pr_metrics(all_prs, sprint_windows):
             "time_to_merge": stats(times_to_merge),
             "time_to_address_comments": stats(times_to_address),
             "weekly_extremes": dict(sorted(weekly.items())),
+            "author_merged_prs": dict(
+                sorted(author_merged.items(), key=lambda x: -x[1])
+            ),
             "reviewer_approvals": dict(
                 sorted(reviewer_approvals.items(), key=lambda x: -x[1])
             ),

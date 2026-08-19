@@ -147,7 +147,7 @@
   </div>
   <div id="sec-contributors"></div>
   <div class="chart-grid full">
-    <div class="chart-card"><h2>Top Contributors</h2><p class="subtitle">Issues assigned per sprint (top 10)</p><div class="chart-wrap"><canvas id="chart-contributors" height="320"></canvas></div><div class="legend" id="legend-contributors"></div></div>
+    <div class="chart-card"><h2>Top Contributors</h2><p class="subtitle">PRs merged per sprint (top 10)</p><div class="chart-wrap"><canvas id="chart-contributors" height="320"></canvas></div><div class="legend" id="legend-contributors"></div></div>
   </div>
 
   <!-- PR Metrics -->
@@ -368,11 +368,11 @@ function renderProject(pn) {
     projTab.style.display='none';
   }
 
-  // Top contributors
-  const allA=new Map();for(const sn of sprintNames)for(const[a,n]of Object.entries(sprints[sn].assignees||{}))allA.set(a,(allA.get(a)||0)+n);
+  // Top contributors (PRs merged)
+  const allA=new Map();for(const sn of sprintNames)for(const[a,n]of Object.entries(prSprints[sn]?.author_merged_prs||{}))allA.set(a,(allA.get(a)||0)+n);
   const topC=[...allA.entries()].sort((a,b)=>b[1]-a[1]).slice(0,10).map(([k])=>k);
   dc('chart-contributors');
-  charts['chart-contributors']=new Chart(document.getElementById('chart-contributors'),{type:'bar',data:{labels:topC,datasets:sprintNames.map((sn,i)=>({label:sn,data:topC.map(a=>sprints[sn].assignees?.[a]||0),backgroundColor:c.series[i%8],borderRadius:4,barThickness:14}))},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index'}}}});
+  charts['chart-contributors']=new Chart(document.getElementById('chart-contributors'),{type:'bar',data:{labels:topC,datasets:sprintNames.map((sn,i)=>({label:sn,data:topC.map(a=>prSprints[sn]?.author_merged_prs?.[a]||0),backgroundColor:c.series[i%8],borderRadius:4,barThickness:14}))},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index'}}}});
   ml('legend-contributors',sprintNames.map((sn,i)=>({color:c.series[i%8],label:sn,type:'rect'})));
 
   // ===== PR METRICS =====
