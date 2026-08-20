@@ -156,7 +156,7 @@
   <div class="kpi-row" id="pr-kpi-row"></div>
   <div class="chart-grid">
     <div class="chart-card"><h2>PR Cycle Time Trend</h2><p class="subtitle">Hours (median) across sprints</p><div class="chart-wrap"><canvas id="chart-pr-cycle" height="260"></canvas></div><div class="legend" id="legend-pr-cycle"></div></div>
-    <div class="chart-card"><h2>Reviewer Activity</h2><p class="subtitle" id="reviewer-subtitle">Approvals per developer, current sprint</p><div class="chart-wrap"><canvas id="chart-reviewer" height="260"></canvas></div></div>
+    <div class="chart-card"><h2>Reviewer Activity</h2><p class="subtitle" id="reviewer-subtitle">Approvals per developer, current sprint</p><div class="chart-wrap" id="reviewer-wrap"><canvas id="chart-reviewer"></canvas></div></div>
   </div>
   <div class="chart-grid">
     <div class="chart-card"><h2>PRs per Domain</h2><p class="subtitle" id="domain-pr-subtitle">Total vs authored by domain owner, current sprint</p><div class="chart-wrap"><canvas id="chart-domain-prs" height="260"></canvas></div><div class="legend" id="legend-domain-prs"></div></div>
@@ -413,7 +413,12 @@ function renderProject(pn) {
   const revAppr = latestPR.reviewer_approvals || {};
   const topRev = Object.entries(revAppr).sort((a,b)=>b[1]-a[1]).slice(0,15);
   dc('chart-reviewer');
-  if(topRev.length)charts['chart-reviewer']=new Chart(document.getElementById('chart-reviewer'),{type:'bar',data:{labels:topRev.map(([k])=>k),datasets:[{data:topRev.map(([,v])=>v),backgroundColor:c.series[0],borderRadius:4,barThickness:18}]},options:{...dOpts(c),indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true},y:{...dOpts(c).scales.y,ticks:{...dOpts(c).scales.y.ticks,autoSkip:false},grid:{display:false}}}}});
+  const revWrap=document.getElementById('reviewer-wrap');
+  const revCanvas=document.getElementById('chart-reviewer');
+  const revH=Math.max(260,topRev.length*32+40);
+  revWrap.style.height=revH+'px';
+  revCanvas.style.height=revH+'px';
+  if(topRev.length)charts['chart-reviewer']=new Chart(revCanvas,{type:'bar',data:{labels:topRev.map(([k])=>k),datasets:[{data:topRev.map(([,v])=>v),backgroundColor:c.series[0],borderRadius:4,barThickness:18}]},options:{...dOpts(c),maintainAspectRatio:false,indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true},y:{...dOpts(c).scales.y,ticks:{...dOpts(c).scales.y.ticks,autoSkip:false},grid:{display:false}}}}});
 
   // PRs per Domain (stacked: owner-authored vs others)
   document.getElementById('domain-pr-subtitle').textContent = latest;
