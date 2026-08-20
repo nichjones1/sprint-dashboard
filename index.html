@@ -158,8 +158,10 @@
     <div class="chart-card"><h2>PR Cycle Time Trend</h2><p class="subtitle">Hours (median) across sprints</p><div class="chart-wrap"><canvas id="chart-pr-cycle" height="260"></canvas></div><div class="legend" id="legend-pr-cycle"></div></div>
     <div class="chart-card"><h2>Reviewer Activity</h2><p class="subtitle" id="reviewer-subtitle">Approvals per developer, current sprint</p><div class="chart-wrap" id="reviewer-wrap"><canvas id="chart-reviewer"></canvas></div></div>
   </div>
-  <div class="chart-grid">
-    <div class="chart-card"><h2>PRs per Domain</h2><p class="subtitle" id="domain-pr-subtitle">Total vs authored by domain owner, current sprint</p><div class="chart-wrap"><canvas id="chart-domain-prs" height="260"></canvas></div><div class="legend" id="legend-domain-prs"></div></div>
+  <div class="chart-grid full">
+    <div class="chart-card"><h2>PRs per Domain</h2><p class="subtitle" id="domain-pr-subtitle">Total vs authored by domain owner, current sprint</p><div class="chart-wrap" id="domain-prs-wrap"><canvas id="chart-domain-prs"></canvas></div><div class="legend" id="legend-domain-prs"></div></div>
+  </div>
+  <div class="chart-grid full">
     <div class="chart-card"><h2>Avg Time to Approval by Domain</h2><p class="subtitle">Hours, current sprint</p><div class="chart-wrap" id="domain-time-wrap"><canvas id="chart-domain-time"></canvas></div></div>
   </div>
   <div class="chart-grid full">
@@ -424,12 +426,17 @@ function renderProject(pn) {
   document.getElementById('domain-pr-subtitle').textContent = latest;
   const domPrs = latestPR.domain_pr_count || {};
   const domOwnAuth = latestPR.domain_owner_authored || {};
-  const domEntries = Object.entries(domPrs).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  const domEntries = Object.entries(domPrs).sort((a,b)=>b[1]-a[1]);
   dc('chart-domain-prs');
-  if(domEntries.length)charts['chart-domain-prs']=new Chart(document.getElementById('chart-domain-prs'),{type:'bar',data:{labels:domEntries.map(([k])=>k),datasets:[
+  const dpWrap=document.getElementById('domain-prs-wrap');
+  const dpCanvas=document.getElementById('chart-domain-prs');
+  const dpH=Math.max(260,domEntries.length*32+40);
+  dpWrap.style.height=dpH+'px';
+  dpCanvas.style.height=dpH+'px';
+  if(domEntries.length)charts['chart-domain-prs']=new Chart(dpCanvas,{type:'bar',data:{labels:domEntries.map(([k])=>k),datasets:[
     {label:'By Domain Owner',data:domEntries.map(([k])=>domOwnAuth[k]||0),backgroundColor:c.series[0],borderRadius:0,barThickness:18},
     {label:'By Others',data:domEntries.map(([k,v])=>v-(domOwnAuth[k]||0)),backgroundColor:c.series[0]+'33',borderRadius:{topLeft:0,topRight:4,bottomLeft:0,bottomRight:4},barThickness:18},
-  ]},options:{...dOpts(c),indexAxis:'y',plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{afterBody:(items)=>{const i=items[0].dataIndex;const[dom,total]=domEntries[i];const own=domOwnAuth[dom]||0;return `${total} total • ${total?Math.round(own/total*100):0}% by owner`}}}},scales:{x:{...dOpts(c).scales.x,stacked:true,beginAtZero:true},y:{...dOpts(c).scales.y,stacked:true,grid:{display:false}}}}});
+  ]},options:{...dOpts(c),maintainAspectRatio:false,indexAxis:'y',plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{afterBody:(items)=>{const i=items[0].dataIndex;const[dom,total]=domEntries[i];const own=domOwnAuth[dom]||0;return `${total} total • ${total?Math.round(own/total*100):0}% by owner`}}}},scales:{x:{...dOpts(c).scales.x,stacked:true,beginAtZero:true},y:{...dOpts(c).scales.y,stacked:true,ticks:{...dOpts(c).scales.y.ticks,autoSkip:false},grid:{display:false}}}}});
   ml('legend-domain-prs',[{color:c.series[0],label:'By Domain Owner',type:'rect'},{color:c.series[0]+'33',label:'By Others',type:'rect'}]);
 
   // Domain Avg Approval Time
