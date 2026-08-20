@@ -160,7 +160,7 @@
   </div>
   <div class="chart-grid">
     <div class="chart-card"><h2>PRs per Domain</h2><p class="subtitle" id="domain-pr-subtitle">Total vs authored by domain owner, current sprint</p><div class="chart-wrap"><canvas id="chart-domain-prs" height="260"></canvas></div><div class="legend" id="legend-domain-prs"></div></div>
-    <div class="chart-card"><h2>Avg Time to Approval by Domain</h2><p class="subtitle">Hours, current sprint</p><div class="chart-wrap"><canvas id="chart-domain-time" height="260"></canvas></div></div>
+    <div class="chart-card"><h2>Avg Time to Approval by Domain</h2><p class="subtitle">Hours, current sprint</p><div class="chart-wrap" id="domain-time-wrap"><canvas id="chart-domain-time"></canvas></div></div>
   </div>
   <div class="chart-grid full">
     <div class="chart-card"><details class="collapsible"><summary><h2>Avg Time to Approval by Engineer</h2><span class="subtitle" style="margin-bottom:0" id="eng-approval-subtitle">Hours from PR creation to approval, current sprint</span></summary><div class="collapse-body"><div class="chart-wrap" id="eng-approval-wrap"><canvas id="chart-eng-approval"></canvas></div></div></details></div>
@@ -434,9 +434,14 @@ function renderProject(pn) {
 
   // Domain Avg Approval Time
   const domTime = latestPR.domain_avg_approval_hours || {};
-  const dtEntries = Object.entries(domTime).sort((a,b)=>a[1]-b[1]).slice(0,12);
+  const dtEntries = Object.entries(domTime).sort((a,b)=>a[1]-b[1]);
   dc('chart-domain-time');
-  if(dtEntries.length)charts['chart-domain-time']=new Chart(document.getElementById('chart-domain-time'),{type:'bar',data:{labels:dtEntries.map(([k])=>k),datasets:[{data:dtEntries.map(([,v])=>v),backgroundColor:c.series[3],borderRadius:4,barThickness:18}]},options:{...dOpts(c),indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true,title:{display:true,text:'Hours',color:c.muted}},y:{...dOpts(c).scales.y,grid:{display:false}}}}});
+  const dtWrap=document.getElementById('domain-time-wrap');
+  const dtCanvas=document.getElementById('chart-domain-time');
+  const dtH=Math.max(260,dtEntries.length*32+40);
+  dtWrap.style.height=dtH+'px';
+  dtCanvas.style.height=dtH+'px';
+  if(dtEntries.length)charts['chart-domain-time']=new Chart(dtCanvas,{type:'bar',data:{labels:dtEntries.map(([k])=>k),datasets:[{data:dtEntries.map(([,v])=>v),backgroundColor:c.series[3],borderRadius:4,barThickness:18}]},options:{...dOpts(c),maintainAspectRatio:false,indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true,title:{display:true,text:'Hours',color:c.muted}},y:{...dOpts(c).scales.y,ticks:{...dOpts(c).scales.y.ticks,autoSkip:false},grid:{display:false}}}}});
 
   // Avg Time to Approval by Engineer (rolling average across all sprints, business days)
   document.getElementById('eng-approval-subtitle').textContent = `Business days from PR creation to approval, rolling avg across ${sprintNames.length} sprints`;
