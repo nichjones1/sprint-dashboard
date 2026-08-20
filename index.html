@@ -413,7 +413,7 @@ function renderProject(pn) {
   const revAppr = latestPR.reviewer_approvals || {};
   const topRev = Object.entries(revAppr).sort((a,b)=>b[1]-a[1]).slice(0,15);
   dc('chart-reviewer');
-  if(topRev.length)charts['chart-reviewer']=new Chart(document.getElementById('chart-reviewer'),{type:'bar',data:{labels:topRev.map(([k])=>k),datasets:[{data:topRev.map(([,v])=>v),backgroundColor:c.series[0],borderRadius:4,barThickness:18}]},options:{...dOpts(c),indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true},y:{...dOpts(c).scales.y,grid:{display:false}}}}});
+  if(topRev.length)charts['chart-reviewer']=new Chart(document.getElementById('chart-reviewer'),{type:'bar',data:{labels:topRev.map(([k])=>k),datasets:[{data:topRev.map(([,v])=>v),backgroundColor:c.series[0],borderRadius:4,barThickness:18}]},options:{...dOpts(c),indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true},y:{...dOpts(c).scales.y,ticks:{...dOpts(c).scales.y.ticks,autoSkip:false},grid:{display:false}}}}});
 
   // PRs per Domain (stacked: owner-authored vs others)
   document.getElementById('domain-pr-subtitle').textContent = latest;
