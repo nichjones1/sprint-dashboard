@@ -829,21 +829,7 @@ def compute_pr_metrics(all_prs, sprint_windows):
             sorted(r_domain_prs.items(), key=lambda x: -x[1])
         )
 
-    # Draft PRs snapshot (current state, not per-sprint)
-    draft_prs = {}
-    for pr in all_prs:
-        if pr["is_draft"] and pr["state"] == "OPEN" and not pr["is_bot"]:
-            a = pr["author"]
-            if a not in draft_prs:
-                draft_prs[a] = []
-            draft_prs[a].append({
-                "repo": pr["repo"],
-                "number": pr["number"],
-                "title": pr["title"],
-                "created_at": pr["created_at"],
-            })
-
-    return {"sprints": metrics, "draft_prs": draft_prs, **rolling}
+    return {"sprints": metrics, **rolling}
 
 
 def main():

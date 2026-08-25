@@ -172,9 +172,6 @@
   <div class="chart-grid full">
     <div class="chart-card"><details class="collapsible"><summary><h2>Domain Approval Ownership</h2><span class="subtitle" style="margin-bottom:0">Rolling 3 months &mdash; share of approvals per reviewer within each domain</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-secondary);margin-bottom:12px;cursor:pointer"><input type="checkbox" id="bot-toggle"> Include bot PRs</label><div id="domain-ownership-container"></div></div></details></div>
   </div>
-  <div class="chart-grid">
-    <div class="chart-card"><h2>Draft PRs</h2><p class="subtitle">Open draft PRs by developer</p><div class="scroll-table-wrap" id="draft-prs-container"></div></div>
-  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
@@ -401,7 +398,6 @@ function renderProject(pn) {
     <div class="stat-tile"><div class="label">Median First Review</div><div class="value small">${fmtHours(tfr.median)}</div>${deltaH(tfr.median,prevTfr?.median)}</div>
     <div class="stat-tile"><div class="label">Median Time to Merge</div><div class="value small">${fmtHours(ttm.median)}</div>${deltaH(ttm.median,prevTtm?.median)}</div>
     <div class="stat-tile"><div class="label">Median Comment Response</div><div class="value small">${fmtHours(tta.median)}</div><div class="delta delta-neutral">${tta.count} PRs w/ changes requested</div></div>
-    <div class="stat-tile"><div class="label">Draft PRs Open</div><div class="value">${Object.values(prm.draft_prs||{}).reduce((s,v)=>s+v.length,0)}</div><div class="delta delta-neutral">${Object.keys(prm.draft_prs||{}).length} developers</div></div>
   `;
 
   // PR Cycle Time Trend (line chart)
@@ -506,20 +502,6 @@ function renderProject(pn) {
     else renderDomainOwnership(rollingOwn, rollingPrCount);
   };
 
-  // Draft PRs table
-  const drafts = prm.draft_prs || {};
-  const draftEntries = Object.entries(drafts).sort((a,b)=>b[1].length-a[1].length);
-  if(draftEntries.length){
-    let dh='<table class="data-table"><thead><tr><th>Developer</th><th>Count</th><th>PRs</th></tr></thead><tbody>';
-    for(const[dev,prs]of draftEntries){
-      const prList=prs.map(p=>`<a href="https://github.com/${ghOrg}/${p.repo}/pull/${p.number}" target="_blank" rel="noopener">${p.repo}#${p.number}</a>`).join(', ');
-      dh+=`<tr><td style="font-weight:500">${dev}</td><td><span class="ooo-badge" style="background:var(--series-7)">${prs.length}</span></td><td style="font-size:12px;color:var(--text-secondary)">${prList}</td></tr>`;
-    }
-    dh+='</tbody></table>';
-    document.getElementById('draft-prs-container').innerHTML=dh;
-  } else {
-    document.getElementById('draft-prs-container').innerHTML='<p style="color:var(--text-muted);font-size:13px">No open draft PRs</p>';
-  }
 
 }
 
