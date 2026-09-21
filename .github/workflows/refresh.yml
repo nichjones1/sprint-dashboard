@@ -21,26 +21,21 @@ jobs:
       - run: pip install cryptography certifi
 
       - name: Generate config
+        env:
+          SPRINT_GITHUB_TOKEN: ${{ secrets.SPRINT_GITHUB_TOKEN }}
         run: |
-          cat > config.json <<'TEMPLATE'
-          {
-            "github_token": "${{ secrets.SPRINT_GITHUB_TOKEN }}",
-            "projects": [
-              {
-                "name": "Podman Desktop",
-                "github_org": "podman-desktop",
-                "github_project_number": 4
-              },
-              {
-                "name": "Kaiden",
-                "github_org": "openkaiden",
-                "github_project_number": 1
-              }
+          python -c "
+          import json, os
+          json.dump({
+            'github_token': os.environ['SPRINT_GITHUB_TOKEN'],
+            'projects': [
+              {'name': 'Podman Desktop', 'github_org': 'podman-desktop', 'github_project_number': 4},
+              {'name': 'Kaiden', 'github_org': 'openkaiden', 'github_project_number': 1}
             ],
-            "google_sa_key_path": "",
-            "google_sheet_id": "1hMVvP2gUUwVjYDJapFZEcxge4bZi990r0xoihwv-l1E"
-          }
-          TEMPLATE
+            'google_sa_key_path': '',
+            'google_sheet_id': '1hMVvP2gUUwVjYDJapFZEcxge4bZi990r0xoihwv-l1E'
+          }, open('config.json', 'w'), indent=2)
+          "
 
       - name: Fetch data
         env:
