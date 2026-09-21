@@ -43,8 +43,12 @@ def github_graphql(token, query, variables=None):
 
 
 def google_access_token(sa_key_path):
-    with open(sa_key_path) as f:
-        creds = json.load(f)
+    sa_key_json = os.environ.get("GOOGLE_SA_KEY_JSON")
+    if sa_key_json:
+        creds = json.loads(sa_key_json)
+    else:
+        with open(sa_key_path) as f:
+            creds = json.load(f)
 
     header = base64.urlsafe_b64encode(
         json.dumps({"alg": "RS256", "typ": "JWT"}).encode()
