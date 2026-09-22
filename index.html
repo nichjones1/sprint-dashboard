@@ -507,7 +507,7 @@ function renderProject(pn) {
 
 async function loadData(){
   try{
-    const r=await fetch('sprint_data.json?t='+Date.now());
+    const r=await fetch('sprint_data.json?v='+Date.now(),{cache:'no-store'});
     DATA=await r.json();
     const pn=Object.keys(DATA.projects);
     document.getElementById('project-tabs').innerHTML=pn.map(n=>`<button class="project-tab" data-project="${n}" onclick="selectProject('${n}')">${n}</button>`).join('');
