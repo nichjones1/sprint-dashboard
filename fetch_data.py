@@ -39,7 +39,10 @@ def github_graphql(token, query, variables=None):
     req.add_header("Authorization", f"bearer {token}")
     req.add_header("Content-Type", "application/json")
     resp = urllib.request.urlopen(req, context=SSL_CTX)
-    return json.loads(resp.read())
+    result = json.loads(resp.read())
+    if "errors" in result:
+        print(f"GraphQL errors: {json.dumps(result['errors'], indent=2)}", file=sys.stderr)
+    return result
 
 
 def google_access_token(sa_key_path):
