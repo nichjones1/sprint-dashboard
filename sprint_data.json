@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T14:12:04.510379",
+  "generated_at": "2026-09-23T15:11:42.023482",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -7,21 +7,21 @@
         "Sprint 298": {
           "start_date": "2026-09-23",
           "duration": 21,
-          "total_items": 172,
-          "done_items": 5,
-          "total_story_points": 167.0,
+          "total_items": 165,
+          "done_items": 7,
+          "total_story_points": 159.0,
           "done_story_points": 4.0,
           "statuses": {
-            "\ud83d\udea7 In Progress": 29,
-            "\ud83d\udcc5 Planned": 95,
+            "\ud83d\udea7 In Progress": 27,
+            "\ud83d\udcc5 Planned": 89,
             "\ud83d\udea5 In Review": 28,
-            "\u2714\ufe0f Done": 5,
-            "\ud83d\udccb Backlog": 11,
+            "\u2714\ufe0f Done": 7,
+            "\ud83d\udccb Backlog": 10,
             "\u23f3On Hold": 4
           },
           "goals": {
-            "QE": 46,
-            "Uncategorized": 91,
+            "QE": 38,
+            "Uncategorized": 92,
             "Design": 11,
             "Bug Fix": 7,
             "Technical Debt": 4,
@@ -31,11 +31,11 @@
             "Podman Feature": 2
           },
           "priorities": {
-            "\ud83c\udfd4 High": 27,
+            "\ud83c\udfd4 High": 26,
             "None": 65,
             "\ud83c\udf0b Urgent": 2,
             "\ud83c\udfdd Low": 14,
-            "\ud83c\udfd5 Medium": 56,
+            "\ud83c\udfd5 Medium": 50,
             "Critical": 8
           },
           "assignees": {
@@ -43,29 +43,30 @@
             "ScrewTSW": 12,
             "0xKalasi": 10,
             "JustMell0": 10,
+            "axel7083": 9,
             "cbr7": 9,
             "SoniaSandler": 9,
             "gastoner": 9,
             "odockal": 9,
             "cdrage": 8,
             "dgolovin": 8,
-            "axel7083": 8,
             "feloy": 8,
             "danivilla9": 7,
             "simonrey1": 6,
-            "rohit-redhat": 5
+            "serbangeorge-m": 6
           },
           "repos": {
-            "podman-desktop": 122,
+            "podman-desktop": 115,
             "podman-desktop-internal": 20,
-            "e2e": 11,
+            "e2e": 10,
             "podman-desktop-redhat-account-ext": 6,
             "extension-kubernetes-dashboard": 5,
             "extension-bootc": 3,
             "crc-extension": 2,
             "podman-desktop-extension-ai-lab": 1,
             "podman-desktop-rhel-ext": 1,
-            "podman-desktop-hummingbird-ext": 1
+            "podman-desktop-hummingbird-ext": 1,
+            "extension-podman-quadlet": 1
           }
         },
         "Sprint 297": {
@@ -271,26 +272,27 @@
         "Sprint 299": {
           "start_date": "2026-10-14",
           "duration": 21,
-          "total_items": 15,
+          "total_items": 24,
           "done_items": 0,
-          "total_story_points": 10.0,
+          "total_story_points": 19.0,
           "done_story_points": 0,
           "statuses": {
             "\u23f3On Hold": 4,
             "None": 3,
-            "\ud83d\udccb Backlog": 2,
-            "\ud83d\udcc5 Planned": 5,
+            "\ud83d\udccb Backlog": 3,
+            "\ud83d\udcc5 Planned": 13,
             "\ud83d\udea5 In Review": 1
           },
           "goals": {
             "Documentation": 1,
-            "Uncategorized": 14
+            "Uncategorized": 14,
+            "QE": 9
           },
           "priorities": {
-            "\ud83c\udfd5 Medium": 3,
+            "\ud83c\udfd5 Medium": 10,
             "\ud83c\udfdd Low": 3,
-            "None": 6,
-            "\ud83c\udfd4 High": 3
+            "None": 7,
+            "\ud83c\udfd4 High": 4
           },
           "assignees": {
             "simonrey1": 2,
@@ -300,8 +302,9 @@
             "TheConen": 1
           },
           "repos": {
-            "podman-desktop": 9,
+            "podman-desktop": 16,
             "podman-desktop-internal": 3,
+            "e2e": 2,
             "crc-extension": 2,
             "podman-desktop-hummingbird-ext": 1
           }
@@ -1139,7 +1142,7 @@
             }
           },
           "Sprint 298": {
-            "total_prs": 4,
+            "total_prs": 5,
             "merged_prs": 1,
             "time_to_first_review": {
               "avg": 2.1,
