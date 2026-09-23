@@ -51,5 +51,10 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Refresh sprint data"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
+              echo "Push attempt $i failed, retrying..."
+            done
+            echo "Failed to push after 3 attempts" >&2
+            exit 1
           fi
