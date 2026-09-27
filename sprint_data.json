@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T14:41:37.808723",
+  "generated_at": "2026-09-27T15:16:00.414059",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -8,14 +8,14 @@
           "start_date": "2026-09-23",
           "duration": 21,
           "total_items": 185,
-          "done_items": 10,
+          "done_items": 11,
           "total_story_points": 176.0,
           "done_story_points": 7.0,
           "statuses": {
             "\ud83d\udcc5 Planned": 92,
-            "\ud83d\udea7 In Progress": 30,
             "\ud83d\udea5 In Review": 33,
-            "\u2714\ufe0f Done": 10,
+            "\u2714\ufe0f Done": 11,
+            "\ud83d\udea7 In Progress": 29,
             "\ud83d\udccb Backlog": 13,
             "\u23f3On Hold": 3,
             "None": 4
@@ -1145,7 +1145,7 @@
           },
           "Sprint 298": {
             "total_prs": 30,
-            "merged_prs": 12,
+            "merged_prs": 13,
             "time_to_first_review": {
               "avg": 3.7,
               "median": 1.1,
@@ -1157,9 +1157,9 @@
               "count": 11
             },
             "time_to_merge": {
-              "avg": 10.5,
+              "avg": 12.0,
               "median": 4.0,
-              "count": 12
+              "count": 13
             },
             "time_to_address_comments": {
               "avg": 0,
@@ -1169,10 +1169,10 @@
             "weekly_extremes": {
               "2026-W38": {
                 "longest": {
-                  "title": "test(e2e): update serial declaration - part 12",
+                  "title": "feat(color-registry): add button-icon, button-detailed and button-spinner colors",
                   "repo": "podman-desktop",
-                  "number": 19378,
-                  "hours": 27.78
+                  "number": 19417,
+                  "hours": 30.25
                 },
                 "shortest": {
                   "title": "fix: resolve node and pnpm versions in run-playwright-test action",
@@ -1187,6 +1187,7 @@
               "simonrey1": 2,
               "gastoner": 2,
               "serbangeorge-m": 2,
+              "vancura": 1,
               "turkeryildirim": 1,
               "odockal": 1,
               "feloy": 1
@@ -1310,8 +1311,8 @@
             "deboer-tim": 19.6
           },
           "ui-components": {
-            "benoitf": 50.9,
-            "vancura": 49.1
+            "benoitf": 51.4,
+            "vancura": 48.6
           },
           "qe": {
             "serbangeorge-m": 31.6,
@@ -1386,11 +1387,11 @@
           }
         },
         "rolling_domain_pr_count": {
-          "foundations": 184,
+          "foundations": 185,
           "containers": 72,
           "kubernetes-dashboard": 69,
-          "ui-components": 64,
           "extensibility": 63,
+          "ui-components": 63,
           "qe": 52,
           "kubernetes": 25,
           "podman-quadlet": 21,
@@ -1419,8 +1420,8 @@
             "deboer-tim": 2.1
           },
           "ui-components": {
-            "benoitf": 50.9,
-            "vancura": 49.1
+            "benoitf": 51.4,
+            "vancura": 48.6
           },
           "qe": {
             "serbangeorge-m": 31.6,
@@ -1506,11 +1507,11 @@
         },
         "rolling_domain_pr_count_all": {
           "dependency-update-minor": 951,
-          "foundations": 221,
+          "foundations": 222,
           "kubernetes-dashboard": 107,
           "containers": 80,
           "extensibility": 67,
-          "ui-components": 64,
+          "ui-components": 63,
           "qe": 54,
           "kubernetes-context": 52,
           "podman-quadlet": 40,
