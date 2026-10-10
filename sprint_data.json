@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T17:10:30.564360",
+  "generated_at": "2026-10-10T15:58:21.818907",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -8,14 +8,14 @@
           "start_date": "2026-09-23",
           "duration": 21,
           "total_items": 226,
-          "done_items": 76,
+          "done_items": 77,
           "total_story_points": 261.0,
           "done_story_points": 59.0,
           "statuses": {
             "\ud83d\udea5 In Review": 37,
-            "\u2714\ufe0f Done": 76,
+            "\u2714\ufe0f Done": 77,
             "\ud83d\udea7 In Progress": 34,
-            "\ud83d\udcc5 Planned": 57,
+            "\ud83d\udcc5 Planned": 56,
             "\u23f3On Hold": 8,
             "\ud83d\udccb Backlog": 13,
             "None": 1
@@ -1155,11 +1155,11 @@
           },
           "Sprint 298": {
             "total_prs": 261,
-            "merged_prs": 206,
+            "merged_prs": 207,
             "time_to_first_review": {
-              "avg": 13.8,
-              "median": 1.0,
-              "count": 213
+              "avg": 13.7,
+              "median": 0.9,
+              "count": 214
             },
             "time_to_first_comment": {
               "avg": 16.8,
@@ -1167,9 +1167,9 @@
               "count": 43
             },
             "time_to_merge": {
-              "avg": 22.1,
+              "avg": 22.5,
               "median": 2.5,
-              "count": 206
+              "count": 207
             },
             "time_to_address_comments": {
               "avg": 11.9,
@@ -1222,7 +1222,7 @@
             },
             "author_merged_prs": {
               "benoitf": 137,
-              "axel7083": 19,
+              "axel7083": 20,
               "danivilla9": 7,
               "simonrey1": 7,
               "cbr7": 5,
@@ -1248,7 +1248,7 @@
               "deboer-tim": 36,
               "simonrey1": 33,
               "feloy": 31,
-              "jeffmaury": 27,
+              "jeffmaury": 28,
               "vancura": 22,
               "cbr7": 13,
               "cdrage": 10,
@@ -1388,8 +1388,8 @@
             },
             "engineer_avg_approval_bdays": {
               "deboer-tim": 0.26,
+              "jeffmaury": 0.32,
               "axel7083": 0.33,
-              "jeffmaury": 0.33,
               "simonrey1": 0.38,
               "feloy": 0.44,
               "odockal": 0.61,
