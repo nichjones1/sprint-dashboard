@@ -52,8 +52,17 @@ jobs:
           else
             git commit -m "Refresh sprint data"
             for i in 1 2 3; do
-              git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
+              git fetch origin "${GITHUB_REF_NAME}"
+              # Replay our refresh commit on top of the latest remote. sprint_data.json
+              # is fully regenerated each run, so on conflict always keep our freshly
+              # generated version (-X theirs == the commit being replayed).
+              if git rebase -X theirs "origin/${GITHUB_REF_NAME}" && git push; then
+                exit 0
+              fi
+              # Clean up any half-finished rebase so the next attempt can fetch/rebase.
+              git rebase --abort || true
               echo "Push attempt $i failed, retrying..."
+              sleep $((i * 3))
             done
             echo "Failed to push after 3 attempts" >&2
             exit 1

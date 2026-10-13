@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T19:59:34.366976",
+  "generated_at": "2026-10-13T09:09:52.509365",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -7,23 +7,23 @@
         "Sprint 298": {
           "start_date": "2026-09-23",
           "duration": 21,
-          "total_items": 225,
-          "done_items": 80,
-          "total_story_points": 261.0,
-          "done_story_points": 63.0,
+          "total_items": 223,
+          "done_items": 90,
+          "total_story_points": 259.0,
+          "done_story_points": 64.0,
           "statuses": {
-            "\ud83d\udea5 In Review": 41,
-            "\u2714\ufe0f Done": 80,
-            "\ud83d\udea7 In Progress": 31,
-            "\ud83d\udcc5 Planned": 50,
-            "\u23f3On Hold": 8,
-            "\ud83d\udccb Backlog": 14,
-            "None": 1
+            "\ud83d\udea5 In Review": 43,
+            "\u2714\ufe0f Done": 90,
+            "\ud83d\udea7 In Progress": 26,
+            "\ud83d\udcc5 Planned": 42,
+            "\u23f3On Hold": 7,
+            "\ud83d\udccb Backlog": 13,
+            "None": 2
           },
           "goals": {
+            "Uncategorized": 118,
             "Podman Feature": 2,
-            "QE": 66,
-            "Uncategorized": 115,
+            "QE": 61,
             "Bug Fix": 13,
             "Design": 11,
             "Technical Debt": 6,
@@ -33,17 +33,17 @@
             "Marketing": 1
           },
           "priorities": {
+            "\ud83c\udfd5 Medium": 49,
             "\ud83c\udfd4 High": 25,
-            "None": 119,
-            "\ud83c\udfd5 Medium": 48,
+            "None": 115,
             "\ud83c\udfdd Low": 18,
             "Critical": 10,
-            "\ud83c\udf0b Urgent": 5
+            "\ud83c\udf0b Urgent": 6
           },
           "assignees": {
             "vancura": 23,
             "odockal": 22,
-            "axel7083": 14,
+            "axel7083": 15,
             "SoniaSandler": 12,
             "amisskii": 12,
             "cdrage": 10,
@@ -58,8 +58,8 @@
             "feloy": 7
           },
           "repos": {
-            "podman-desktop": 132,
-            "podman-desktop-internal": 43,
+            "podman-desktop": 135,
+            "podman-desktop-internal": 37,
             "e2e": 14,
             "extension-podman-quadlet": 10,
             "extension-kubernetes-dashboard": 6,
@@ -71,7 +71,8 @@
             "podman-desktop-hummingbird-ext": 1,
             "podman-desktop-rhel-ext": 1,
             "podman-desktop-sandbox-ext": 1,
-            "minc-extension": 1
+            "minc-extension": 1,
+            "extension-grype": 1
           }
         },
         "Sprint 297": {
@@ -277,52 +278,60 @@
         "Sprint 299": {
           "start_date": "2026-10-14",
           "duration": 21,
-          "total_items": 91,
+          "total_items": 93,
           "done_items": 3,
-          "total_story_points": 21.0,
+          "total_story_points": 23.0,
           "done_story_points": 0,
           "statuses": {
-            "None": 24,
-            "\ud83d\udcc5 Planned": 15,
-            "\ud83d\udccb Backlog": 45,
-            "\u23f3On Hold": 3,
+            "\ud83d\udcc5 Planned": 18,
+            "None": 22,
+            "\ud83d\udccb Backlog": 43,
+            "\u2714\ufe0f Done": 3,
             "\ud83d\udea5 In Review": 1,
-            "\u2714\ufe0f Done": 3
+            "\ud83d\udea7 In Progress": 5,
+            "\u23f3On Hold": 1
           },
           "goals": {
-            "Uncategorized": 78,
+            "Uncategorized": 74,
             "Design": 1,
-            "Documentation": 1,
-            "QE": 10,
-            "Bug Fix": 1
+            "Bug Fix": 1,
+            "Dashboard": 1,
+            "QE": 16
           },
           "priorities": {
-            "None": 73,
-            "\ud83c\udfd5 Medium": 11,
-            "\ud83c\udfdd Low": 2,
-            "\ud83c\udfd4 High": 5
+            "\ud83c\udfd4 High": 5,
+            "None": 76,
+            "\ud83c\udfdd Low": 1,
+            "Critical": 1,
+            "\ud83c\udfd5 Medium": 10
           },
           "assignees": {
-            "vancura": 24,
+            "vancura": 25,
             "axel7083": 10,
+            "benoitf": 7,
             "simonrey1": 6,
             "cdrage": 5,
             "SoniaSandler": 4,
-            "benoitf": 3,
-            "dgolovin": 2,
+            "dgolovin": 1,
             "JustMell0": 1,
             "TheConen": 1,
-            "odockal": 1
+            "sAchin-680": 1,
+            "odockal": 1,
+            "h55n": 1,
+            "danivilla9": 1
           },
           "repos": {
-            "podman-desktop": 73,
+            "podman-desktop": 66,
+            "podman-desktop-internal": 9,
             "podman-desktop-hummingbird-ext": 5,
             "crc-extension": 4,
-            "podman-desktop-internal": 3,
-            "podman-desktop-sandbox-ext": 2,
             "e2e": 2,
+            "podman-desktop-redhat-lightspeed-ext": 2,
             "extension-podman-quadlet": 1,
-            "eslint-config": 1
+            "eslint-config": 1,
+            "podman-desktop-extension-ai-lab": 1,
+            "extension-minikube": 1,
+            "gh-extensions-actions": 1
           }
         }
       },
@@ -1158,22 +1167,22 @@
             }
           },
           "Sprint 298": {
-            "total_prs": 275,
-            "merged_prs": 210,
+            "total_prs": 285,
+            "merged_prs": 215,
             "time_to_first_review": {
-              "avg": 13.3,
+              "avg": 13.5,
               "median": 1.0,
-              "count": 222
+              "count": 232
             },
             "time_to_first_comment": {
-              "avg": 20.5,
-              "median": 1.0,
-              "count": 47
+              "avg": 19.7,
+              "median": 1.3,
+              "count": 50
             },
             "time_to_merge": {
               "avg": 22.2,
-              "median": 2.5,
-              "count": 210
+              "median": 2.6,
+              "count": 215
             },
             "time_to_address_comments": {
               "avg": 11.9,
@@ -1225,10 +1234,10 @@
               },
               "2026-W41": {
                 "longest": {
-                  "title": "feat(renderer): show an Overrides badge on an extension replacing a bundled one",
+                  "title": "feat(renderer): extend catalog extension filters",
                   "repo": "podman-desktop",
-                  "number": 19607,
-                  "hours": 6.0
+                  "number": 19616,
+                  "hours": 22.68
                 },
                 "shortest": {
                   "title": "refactor(renderer): use the Tailwind CSS variable shorthand in ExtensionBadge",
@@ -1239,20 +1248,21 @@
               }
             },
             "author_merged_prs": {
-              "benoitf": 137,
+              "benoitf": 138,
               "axel7083": 23,
               "danivilla9": 7,
               "simonrey1": 7,
+              "odockal": 5,
               "cbr7": 5,
               "gastoner": 5,
+              "vancura": 4,
               "deboer-tim": 4,
-              "vancura": 3,
-              "odockal": 3,
               "0xKalasi": 2,
               "dgolovin": 2,
               "serbangeorge-m": 2,
               "cdrage": 2,
               "feloy": 2,
+              "JustMell0": 1,
               "vzhukovs": 1,
               "h55n": 1,
               "SoniaSandler": 1,
@@ -1261,89 +1271,89 @@
               "turkeryildirim": 1
             },
             "reviewer_approvals": {
-              "axel7083": 47,
-              "benoitf": 43,
+              "axel7083": 49,
+              "benoitf": 44,
+              "simonrey1": 36,
               "deboer-tim": 36,
-              "simonrey1": 34,
               "feloy": 31,
-              "jeffmaury": 28,
-              "vancura": 24,
-              "cbr7": 13,
-              "cdrage": 10,
-              "SoniaSandler": 10,
+              "jeffmaury": 29,
+              "vancura": 28,
+              "cbr7": 15,
+              "SoniaSandler": 11,
+              "cdrage": 11,
               "odockal": 7,
-              "danivilla9": 5,
-              "gastoner": 4,
+              "danivilla9": 6,
+              "gastoner": 6,
+              "kyetter": 3,
               "amisskii": 3,
-              "kyetter": 2,
               "serbangeorge-m": 1,
               "JustMell0": 1
             },
             "domain_pr_count": {
-              "foundations": 46,
+              "foundations": 48,
               "podman-quadlet": 34,
-              "extensibility": 28,
+              "extensibility": 30,
               "apple-container": 24,
               "kubernetes-dashboard": 16,
-              "qe": 13,
+              "qe": 14,
+              "ui-components": 13,
               "bootc": 13,
-              "ui-components": 12,
               "kreate": 10,
               "kubernetes-context": 9,
               "containers": 8,
               "postgresql": 8,
               "grype": 7,
+              "minikube": 5,
               "kind": 5,
               "kubernetes": 4,
-              "minikube": 4,
               "layers-explorer": 4,
               "github": 4,
-              "docs": 2,
+              "docs": 3,
               "technical-debt": 1,
               "dependency-update-major": 1,
               "github-actions": 1
             },
             "domain_owner_authored": {
-              "foundations": 25,
+              "foundations": 26,
               "podman-quadlet": 25,
               "apple-container": 24,
-              "qe": 9,
+              "qe": 10,
               "ui-components": 5,
               "extensibility": 5,
+              "minikube": 5,
               "bootc": 5,
               "kind": 5,
-              "minikube": 4,
               "containers": 1
             },
             "domain_approval_ownership": {
-              "extensibility": {
-                "benoitf": 64.3,
-                "deboer-tim": 35.7
-              },
               "foundations": {
                 "deboer-tim": 60.6,
                 "benoitf": 39.4
               },
-              "ui-components": {
-                "vancura": 63.6,
-                "benoitf": 36.4
+              "docs": {
+                "kyetter": 66.7,
+                "cdrage": 33.3
               },
-              "containers": {
-                "axel7083": 71.4,
-                "benoitf": 28.6
+              "extensibility": {
+                "benoitf": 64.3,
+                "deboer-tim": 35.7
               },
               "qe": {
                 "odockal": 80.0,
                 "danivilla9": 20.0
               },
+              "ui-components": {
+                "vancura": 66.7,
+                "benoitf": 33.3
+              },
+              "containers": {
+                "axel7083": 71.4,
+                "benoitf": 28.6
+              },
               "technical-debt": {
                 "axel7083": 100.0
               },
               "kubernetes": {},
-              "docs": {
-                "kyetter": 50.0,
-                "cdrage": 50.0
-              },
               "dependency-update-major": {
                 "simonrey1": 100.0
               },
@@ -1383,14 +1393,14 @@
               }
             },
             "domain_avg_approval_hours": {
-              "extensibility": 14.4,
-              "foundations": 14.6,
-              "ui-components": 18.7,
+              "foundations": 21.2,
+              "docs": 41.6,
+              "extensibility": 17.1,
+              "qe": 68.0,
+              "ui-components": 32.4,
               "containers": 15.4,
-              "qe": 74.7,
               "technical-debt": 45.7,
               "kubernetes": 159.9,
-              "docs": 81.2,
               "dependency-update-major": 0.3,
               "minikube": 2.4,
               "bootc": 44.3,
@@ -1406,21 +1416,21 @@
             },
             "engineer_avg_approval_bdays": {
               "deboer-tim": 0.26,
-              "jeffmaury": 0.32,
+              "jeffmaury": 0.33,
+              "simonrey1": 0.35,
               "axel7083": 0.36,
-              "simonrey1": 0.37,
               "feloy": 0.44,
               "odockal": 0.61,
-              "benoitf": 0.68,
+              "benoitf": 0.67,
               "JustMell0": 0.71,
-              "SoniaSandler": 0.86,
+              "SoniaSandler": 0.82,
+              "kyetter": 0.86,
               "serbangeorge-m": 0.91,
-              "vancura": 1.01,
-              "kyetter": 1.18,
-              "danivilla9": 1.58,
-              "gastoner": 1.86,
-              "cbr7": 1.87,
-              "cdrage": 2.31,
+              "danivilla9": 1.47,
+              "vancura": 1.56,
+              "cbr7": 1.71,
+              "cdrage": 2.15,
+              "gastoner": 2.27,
               "amisskii": 3.12
             }
           },
@@ -1458,21 +1468,18 @@
           }
         },
         "rolling_domain_ownership": {
+          "foundations": {
+            "benoitf": 72.5,
+            "deboer-tim": 27.5
+          },
+          "docs": {
+            "cdrage": 52.9,
+            "kyetter": 41.2,
+            "slemeur": 5.9
+          },
           "extensibility": {
             "benoitf": 89.7,
             "deboer-tim": 10.3
-          },
-          "foundations": {
-            "benoitf": 72.6,
-            "deboer-tim": 27.4
-          },
-          "ui-components": {
-            "benoitf": 50.0,
-            "vancura": 50.0
-          },
-          "containers": {
-            "axel7083": 73.1,
-            "benoitf": 26.9
           },
           "qe": {
             "odockal": 30.0,
@@ -1481,17 +1488,20 @@
             "amisskii": 15.0,
             "ScrewTSW": 5.0
           },
+          "ui-components": {
+            "vancura": 50.4,
+            "benoitf": 49.6
+          },
+          "containers": {
+            "axel7083": 73.1,
+            "benoitf": 26.9
+          },
           "technical-debt": {
             "axel7083": 100.0
           },
           "kubernetes": {
             "gastoner": 81.8,
             "cdrage": 18.2
-          },
-          "docs": {
-            "cdrage": 56.2,
-            "kyetter": 37.5,
-            "slemeur": 6.2
           },
           "dependency-update-major": {
             "simonrey1": 33.3,
@@ -1547,12 +1557,12 @@
           }
         },
         "rolling_domain_pr_count": {
-          "foundations": 226,
-          "extensibility": 88,
+          "foundations": 228,
+          "extensibility": 90,
           "kubernetes-dashboard": 84,
           "containers": 79,
-          "ui-components": 71,
-          "qe": 60,
+          "ui-components": 72,
+          "qe": 61,
           "podman-quadlet": 55,
           "apple-container": 35,
           "bootc": 32,
@@ -1561,9 +1571,9 @@
           "kreate": 24,
           "grype": 24,
           "postgresql": 20,
-          "minikube": 18,
+          "minikube": 19,
           "kind": 17,
-          "docs": 14,
+          "docs": 15,
           "layers-explorer": 11,
           "github": 8,
           "github-actions": 6,
@@ -1572,17 +1582,33 @@
           "technical-debt": 1
         },
         "rolling_domain_ownership_all": {
-          "extensibility": {
-            "benoitf": 90.3,
-            "deboer-tim": 9.7
-          },
           "foundations": {
             "benoitf": 78.0,
             "deboer-tim": 22.0
           },
+          "containers": {
+            "axel7083": 63.7,
+            "benoitf": 36.2
+          },
+          "docs": {
+            "cdrage": 52.9,
+            "kyetter": 41.2,
+            "slemeur": 5.9
+          },
+          "extensibility": {
+            "benoitf": 90.3,
+            "deboer-tim": 9.7
+          },
+          "qe": {
+            "odockal": 30.0,
+            "serbangeorge-m": 30.0,
+            "danivilla9": 20.0,
+            "amisskii": 15.0,
+            "ScrewTSW": 5.0
+          },
           "ui-components": {
-            "benoitf": 50.0,
-            "vancura": 50.0
+            "vancura": 50.4,
+            "benoitf": 49.6
           },
           "dependency-update-minor": {
             "benoitf": 34.8,
@@ -1593,10 +1619,6 @@
             "jeffmaury": 2.9,
             "cdrage": 1.4
           },
-          "containers": {
-            "axel7083": 65.4,
-            "benoitf": 34.6
-          },
           "dependency-update-major": {
             "benoitf": 51.4,
             "simonrey1": 21.6,
@@ -1605,24 +1627,12 @@
             "feloy": 2.7,
             "dgolovin": 2.7
           },
-          "qe": {
-            "odockal": 30.0,
-            "serbangeorge-m": 30.0,
-            "danivilla9": 20.0,
-            "amisskii": 15.0,
-            "ScrewTSW": 5.0
-          },
           "technical-debt": {
             "axel7083": 100.0
           },
           "kubernetes": {
             "gastoner": 81.8,
             "cdrage": 18.2
-          },
-          "docs": {
-            "cdrage": 56.2,
-            "kyetter": 37.5,
-            "slemeur": 6.2
           },
           "minikube": {
             "jeffmaury": 76.0,
@@ -1649,8 +1659,8 @@
             "jeffmaury": 100.0
           },
           "github": {
-            "SoniaSandler": 50.0,
-            "dgolovin": 50.0
+            "dgolovin": 52.9,
+            "SoniaSandler": 47.1
           },
           "apple-container": {
             "benoitf": 100.0
@@ -1663,35 +1673,35 @@
             "benoitf": 21.4
           },
           "grype": {
-            "axel7083": 59.5,
-            "simonrey1": 40.5
+            "axel7083": 60.5,
+            "simonrey1": 39.5
           },
           "github-actions": {
             "benoitf": 100.0
           }
         },
         "rolling_domain_pr_count_all": {
-          "dependency-update-minor": 1222,
-          "foundations": 274,
+          "dependency-update-minor": 1223,
+          "foundations": 277,
           "kubernetes-dashboard": 136,
-          "extensibility": 93,
-          "containers": 89,
+          "extensibility": 95,
+          "containers": 91,
           "podman-quadlet": 84,
-          "ui-components": 71,
+          "ui-components": 72,
           "kubernetes-context": 71,
-          "qe": 62,
-          "apple-container": 56,
+          "qe": 63,
+          "apple-container": 57,
           "kreate": 51,
           "bootc": 49,
           "dependency-update-major": 40,
-          "grype": 39,
+          "grype": 40,
           "postgresql": 34,
           "kind": 32,
+          "minikube": 29,
           "kubernetes": 28,
           "github": 28,
-          "minikube": 27,
           "layers-explorer": 26,
-          "docs": 14,
+          "docs": 15,
           "github-actions": 12,
           "technical-debt": 1
         }
@@ -1704,17 +1714,17 @@
           "start_date": "2026-09-23",
           "duration": 21,
           "total_items": 99,
-          "done_items": 40,
+          "done_items": 41,
           "total_story_points": 0,
           "done_story_points": 0,
           "statuses": {
-            "Done": 40,
+            "\ud83d\udea7 In Progress": 10,
+            "Done": 41,
             "\ud83d\udea5 In Review": 12,
-            "\ud83d\udcc5 Planned": 2,
             "\u23f3On Hold": 7,
             "\ud83d\udccb Backlog": 27,
-            "\u23f1Postponed": 1,
-            "\ud83d\udea7 In Progress": 10
+            "\ud83d\udcc5 Planned": 1,
+            "\u23f1Postponed": 1
           },
           "goals": {
             "Uncategorized": 99
@@ -2249,7 +2259,7 @@
             }
           },
           "Sprint 298": {
-            "total_prs": 83,
+            "total_prs": 84,
             "merged_prs": 64,
             "time_to_first_review": {
               "avg": 8.1,
@@ -2331,7 +2341,7 @@
               "benoitf": 26,
               "jeffmaury": 22,
               "bmahabirbu": 15,
-              "MarsKubeX": 11,
+              "MarsKubeX": 14,
               "fbricon": 4,
               "feloy": 1
             },
@@ -2343,9 +2353,9 @@
               "feloy": 0.0,
               "fbricon": 0.08,
               "jeffmaury": 0.65,
-              "MarsKubeX": 0.68,
               "bmahabirbu": 0.74,
-              "benoitf": 0.88
+              "benoitf": 0.88,
+              "MarsKubeX": 2.36
             }
           },
           "Sprint 299": {
