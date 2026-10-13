@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T17:46:45.450036",
+  "generated_at": "2026-10-13T18:24:39.754439",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -74,7 +74,7 @@
             "minc-extension": 1,
             "extension-grype": 1
           },
-          "frozen_at": "2026-10-13T17:46:43.286776"
+          "frozen_at": "2026-10-13T18:24:35.280265"
         },
         "Sprint 297": {
           "start_date": "2026-09-02",
@@ -1760,7 +1760,7 @@
             "openshell-image-claude": 1,
             "openshell-image-openclaw": 1
           },
-          "frozen_at": "2026-10-13T17:46:43.286940"
+          "frozen_at": "2026-10-13T18:24:35.280410"
         },
         "Sprint 297": {
           "start_date": "2026-09-02",
