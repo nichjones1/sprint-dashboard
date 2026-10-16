@@ -408,20 +408,22 @@ function renderProject(pn) {
   ]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{label:ctx=>`${ctx.dataset.label}: ${fmtHours(ctx.parsed.y)}`}}}}});
   ml('legend-pr-cycle',[{color:c.series[0],label:'First Review (median)',type:'line'},{color:c.series[1],label:'Time to Merge (median)',type:'line'}]);
 
-  // Reviewer Activity — approvals per reviewer across sprints (trend)
-  document.getElementById('reviewer-subtitle').textContent = `Approvals per reviewer across ${prSprintNames.length} sprint${prSprintNames.length===1?'':'s'}`;
+  // Reviewer Activity — approvals per reviewer across completed sprints (trend)
+  const isSprintComplete=sn=>{const s=sprints[sn];if(!s)return false;const end=new Date(s.start_date+'T00:00:00');end.setDate(end.getDate()+(s.duration||0));return end<=today;};
+  const revSprints=prSprintNames.filter(isSprintComplete);
+  document.getElementById('reviewer-subtitle').textContent = `Approvals per reviewer across ${revSprints.length} completed sprint${revSprints.length===1?'':'s'}`;
   dc('chart-reviewer');
   const revCanvas=document.getElementById('chart-reviewer');
   const revTotals={};
-  for(const sn of prSprintNames){const ra=prSprints[sn]?.reviewer_approvals||{};for(const[r,v] of Object.entries(ra))revTotals[r]=(revTotals[r]||0)+v;}
+  for(const sn of revSprints){const ra=prSprints[sn]?.reviewer_approvals||{};for(const[r,v] of Object.entries(ra))revTotals[r]=(revTotals[r]||0)+v;}
   const revRanked=Object.entries(revTotals).sort((a,b)=>b[1]-a[1]);
   const topRevN=revRanked.slice(0,8).map(([r])=>r);
-  const revDatasets=topRevN.map((r,i)=>({label:r,data:prSprintNames.map(sn=>prSprints[sn]?.reviewer_approvals?.[r]??0),borderColor:c.series[i],backgroundColor:c.series[i],borderWidth:2,pointRadius:4,pointBackgroundColor:c.series[i],pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true}));
+  const revDatasets=topRevN.map((r,i)=>({label:r,data:revSprints.map(sn=>prSprints[sn]?.reviewer_approvals?.[r]??0),borderColor:c.series[i],backgroundColor:c.series[i],borderWidth:2,pointRadius:4,pointBackgroundColor:c.series[i],pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true}));
   if(revRanked.length>8){
-    const otherData=prSprintNames.map(sn=>{const ra=prSprints[sn]?.reviewer_approvals||{};let s=0;for(const[r,v] of Object.entries(ra)){if(!topRevN.includes(r))s+=v;}return s;});
+    const otherData=revSprints.map(sn=>{const ra=prSprints[sn]?.reviewer_approvals||{};let s=0;for(const[r,v] of Object.entries(ra)){if(!topRevN.includes(r))s+=v;}return s;});
     revDatasets.push({label:`Other (${revRanked.length-8})`,data:otherData,borderColor:DEEMPH,backgroundColor:DEEMPH,borderWidth:2,borderDash:[5,4],pointRadius:3,pointBackgroundColor:DEEMPH,pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true});
   }
-  if(revDatasets.length)charts['chart-reviewer']=new Chart(revCanvas,{type:'line',data:{labels:prSprintNames,datasets:revDatasets},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',intersect:false,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y} approval${ctx.parsed.y===1?'':'s'}`}}},scales:{...dOpts(c).scales,y:{...dOpts(c).scales.y,title:{display:true,text:'Approvals',color:c.muted}}}}});
+  if(revDatasets.length)charts['chart-reviewer']=new Chart(revCanvas,{type:'line',data:{labels:revSprints,datasets:revDatasets},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',intersect:false,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y} approval${ctx.parsed.y===1?'':'s'}`}}},scales:{...dOpts(c).scales,y:{...dOpts(c).scales.y,title:{display:true,text:'Approvals',color:c.muted}}}}});
   ml('legend-reviewer',revDatasets.map(ds=>({color:ds.borderColor,label:ds.label,type:'line'})));
 
   // PRs per Domain (stacked: owner-authored vs others)
