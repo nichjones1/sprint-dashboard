@@ -795,48 +795,7 @@ def compute_pr_metrics(all_prs, sprint_windows):
             ),
         }
 
-    # Rolling 3-month domain approval ownership (with and without bot PRs)
-    cutoff = datetime.now().astimezone() - timedelta(days=90)
-    rolling = {}
-    for include_bots in (False, True):
-        suffix = "_all" if include_bots else ""
-        recent_prs = [
-            p for p in all_prs
-            if parse_iso(p["created_at"]) >= cutoff
-            and (include_bots or not p["is_bot"])
-        ]
-        r_domain_prs = {}
-        r_domain_approvals = {}
-        for pr in recent_prs:
-            d = pr["domain"]
-            if not d:
-                continue
-            r_domain_prs[d] = r_domain_prs.get(d, 0) + 1
-            for rv in pr["reviews"]:
-                if rv["state"] == "APPROVED":
-                    if d not in r_domain_approvals:
-                        r_domain_approvals[d] = {}
-                    a = rv["author"]
-                    r_domain_approvals[d][a] = r_domain_approvals[d].get(a, 0) + 1
-
-        r_domain_ownership = {}
-        for d, approvers in r_domain_approvals.items():
-            owners = DOMAIN_OWNERS.get(d)
-            if owners:
-                filtered = {a: c for a, c in approvers.items() if a in owners}
-            else:
-                filtered = approvers
-            total = sum(filtered.values()) if filtered else 1
-            r_domain_ownership[d] = {
-                a: round(c / total * 100, 1) for a, c in
-                sorted(filtered.items(), key=lambda x: -x[1])
-            }
-        rolling[f"rolling_domain_ownership{suffix}"] = r_domain_ownership
-        rolling[f"rolling_domain_pr_count{suffix}"] = dict(
-            sorted(r_domain_prs.items(), key=lambda x: -x[1])
-        )
-
-    return {"sprints": metrics, **rolling}
+    return {"sprints": metrics}
 
 
 def main():

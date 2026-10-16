@@ -158,7 +158,7 @@
     <div class="chart-card"><details class="collapsible" open><summary><h2>PR Cycle Time Trend</h2><span class="subtitle" style="margin-bottom:0">Hours (median) across sprints</span></summary><div class="collapse-body"><div class="chart-wrap"><canvas id="chart-pr-cycle" height="260"></canvas></div><div class="legend" id="legend-pr-cycle"></div></div></details></div>
   </div>
   <div class="chart-grid full">
-    <div class="chart-card"><details class="collapsible" open><summary><h2>Reviewer Activity</h2><span class="subtitle" style="margin-bottom:0" id="reviewer-subtitle">Approvals per developer, current sprint</span></summary><div class="collapse-body"><div class="chart-wrap" id="reviewer-wrap"><canvas id="chart-reviewer"></canvas></div></div></details></div>
+    <div class="chart-card"><details class="collapsible" open><summary><h2>Reviewer Activity</h2><span class="subtitle" style="margin-bottom:0" id="reviewer-subtitle">Approvals per reviewer across sprints</span></summary><div class="collapse-body"><div class="chart-wrap"><canvas id="chart-reviewer" height="320"></canvas></div><div class="legend" id="legend-reviewer"></div></div></details></div>
   </div>
   <div class="chart-grid full">
     <div class="chart-card"><details class="collapsible" open><summary><h2>PRs per Domain</h2><span class="subtitle" style="margin-bottom:0" id="domain-pr-subtitle">Total vs authored by domain owner, current sprint</span></summary><div class="collapse-body"><div class="chart-wrap" id="domain-prs-wrap"><canvas id="chart-domain-prs"></canvas></div><div class="legend" id="legend-domain-prs"></div></div></details></div>
@@ -170,7 +170,7 @@
     <div class="chart-card"><details class="collapsible"><summary><h2>Avg Time to Approval by Engineer</h2><span class="subtitle" style="margin-bottom:0" id="eng-approval-subtitle">Hours from PR creation to approval, current sprint</span></summary><div class="collapse-body"><div class="chart-wrap" id="eng-approval-wrap"><canvas id="chart-eng-approval"></canvas></div></div></details></div>
   </div>
   <div class="chart-grid full">
-    <div class="chart-card"><details class="collapsible"><summary><h2>Domain Approval Ownership</h2><span class="subtitle" style="margin-bottom:0">Rolling 3 months &mdash; share of approvals per reviewer within each domain</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-secondary);margin-bottom:12px;cursor:pointer"><input type="checkbox" id="bot-toggle"> Include bot PRs</label><div id="domain-ownership-container"></div></div></details></div>
+    <div class="chart-card"><details class="collapsible"><summary><h2>Domain Approval Ownership</h2><span class="subtitle" style="margin-bottom:0">Share of approvals per reviewer within a domain, across sprints</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);margin-bottom:12px">Domain <select id="domain-select" style="font-size:13px;padding:4px 8px;border-radius:6px;border:1px solid var(--gridline);background:var(--surface-1);color:var(--text-primary);max-width:320px"></select></label><div class="chart-wrap"><canvas id="chart-domain-ownership" height="320"></canvas></div><div class="legend" id="legend-domain-ownership"></div></div></details></div>
   </div>
 </div>
 
@@ -408,17 +408,21 @@ function renderProject(pn) {
   ]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{label:ctx=>`${ctx.dataset.label}: ${fmtHours(ctx.parsed.y)}`}}}}});
   ml('legend-pr-cycle',[{color:c.series[0],label:'First Review (median)',type:'line'},{color:c.series[1],label:'Time to Merge (median)',type:'line'}]);
 
-  // Reviewer Activity
-  document.getElementById('reviewer-subtitle').textContent = `Approvals per developer, ${latest}`;
-  const revAppr = latestPR.reviewer_approvals || {};
-  const topRev = Object.entries(revAppr).sort((a,b)=>b[1]-a[1]).slice(0,15);
+  // Reviewer Activity — approvals per reviewer across sprints (trend)
+  document.getElementById('reviewer-subtitle').textContent = `Approvals per reviewer across ${prSprintNames.length} sprint${prSprintNames.length===1?'':'s'}`;
   dc('chart-reviewer');
-  const revWrap=document.getElementById('reviewer-wrap');
   const revCanvas=document.getElementById('chart-reviewer');
-  const revH=Math.max(260,topRev.length*32+40);
-  revWrap.style.height=revH+'px';
-  revCanvas.style.height=revH+'px';
-  if(topRev.length)charts['chart-reviewer']=new Chart(revCanvas,{type:'bar',data:{labels:topRev.map(([k])=>k),datasets:[{data:topRev.map(([,v])=>v),backgroundColor:c.series[0],borderRadius:4,barThickness:18}]},options:{...dOpts(c),maintainAspectRatio:false,indexAxis:'y',scales:{x:{...dOpts(c).scales.x,beginAtZero:true},y:{...dOpts(c).scales.y,ticks:{...dOpts(c).scales.y.ticks,autoSkip:false},grid:{display:false}}}}});
+  const revTotals={};
+  for(const sn of prSprintNames){const ra=prSprints[sn]?.reviewer_approvals||{};for(const[r,v] of Object.entries(ra))revTotals[r]=(revTotals[r]||0)+v;}
+  const revRanked=Object.entries(revTotals).sort((a,b)=>b[1]-a[1]);
+  const topRevN=revRanked.slice(0,8).map(([r])=>r);
+  const revDatasets=topRevN.map((r,i)=>({label:r,data:prSprintNames.map(sn=>prSprints[sn]?.reviewer_approvals?.[r]??0),borderColor:c.series[i],backgroundColor:c.series[i],borderWidth:2,pointRadius:4,pointBackgroundColor:c.series[i],pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true}));
+  if(revRanked.length>8){
+    const otherData=prSprintNames.map(sn=>{const ra=prSprints[sn]?.reviewer_approvals||{};let s=0;for(const[r,v] of Object.entries(ra)){if(!topRevN.includes(r))s+=v;}return s;});
+    revDatasets.push({label:`Other (${revRanked.length-8})`,data:otherData,borderColor:DEEMPH,backgroundColor:DEEMPH,borderWidth:2,borderDash:[5,4],pointRadius:3,pointBackgroundColor:DEEMPH,pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true});
+  }
+  if(revDatasets.length)charts['chart-reviewer']=new Chart(revCanvas,{type:'line',data:{labels:prSprintNames,datasets:revDatasets},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',intersect:false,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y} approval${ctx.parsed.y===1?'':'s'}`}}},scales:{...dOpts(c).scales,y:{...dOpts(c).scales.y,title:{display:true,text:'Approvals',color:c.muted}}}}});
+  ml('legend-reviewer',revDatasets.map(ds=>({color:ds.borderColor,label:ds.label,type:'line'})));
 
   // PRs per Domain (stacked: owner-authored vs others)
   document.getElementById('domain-pr-subtitle').textContent = latest;
@@ -473,34 +477,47 @@ function renderProject(pn) {
   engCanvas.style.height=engH+'px';
   if(engEntries.length)charts['chart-eng-approval']=new Chart(engCanvas,{type:'bar',data:{labels:engEntries.map(([k])=>k),datasets:[{data:engEntries.map(([,v])=>v),backgroundColor:engEntries.map(([,v])=>v<=1?c.series[2]:v<=3?c.series[3]:c.series[1]),borderRadius:4,barThickness:18}]},options:{...dOpts(c),maintainAspectRatio:false,indexAxis:'y',plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,callbacks:{label:ctx=>{const[eng,avg,cnt]=engEntries[ctx.dataIndex];return`${fmtBd(avg)} avg (${cnt} approvals across ${sprintNames.length} sprints)`}}}},scales:{x:{...dOpts(c).scales.x,beginAtZero:true,title:{display:true,text:'Business Days',color:c.muted}},y:{...dOpts(c).scales.y,grid:{display:false}}}}});
 
-  // Domain Approval Ownership table (rolling 3 months)
-  function renderDomainOwnership(own, prCounts) {
-    const names = Object.keys(own).sort();
-    if(!names.length){ document.getElementById('domain-ownership-container').innerHTML='<p style="color:var(--text-muted);font-size:13px">No domain labels found on PRs</p>'; return; }
-    let h='<table class="data-table"><thead><tr><th>Domain</th><th>PRs</th><th>Reviewer</th><th>Share</th><th></th></tr></thead><tbody>';
-    for(const d of names){
-      const reviewers=Object.entries(own[d]).sort((a,b)=>b[1]-a[1]);
-      const prCount=prCounts[d]||0;
-      for(let ri=0;ri<reviewers.length;ri++){
-        const[rev,pct]=reviewers[ri];
-        const barColor=c.series[ri%8];
-        h+=`<tr>${ri===0?`<td rowspan="${reviewers.length}" style="font-weight:500;vertical-align:top">${d}</td><td rowspan="${reviewers.length}" class="mono" style="vertical-align:top;font-weight:600">${prCount}</td>`:''}
-          <td>${rev}</td><td class="mono" style="font-weight:600">${pct}%</td>
-          <td style="width:120px"><div class="avail-bar-track"><div class="avail-bar-fill" style="width:${pct}%;background:${barColor}"></div></div></td></tr>`;
+  // Domain Approval Ownership — per-reviewer share within a domain, across sprints
+  const ownSel=document.getElementById('domain-select');
+  const domSprintShares={}; // domain -> reviewer -> { sprint -> pct }
+  const domRank={};         // domain -> cumulative pct (for default selection)
+  for(const sn of prSprintNames){
+    const dOwn=prSprints[sn]?.domain_approval_ownership||{};
+    for(const[dom,revs] of Object.entries(dOwn)){
+      if(!domSprintShares[dom])domSprintShares[dom]={};
+      for(const[rev,pct] of Object.entries(revs)){
+        if(!domSprintShares[dom][rev])domSprintShares[dom][rev]={};
+        domSprintShares[dom][rev][sn]=pct;
+        domRank[dom]=(domRank[dom]||0)+pct;
       }
     }
-    h+='</tbody></table>';
-    document.getElementById('domain-ownership-container').innerHTML=h;
   }
-  const rollingOwn = prm.rolling_domain_ownership || {};
-  const rollingOwnAll = prm.rolling_domain_ownership_all || {};
-  const rollingPrCount = prm.rolling_domain_pr_count || {};
-  const rollingPrCountAll = prm.rolling_domain_pr_count_all || {};
-  renderDomainOwnership(rollingOwn, rollingPrCount);
-  document.getElementById('bot-toggle').onchange = function() {
-    if(this.checked) renderDomainOwnership(rollingOwnAll, rollingPrCountAll);
-    else renderDomainOwnership(rollingOwn, rollingPrCount);
-  };
+  const domList=Object.keys(domSprintShares).sort();
+  function renderOwnershipTrend(dom){
+    dc('chart-domain-ownership');
+    const canvas=document.getElementById('chart-domain-ownership');
+    if(!dom||!domSprintShares[dom]){ml('legend-domain-ownership',[]);return;}
+    const revObj=domSprintShares[dom];
+    const ranked=Object.entries(revObj).map(([rev,byS])=>[rev,Object.values(byS).reduce((a,b)=>a+b,0)]).sort((a,b)=>b[1]-a[1]);
+    const topR=ranked.slice(0,8).map(([r])=>r);
+    const ds=topR.map((rev,i)=>({label:rev,data:prSprintNames.map(sn=>revObj[rev]?.[sn]??0),borderColor:c.series[i],backgroundColor:c.series[i],borderWidth:2,pointRadius:4,pointBackgroundColor:c.series[i],pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true}));
+    if(ranked.length>8){
+      const otherData=prSprintNames.map(sn=>{let s=0;for(const[rev,byS] of Object.entries(revObj)){if(!topR.includes(rev))s+=(byS[sn]||0);}return Math.round(s*10)/10;});
+      ds.push({label:`Other (${ranked.length-8})`,data:otherData,borderColor:DEEMPH,backgroundColor:DEEMPH,borderWidth:2,borderDash:[5,4],pointRadius:3,pointBackgroundColor:DEEMPH,pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true});
+    }
+    charts['chart-domain-ownership']=new Chart(canvas,{type:'line',data:{labels:prSprintNames,datasets:ds},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',intersect:false,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y}%`}}},scales:{...dOpts(c).scales,y:{...dOpts(c).scales.y,title:{display:true,text:'Share of approvals (%)',color:c.muted},ticks:{...dOpts(c).scales.y.ticks,callback:v=>v+'%'}}}}});
+    ml('legend-domain-ownership',ds.map(d=>({color:d.borderColor,label:d.label,type:'line'})));
+  }
+  if(domList.length){
+    const defaultDom=Object.entries(domRank).sort((a,b)=>b[1]-a[1])[0][0];
+    ownSel.innerHTML=domList.map(d=>`<option value="${d}"${d===defaultDom?' selected':''}>${d}</option>`).join('');
+    ownSel.onchange=function(){renderOwnershipTrend(this.value)};
+    renderOwnershipTrend(defaultDom);
+  }else{
+    ownSel.innerHTML='';
+    dc('chart-domain-ownership');
+    ml('legend-domain-ownership',[]);
+  }
 
 
 }
