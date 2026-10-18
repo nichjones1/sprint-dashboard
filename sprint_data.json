@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T13:54:06.389865",
+  "generated_at": "2026-10-18T14:08:39.583564",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -1148,7 +1148,7 @@
             }
           },
           "Sprint 299": {
-            "total_prs": 36,
+            "total_prs": 38,
             "merged_prs": 9,
             "time_to_first_review": {
               "avg": 13.3,
@@ -1205,9 +1205,9 @@
               "simonrey1": 1
             },
             "domain_pr_count": {
+              "containers": 7,
               "ui-components": 7,
               "foundations": 5,
-              "containers": 5,
               "extensibility": 4,
               "minikube": 4,
               "qe": 3,
