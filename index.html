@@ -155,7 +155,7 @@
   <h3 class="section-title">Pull Request Metrics</h3>
   <div class="kpi-row" id="pr-kpi-row"></div>
   <div class="chart-grid full">
-    <div class="chart-card"><details class="collapsible" open><summary><h2>PR Cycle Time Trend</h2><span class="subtitle" style="margin-bottom:0">Hours (median) across sprints</span></summary><div class="collapse-body"><div class="chart-wrap"><canvas id="chart-pr-cycle" height="260"></canvas></div><div class="legend" id="legend-pr-cycle"></div></div></details></div>
+    <div class="chart-card"><details class="collapsible" open><summary><h2>PR Cycle Time Trend</h2><span class="subtitle" style="margin-bottom:0">Hours (median) across completed sprints</span></summary><div class="collapse-body"><div class="chart-wrap"><canvas id="chart-pr-cycle" height="260"></canvas></div><div class="legend" id="legend-pr-cycle"></div></div></details></div>
   </div>
   <div class="chart-grid full">
     <div class="chart-card"><details class="collapsible" open><summary><h2>Reviewer Activity</h2><span class="subtitle" style="margin-bottom:0" id="reviewer-subtitle">Approvals per reviewer across sprints</span></summary><div class="collapse-body"><div class="chart-wrap"><canvas id="chart-reviewer" height="320"></canvas></div><div class="legend" id="legend-reviewer"></div></div></details></div>
@@ -405,9 +405,9 @@ function renderProject(pn) {
 
   // PR Cycle Time Trend (line chart)
   dc('chart-pr-cycle');
-  charts['chart-pr-cycle']=new Chart(document.getElementById('chart-pr-cycle'),{type:'line',data:{labels:sprintNames,datasets:[
-    {label:'First Review',data:sprintNames.map(sn=>prSprints[sn]?.time_to_first_review?.median||null),borderColor:c.series[0],backgroundColor:c.series[0]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[0],pointBorderColor:c.surface,pointBorderWidth:2,tension:.3},
-    {label:'Time to Merge',data:sprintNames.map(sn=>prSprints[sn]?.time_to_merge?.median||null),borderColor:c.series[1],backgroundColor:c.series[1]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[1],pointBorderColor:c.surface,pointBorderWidth:2,tension:.3},
+  charts['chart-pr-cycle']=new Chart(document.getElementById('chart-pr-cycle'),{type:'line',data:{labels:completedPRSprints,datasets:[
+    {label:'First Review',data:completedPRSprints.map(sn=>prSprints[sn]?.time_to_first_review?.median||null),borderColor:c.series[0],backgroundColor:c.series[0]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[0],pointBorderColor:c.surface,pointBorderWidth:2,tension:.3},
+    {label:'Time to Merge',data:completedPRSprints.map(sn=>prSprints[sn]?.time_to_merge?.median||null),borderColor:c.series[1],backgroundColor:c.series[1]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[1],pointBorderColor:c.surface,pointBorderWidth:2,tension:.3},
   ]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{label:ctx=>`${ctx.dataset.label}: ${fmtHours(ctx.parsed.y)}`}}}}});
   ml('legend-pr-cycle',[{color:c.series[0],label:'First Review (median)',type:'line'},{color:c.series[1],label:'Time to Merge (median)',type:'line'}]);
 
