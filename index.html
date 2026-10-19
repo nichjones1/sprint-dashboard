@@ -121,8 +121,8 @@
     <div class="chart-card"><h2>Issues by Status</h2><p class="subtitle">Current and next sprint</p><div class="chart-wrap"><canvas id="chart-status" height="260"></canvas></div><div class="legend" id="legend-status"></div></div>
   </div>
   <div class="chart-grid">
-    <div class="chart-card"><h2>Team Capacity</h2><p class="subtitle">Available vs Out of Office days</p><div class="chart-wrap"><canvas id="chart-capacity" height="260"></canvas></div><div class="legend" id="legend-capacity"></div></div>
-    <div class="chart-card"><h2>Velocity vs Capacity</h2><p class="subtitle">Done issues per available person-day</p><div class="chart-wrap"><canvas id="chart-velocity" height="260"></canvas></div></div>
+    <div class="chart-card"><h2>Team Capacity</h2><p class="subtitle">Available vs Out of Office days, completed sprints</p><div class="chart-wrap"><canvas id="chart-capacity" height="260"></canvas></div><div class="legend" id="legend-capacity"></div></div>
+    <div class="chart-card"><h2>Velocity vs Capacity</h2><p class="subtitle">Done issues per available person-day, completed sprints</p><div class="chart-wrap"><canvas id="chart-velocity" height="260"></canvas></div></div>
   </div>
   <div class="chart-grid">
     <div class="chart-card"><h2 id="goals-title">Sprint Goal Breakdown</h2><p class="subtitle" id="goals-subtitle"></p><div class="chart-wrap"><canvas id="chart-goals" height="280"></canvas></div></div>
@@ -233,6 +233,8 @@ function renderProject(pn) {
   }
   const latestIdx = sprintNames.indexOf(latest);
   const prevN = latestIdx>0 ? sprintNames[latestIdx-1] : null;
+  const isSprintComplete=sn=>{const s=sprints[sn];if(!s)return false;const end=new Date(s.start_date+'T00:00:00');end.setDate(end.getDate()+(s.duration||0));return end<=today;};
+  const completedSprintNames = sprintNames.filter(isSprintComplete);
 
   document.getElementById('generated-at').textContent = 'Last updated: '+new Date(DATA.generated_at).toLocaleString();
 
@@ -271,12 +273,12 @@ function renderProject(pn) {
 
   // Capacity
   dc('chart-capacity');
-  charts['chart-capacity']=new Chart(document.getElementById('chart-capacity'),{type:'bar',data:{labels:sprintNames,datasets:[{label:'Available',data:sprintNames.map(sn=>DATA.availability[sn]?.total_available_days||0),backgroundColor:c.series[2],borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:24},{label:'OOO',data:sprintNames.map(sn=>DATA.availability[sn]?.total_ooo_days||0),backgroundColor:c.series[1],borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:24}]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index'}},scales:{...dOpts(c).scales,x:{...dOpts(c).scales.x,stacked:true},y:{...dOpts(c).scales.y,stacked:true}}}});
+  charts['chart-capacity']=new Chart(document.getElementById('chart-capacity'),{type:'bar',data:{labels:completedSprintNames,datasets:[{label:'Available',data:completedSprintNames.map(sn=>DATA.availability[sn]?.total_available_days||0),backgroundColor:c.series[2],borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:24},{label:'OOO',data:completedSprintNames.map(sn=>DATA.availability[sn]?.total_ooo_days||0),backgroundColor:c.series[1],borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:24}]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index'}},scales:{...dOpts(c).scales,x:{...dOpts(c).scales.x,stacked:true},y:{...dOpts(c).scales.y,stacked:true}}}});
   ml('legend-capacity',[{color:c.series[2],label:'Available',type:'rect'},{color:c.series[1],label:'Out of Office',type:'rect'}]);
 
   // Velocity
   dc('chart-velocity');
-  charts['chart-velocity']=new Chart(document.getElementById('chart-velocity'),{type:'line',data:{labels:sprintNames,datasets:[{label:'Issues/person-day',data:sprintNames.map(sn=>{const a=DATA.availability[sn]?.total_available_days;return a?Math.round(sprints[sn].done_items/a*100)/100:null}),borderColor:c.series[0],backgroundColor:c.series[0]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[0],pointBorderColor:c.surface,pointBorderWidth:2,fill:true,tension:.3}]},options:dOpts(c)});
+  charts['chart-velocity']=new Chart(document.getElementById('chart-velocity'),{type:'line',data:{labels:completedSprintNames,datasets:[{label:'Issues/person-day',data:completedSprintNames.map(sn=>{const a=DATA.availability[sn]?.total_available_days;return a?Math.round(sprints[sn].done_items/a*100)/100:null}),borderColor:c.series[0],backgroundColor:c.series[0]+'1a',borderWidth:2,pointRadius:6,pointBackgroundColor:c.series[0],pointBorderColor:c.surface,pointBorderWidth:2,fill:true,tension:.3}]},options:dOpts(c)});
 
   // Sprint Goals
   const goals=sprints[latest].goals;
@@ -378,7 +380,6 @@ function renderProject(pn) {
 
   // ===== PR METRICS =====
   const prSprintNames = sprintNames.slice(0, latestIdx+1).filter(sn => (prSprints[sn]?.total_prs||0) > 0);
-  const isSprintComplete=sn=>{const s=sprints[sn];if(!s)return false;const end=new Date(s.start_date+'T00:00:00');end.setDate(end.getDate()+(s.duration||0));return end<=today;};
   const completedPRSprints = prSprintNames.filter(isSprintComplete);
   const latestPRName = prSprintNames.length ? prSprintNames[prSprintNames.length-1] : latest;
   const prevPRName = prSprintNames.length>1 ? prSprintNames[prSprintNames.length-2] : null;
