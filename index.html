@@ -161,7 +161,7 @@
     <div class="chart-card"><details class="collapsible" open><summary><h2>Reviewer Activity</h2><span class="subtitle" style="margin-bottom:0" id="reviewer-subtitle">Approvals per reviewer across sprints</span></summary><div class="collapse-body"><div class="chart-wrap"><canvas id="chart-reviewer" height="320"></canvas></div><div class="legend" id="legend-reviewer"></div></div></details></div>
   </div>
   <div class="chart-grid full">
-    <div class="chart-card"><details class="collapsible" open><summary><h2>PRs per Domain</h2><span class="subtitle" style="margin-bottom:0" id="domain-pr-subtitle">PRs by domain owner vs others, across sprints</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);margin-bottom:12px">Domain <select id="domain-pr-select" style="font-size:13px;padding:4px 8px;border-radius:6px;border:1px solid var(--gridline);background:var(--surface-1);color:var(--text-primary);max-width:320px"></select></label><div class="chart-wrap"><canvas id="chart-domain-prs" height="320"></canvas></div><div class="legend" id="legend-domain-prs"></div></div></details></div>
+    <div class="chart-card"><details class="collapsible" open><summary><h2>PRs per Domain</h2><span class="subtitle" style="margin-bottom:0" id="domain-pr-subtitle">PRs by domain owner vs others, across completed sprints</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);margin-bottom:12px">Domain <select id="domain-pr-select" style="font-size:13px;padding:4px 8px;border-radius:6px;border:1px solid var(--gridline);background:var(--surface-1);color:var(--text-primary);max-width:320px"></select></label><div class="chart-wrap"><canvas id="chart-domain-prs" height="320"></canvas></div><div class="legend" id="legend-domain-prs"></div></div></details></div>
   </div>
   <div class="chart-grid full">
     <div class="chart-card"><details class="collapsible" open><summary><h2>Avg Time to Approval by Domain</h2><span class="subtitle" style="margin-bottom:0">Hours, current sprint</span></summary><div class="collapse-body"><div class="chart-wrap" id="domain-time-wrap"><canvas id="chart-domain-time"></canvas></div></div></details></div>
@@ -170,7 +170,7 @@
     <div class="chart-card"><details class="collapsible"><summary><h2>Avg Time to Approval by Engineer</h2><span class="subtitle" style="margin-bottom:0" id="eng-approval-subtitle">Hours from PR creation to approval, current sprint</span></summary><div class="collapse-body"><div class="chart-wrap" id="eng-approval-wrap"><canvas id="chart-eng-approval"></canvas></div></div></details></div>
   </div>
   <div class="chart-grid full">
-    <div class="chart-card"><details class="collapsible"><summary><h2>Domain Approval Ownership</h2><span class="subtitle" style="margin-bottom:0">Share of approvals per reviewer within a domain, across sprints</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);margin-bottom:12px">Domain <select id="domain-select" style="font-size:13px;padding:4px 8px;border-radius:6px;border:1px solid var(--gridline);background:var(--surface-1);color:var(--text-primary);max-width:320px"></select></label><div class="chart-wrap"><canvas id="chart-domain-ownership" height="320"></canvas></div><div class="legend" id="legend-domain-ownership"></div></div></details></div>
+    <div class="chart-card"><details class="collapsible"><summary><h2>Domain Approval Ownership</h2><span class="subtitle" style="margin-bottom:0">Share of approvals per reviewer within a domain, across completed sprints</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);margin-bottom:12px">Domain <select id="domain-select" style="font-size:13px;padding:4px 8px;border-radius:6px;border:1px solid var(--gridline);background:var(--surface-1);color:var(--text-primary);max-width:320px"></select></label><div class="chart-wrap"><canvas id="chart-domain-ownership" height="320"></canvas></div><div class="legend" id="legend-domain-ownership"></div></div></details></div>
   </div>
 </div>
 
@@ -378,6 +378,8 @@ function renderProject(pn) {
 
   // ===== PR METRICS =====
   const prSprintNames = sprintNames.slice(0, latestIdx+1).filter(sn => (prSprints[sn]?.total_prs||0) > 0);
+  const isSprintComplete=sn=>{const s=sprints[sn];if(!s)return false;const end=new Date(s.start_date+'T00:00:00');end.setDate(end.getDate()+(s.duration||0));return end<=today;};
+  const completedPRSprints = prSprintNames.filter(isSprintComplete);
   const latestPRName = prSprintNames.length ? prSprintNames[prSprintNames.length-1] : latest;
   const prevPRName = prSprintNames.length>1 ? prSprintNames[prSprintNames.length-2] : null;
   const latestPR = prSprints[latestPRName] || {};
@@ -409,8 +411,7 @@ function renderProject(pn) {
   ml('legend-pr-cycle',[{color:c.series[0],label:'First Review (median)',type:'line'},{color:c.series[1],label:'Time to Merge (median)',type:'line'}]);
 
   // Reviewer Activity — approvals per reviewer across completed sprints (trend)
-  const isSprintComplete=sn=>{const s=sprints[sn];if(!s)return false;const end=new Date(s.start_date+'T00:00:00');end.setDate(end.getDate()+(s.duration||0));return end<=today;};
-  const revSprints=prSprintNames.filter(isSprintComplete);
+  const revSprints=completedPRSprints;
   document.getElementById('reviewer-subtitle').textContent = `Approvals per reviewer across ${revSprints.length} completed sprint${revSprints.length===1?'':'s'}`;
   dc('chart-reviewer');
   const revCanvas=document.getElementById('chart-reviewer');
@@ -429,8 +430,8 @@ function renderProject(pn) {
   // PRs per Domain — owner-authored vs others, across sprints (trend)
   const domPrSel=document.getElementById('domain-pr-select');
   const domPRHist={}; // domain -> sprint -> {total, owner}
-  const domPRRank={}; // domain -> total PRs across sprints
-  for(const sn of prSprintNames){
+  const domPRRank={}; // domain -> total PRs across completed sprints
+  for(const sn of completedPRSprints){
     const tot=prSprints[sn]?.domain_pr_count||{};
     const own=prSprints[sn]?.domain_owner_authored||{};
     for(const[dom,v] of Object.entries(tot)){
@@ -445,12 +446,12 @@ function renderProject(pn) {
     const canvas=document.getElementById('chart-domain-prs');
     if(!dom||!domPRHist[dom]){ml('legend-domain-prs',[]);return;}
     const hist=domPRHist[dom];
-    const ownerData=prSprintNames.map(sn=>hist[sn]?.owner||0);
-    const otherData=prSprintNames.map(sn=>Math.max(0,(hist[sn]?.total||0)-(hist[sn]?.owner||0)));
-    charts['chart-domain-prs']=new Chart(canvas,{type:'bar',data:{labels:prSprintNames,datasets:[
+    const ownerData=completedPRSprints.map(sn=>hist[sn]?.owner||0);
+    const otherData=completedPRSprints.map(sn=>Math.max(0,(hist[sn]?.total||0)-(hist[sn]?.owner||0)));
+    charts['chart-domain-prs']=new Chart(canvas,{type:'bar',data:{labels:completedPRSprints,datasets:[
       {label:'By Domain Owner',data:ownerData,backgroundColor:c.series[0],borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:28,stack:'s'},
       {label:'By Others',data:otherData,backgroundColor:c.series[0]+'33',borderRadius:{topLeft:4,topRight:4},borderSkipped:'bottom',barThickness:28,stack:'s'},
-    ]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{afterBody:(items)=>{const i=items[0].dataIndex;const sn=prSprintNames[i];const t=hist[sn]?.total||0;const o=hist[sn]?.owner||0;return `${t} total • ${t?Math.round(o/t*100):0}% by owner`}}}},scales:{...dOpts(c).scales,x:{...dOpts(c).scales.x,stacked:true},y:{...dOpts(c).scales.y,stacked:true,title:{display:true,text:'PRs',color:c.muted}}}}});
+    ]},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{afterBody:(items)=>{const i=items[0].dataIndex;const sn=completedPRSprints[i];const t=hist[sn]?.total||0;const o=hist[sn]?.owner||0;return `${t} total • ${t?Math.round(o/t*100):0}% by owner`}}}},scales:{...dOpts(c).scales,x:{...dOpts(c).scales.x,stacked:true},y:{...dOpts(c).scales.y,stacked:true,title:{display:true,text:'PRs',color:c.muted}}}}});
     ml('legend-domain-prs',[{color:c.series[0],label:'By Domain Owner',type:'rect'},{color:c.series[0]+'33',label:'By Others',type:'rect'}]);
   }
   if(domPRList.length){
@@ -504,7 +505,7 @@ function renderProject(pn) {
   const ownSel=document.getElementById('domain-select');
   const domSprintShares={}; // domain -> reviewer -> { sprint -> pct }
   const domRank={};         // domain -> cumulative pct (for default selection)
-  for(const sn of prSprintNames){
+  for(const sn of completedPRSprints){
     const dOwn=prSprints[sn]?.domain_approval_ownership||{};
     for(const[dom,revs] of Object.entries(dOwn)){
       if(!domSprintShares[dom])domSprintShares[dom]={};
@@ -523,12 +524,12 @@ function renderProject(pn) {
     const revObj=domSprintShares[dom];
     const ranked=Object.entries(revObj).map(([rev,byS])=>[rev,Object.values(byS).reduce((a,b)=>a+b,0)]).sort((a,b)=>b[1]-a[1]);
     const topR=ranked.slice(0,8).map(([r])=>r);
-    const ds=topR.map((rev,i)=>({label:rev,data:prSprintNames.map(sn=>revObj[rev]?.[sn]??0),borderColor:c.series[i],backgroundColor:c.series[i],borderWidth:2,pointRadius:4,pointBackgroundColor:c.series[i],pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true}));
+    const ds=topR.map((rev,i)=>({label:rev,data:completedPRSprints.map(sn=>revObj[rev]?.[sn]??0),borderColor:c.series[i],backgroundColor:c.series[i],borderWidth:2,pointRadius:4,pointBackgroundColor:c.series[i],pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true}));
     if(ranked.length>8){
-      const otherData=prSprintNames.map(sn=>{let s=0;for(const[rev,byS] of Object.entries(revObj)){if(!topR.includes(rev))s+=(byS[sn]||0);}return Math.round(s*10)/10;});
+      const otherData=completedPRSprints.map(sn=>{let s=0;for(const[rev,byS] of Object.entries(revObj)){if(!topR.includes(rev))s+=(byS[sn]||0);}return Math.round(s*10)/10;});
       ds.push({label:`Other (${ranked.length-8})`,data:otherData,borderColor:DEEMPH,backgroundColor:DEEMPH,borderWidth:2,borderDash:[5,4],pointRadius:3,pointBackgroundColor:DEEMPH,pointBorderColor:c.surface,pointBorderWidth:1.5,tension:.3,spanGaps:true});
     }
-    charts['chart-domain-ownership']=new Chart(canvas,{type:'line',data:{labels:prSprintNames,datasets:ds},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',intersect:false,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y}%`}}},scales:{...dOpts(c).scales,y:{...dOpts(c).scales.y,title:{display:true,text:'Share of approvals (%)',color:c.muted},ticks:{...dOpts(c).scales.y.ticks,callback:v=>v+'%'}}}}});
+    charts['chart-domain-ownership']=new Chart(canvas,{type:'line',data:{labels:completedPRSprints,datasets:ds},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',intersect:false,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y}%`}}},scales:{...dOpts(c).scales,y:{...dOpts(c).scales.y,title:{display:true,text:'Share of approvals (%)',color:c.muted},ticks:{...dOpts(c).scales.y.ticks,callback:v=>v+'%'}}}}});
     ml('legend-domain-ownership',ds.map(d=>({color:d.borderColor,label:d.label,type:'line'})));
   }
   if(domList.length){
