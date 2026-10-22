@@ -161,6 +161,9 @@
     <div class="chart-card"><details class="collapsible" open><summary><h2>Reviewer Activity</h2><span class="subtitle" style="margin-bottom:0" id="reviewer-subtitle">Approvals per reviewer across sprints</span></summary><div class="collapse-body"><div class="chart-wrap"><canvas id="chart-reviewer" height="320"></canvas></div><div class="legend" id="legend-reviewer"></div></div></details></div>
   </div>
   <div class="chart-grid full">
+    <div class="chart-card"><details class="collapsible" open><summary><h2>Review Rounds before Merge</h2><span class="subtitle" style="margin-bottom:0">Times the author re-requested review per merged PR (median &amp; max) — completed sprints, engineers with &ge;3 merged PRs</span></summary><div class="collapse-body"><div class="chart-wrap" id="rounds-wrap"><canvas id="chart-rounds"></canvas></div><div class="legend" id="legend-rounds"></div></div></details></div>
+  </div>
+  <div class="chart-grid full">
     <div class="chart-card"><details class="collapsible" open><summary><h2>PRs per Domain</h2><span class="subtitle" style="margin-bottom:0" id="domain-pr-subtitle">PRs by domain owner vs others, across completed sprints</span></summary><div class="collapse-body"><label style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);margin-bottom:12px">Domain <select id="domain-pr-select" style="font-size:13px;padding:4px 8px;border-radius:6px;border:1px solid var(--gridline);background:var(--surface-1);color:var(--text-primary);max-width:320px"></select></label><div class="chart-wrap"><canvas id="chart-domain-prs" height="320"></canvas></div><div class="legend" id="legend-domain-prs"></div></div></details></div>
   </div>
   <div class="chart-grid full">
@@ -427,6 +430,20 @@ function renderProject(pn) {
   }
   if(revDatasets.length)charts['chart-reviewer']=new Chart(revCanvas,{type:'line',data:{labels:revSprints,datasets:revDatasets},options:{...dOpts(c),plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',intersect:false,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y} approval${ctx.parsed.y===1?'':'s'}`}}},scales:{...dOpts(c).scales,y:{...dOpts(c).scales.y,title:{display:true,text:'Approvals',color:c.muted}}}}});
   ml('legend-reviewer',revDatasets.map(ds=>({color:ds.borderColor,label:ds.label,type:'line'})));
+
+  // Review Rounds before Merge — author review-request rounds per merged PR, median & max per engineer
+  const roundsAgg={};
+  for(const sn of completedPRSprints){const a=prSprints[sn]?.author_review_rounds||{};for(const[eng,lst] of Object.entries(a)){(roundsAgg[eng]=roundsAgg[eng]||[]).push(...lst);}}
+  const medOf=arr=>{const s=[...arr].sort((x,y)=>x-y),n=s.length;return n?(n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2):0;};
+  const roundEntries=Object.entries(roundsAgg).map(([eng,lst])=>({eng,median:Math.round(medOf(lst)*10)/10,max:Math.max(...lst),n:lst.length})).filter(e=>e.n>=3).sort((a,b)=>b.median-a.median||b.max-a.max);
+  dc('chart-rounds');
+  const rWrap=document.getElementById('rounds-wrap'),rCanvas=document.getElementById('chart-rounds');
+  const rH=Math.max(300,roundEntries.length*38+40);rWrap.style.height=rH+'px';rCanvas.style.height=rH+'px';
+  if(roundEntries.length)charts['chart-rounds']=new Chart(rCanvas,{type:'bar',data:{labels:roundEntries.map(e=>e.eng),datasets:[
+    {label:'Median',data:roundEntries.map(e=>e.median),backgroundColor:c.series[0],borderRadius:4,barThickness:11},
+    {label:'Max',data:roundEntries.map(e=>e.max),backgroundColor:c.series[3],borderRadius:4,barThickness:11},
+  ]},options:{...dOpts(c),maintainAspectRatio:false,indexAxis:'y',plugins:{...dOpts(c).plugins,tooltip:{...dOpts(c).plugins.tooltip,mode:'index',callbacks:{afterBody:items=>`across ${roundEntries[items[0].dataIndex].n} merged PRs`}}},scales:{x:{...dOpts(c).scales.x,beginAtZero:true,title:{display:true,text:'Review requests by author',color:c.muted}},y:{...dOpts(c).scales.y,ticks:{...dOpts(c).scales.y.ticks,autoSkip:false},grid:{display:false}}}}});
+  ml('legend-rounds',[{color:c.series[0],label:'Median',type:'rect'},{color:c.series[3],label:'Max',type:'rect'}]);
 
   // PRs per Domain — owner-authored vs others, across sprints (trend)
   const domPrSel=document.getElementById('domain-pr-select');

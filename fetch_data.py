@@ -561,6 +561,14 @@ def fetch_pr_data(token, org, sprint_windows):
                 createdAt
               }
             }
+            timelineItems(first: 100, itemTypes: [REVIEW_REQUESTED_EVENT]) {
+              nodes {
+                ... on ReviewRequestedEvent {
+                  createdAt
+                  actor { login }
+                }
+              }
+            }
           }
         }
       }
@@ -601,6 +609,18 @@ def fetch_pr_data(token, org, sprint_windows):
                         "created_at": rv["createdAt"],
                     })
 
+                review_requests = []
+                for ti in pr.get("timelineItems", {}).get("nodes", []):
+                    if not ti:
+                        continue
+                    actor = (ti.get("actor") or {}).get("login")
+                    if not actor:
+                        continue
+                    review_requests.append({
+                        "actor": actor,
+                        "created_at": ti["createdAt"],
+                    })
+
                 all_prs.append({
                     "repo": repo_name,
                     "number": pr["number"],
@@ -614,6 +634,7 @@ def fetch_pr_data(token, org, sprint_windows):
                     "labels": labels,
                     "domain": extract_domain(labels),
                     "reviews": reviews,
+                    "review_requests": review_requests,
                 })
 
             if not pr_data["pageInfo"]["hasNextPage"]:
@@ -724,6 +745,17 @@ def compute_pr_metrics(all_prs, sprint_windows):
         for eng, bdays in reviewer_approval_bdays.items():
             engineer_avg_approval[eng] = round(sum(bdays) / len(bdays), 2) if bdays else 0
 
+        # Review rounds: distinct times the PR author (re)requested review before merge
+        author_review_rounds = {}
+        for pr in merged:
+            a = pr["author"]
+            times = {
+                r["created_at"] for r in pr.get("review_requests", [])
+                if r["actor"] == a
+                and (not pr["merged_at"] or r["created_at"] <= pr["merged_at"])
+            }
+            author_review_rounds.setdefault(a, []).append(len(times))
+
         # Domain metrics
         domain_prs = {}
         domain_approvals = {}
@@ -793,6 +825,7 @@ def compute_pr_metrics(all_prs, sprint_windows):
             "engineer_avg_approval_bdays": dict(
                 sorted(engineer_avg_approval.items(), key=lambda x: x[1])
             ),
+            "author_review_rounds": author_review_rounds,
         }
 
     return {"sprints": metrics}
@@ -864,7 +897,13 @@ def main():
         for sn, sd in list(proj_data["sprints"].items()):
             if sn in prev_sprints and prev_sprints[sn].get("frozen_at"):
                 proj_data["sprints"][sn] = prev_sprints[sn]
-                if sn in prev_pr_sprints:
+                # Keep this run's freshly computed PR metrics while the sprint is
+                # still within the PR fetch window (total_prs > 0); only fall back to
+                # the preserved snapshot once the sprint ages out and is no longer
+                # fetched. PR history is stable, so recomputing in-window is safe and
+                # lets newly added metrics backfill into already-frozen sprints.
+                fresh_pr = proj_data["pr_metrics"]["sprints"].get(sn)
+                if (not fresh_pr or not fresh_pr.get("total_prs")) and sn in prev_pr_sprints:
                     proj_data["pr_metrics"]["sprints"][sn] = prev_pr_sprints[sn]
                 print(f"  {sn}: frozen (preserved from {prev_sprints[sn]['frozen_at']})")
                 continue
