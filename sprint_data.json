@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T15:22:52.471055",
+  "generated_at": "2026-10-22T15:32:20.967858",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -7,52 +7,15 @@
         "Sprint 299": {
           "start_date": "2026-10-14",
           "duration": 21,
-          "total_items": 37,
-          "done_items": 22,
-          "total_story_points": 28.0,
-          "done_story_points": 20.0,
-          "statuses": {
-            "\u2714\ufe0f Done": 22,
-            "\ud83d\udea7 In Progress": 2,
-            "\ud83d\udea5 In Review": 9,
-            "\ud83d\udccb Backlog": 1,
-            "\ud83d\udcc5 Planned": 3
-          },
-          "goals": {
-            "Uncategorized": 28,
-            "QE": 5,
-            "Podman Feature": 1,
-            "Documentation": 1,
-            "Design": 2
-          },
-          "priorities": {
-            "None": 24,
-            "\ud83c\udf0b Urgent": 1,
-            "\ud83c\udfd5 Medium": 4,
-            "\ud83c\udfdd Low": 1,
-            "Critical": 1,
-            "\ud83c\udfd4 High": 6
-          },
-          "assignees": {
-            "vancura": 16,
-            "cdrage": 4,
-            "cbr7": 3,
-            "ScrewTSW": 3,
-            "feloy": 3,
-            "bmahabirbu": 2,
-            "ShiranHi": 2,
-            "0xKalasi": 1,
-            "dgolovin": 1,
-            "axel7083": 1,
-            "kyetter": 1
-          },
-          "repos": {
-            "podman-desktop": 29,
-            "podman-desktop-internal": 3,
-            "extension-kubernetes-dashboard": 3,
-            "podman-install": 1,
-            "None": 1
-          }
+          "total_items": 0,
+          "done_items": 0,
+          "total_story_points": 0,
+          "done_story_points": 0,
+          "statuses": {},
+          "goals": {},
+          "priorities": {},
+          "assignees": {},
+          "repos": {}
         },
         "Sprint 298": {
           "start_date": "2026-09-23",
@@ -259,25 +222,15 @@
         "Sprint 300": {
           "start_date": "2026-11-04",
           "duration": 21,
-          "total_items": 1,
+          "total_items": 0,
           "done_items": 0,
           "total_story_points": 0,
           "done_story_points": 0,
-          "statuses": {
-            "\ud83d\udcc5 Planned": 1
-          },
-          "goals": {
-            "Uncategorized": 1
-          },
-          "priorities": {
-            "None": 1
-          },
-          "assignees": {
-            "vancura": 1
-          },
-          "repos": {
-            "podman-desktop": 1
-          }
+          "statuses": {},
+          "goals": {},
+          "priorities": {},
+          "assignees": {},
+          "repos": {}
         }
       },
       "pr_metrics": {
