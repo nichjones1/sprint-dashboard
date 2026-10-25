@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T14:09:04.826667",
+  "generated_at": "2026-10-25T14:33:17.833648",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -8,13 +8,13 @@
           "start_date": "2026-10-14",
           "duration": 21,
           "total_items": 287,
-          "done_items": 100,
+          "done_items": 101,
           "total_story_points": 250.0,
-          "done_story_points": 55.0,
+          "done_story_points": 58.0,
           "statuses": {
-            "\u2714\ufe0f Done": 100,
+            "\u2714\ufe0f Done": 101,
             "\ud83d\udea7 In Progress": 31,
-            "\ud83d\udea5 In Review": 41,
+            "\ud83d\udea5 In Review": 40,
             "\ud83d\udccb Backlog": 20,
             "\ud83d\udcc5 Planned": 79,
             "\u23f3On Hold": 10,
@@ -1497,7 +1497,7 @@
           },
           "Sprint 298": {
             "total_prs": 291,
-            "merged_prs": 247,
+            "merged_prs": 248,
             "time_to_first_review": {
               "avg": 25.5,
               "median": 1.2,
@@ -1509,14 +1509,14 @@
               "count": 67
             },
             "time_to_merge": {
-              "avg": 55.6,
-              "median": 3.6,
-              "count": 247
+              "avg": 57.0,
+              "median": 3.7,
+              "count": 248
             },
             "time_to_address_comments": {
-              "avg": 65.7,
-              "median": 40.9,
-              "count": 19
+              "avg": 78.2,
+              "median": 46.5,
+              "count": 20
             },
             "weekly_extremes": {
               "2026-W38": {
@@ -1593,7 +1593,7 @@
             "author_merged_prs": {
               "benoitf": 139,
               "axel7083": 24,
-              "gastoner": 11,
+              "gastoner": 12,
               "danivilla9": 8,
               "simonrey1": 8,
               "odockal": 6,
@@ -2005,6 +2005,7 @@
                 2,
                 3,
                 5,
+                2,
                 0,
                 0,
                 0,
@@ -2075,8 +2076,8 @@
             }
           },
           "Sprint 299": {
-            "total_prs": 129,
-            "merged_prs": 78,
+            "total_prs": 132,
+            "merged_prs": 81,
             "time_to_first_review": {
               "avg": 14.1,
               "median": 1.7,
@@ -2088,14 +2089,14 @@
               "count": 52
             },
             "time_to_merge": {
-              "avg": 38.1,
-              "median": 14.0,
-              "count": 78
+              "avg": 38.8,
+              "median": 15.8,
+              "count": 81
             },
             "time_to_address_comments": {
-              "avg": 80.2,
-              "median": 85.2,
-              "count": 10
+              "avg": 73.2,
+              "median": 72.2,
+              "count": 11
             },
             "weekly_extremes": {
               "2026-W41": {
@@ -2132,8 +2133,8 @@
               "vancura": 12,
               "feloy": 11,
               "axel7083": 7,
+              "gastoner": 7,
               "cbr7": 7,
-              "gastoner": 4,
               "simonrey1": 4,
               "DeviceDidWhat": 3,
               "odockal": 3,
@@ -2162,10 +2163,10 @@
               "slemeur": 1
             },
             "domain_pr_count": {
-              "foundations": 20,
-              "extensibility": 19,
+              "foundations": 21,
+              "extensibility": 20,
               "ui-components": 16,
-              "containers": 14,
+              "containers": 15,
               "qe": 8,
               "minikube": 8,
               "kubernetes": 4,
@@ -2334,6 +2335,9 @@
               ],
               "gastoner": [
                 0,
+                1,
+                1,
+                1,
                 0,
                 0,
                 0
@@ -2452,11 +2456,11 @@
           "total_story_points": 0,
           "done_story_points": 0,
           "statuses": {
-            "\ud83d\udea7 In Progress": 15,
+            "\ud83d\udea7 In Progress": 16,
             "\ud83d\udea5 In Review": 9,
             "Done": 16,
             "\u23f3On Hold": 8,
-            "\ud83d\udccb Backlog": 33,
+            "\ud83d\udccb Backlog": 32,
             "\ud83d\udcc5 Planned": 3,
             "\u23f1Postponed": 1
           },
@@ -3328,7 +3332,7 @@
             }
           },
           "Sprint 299": {
-            "total_prs": 27,
+            "total_prs": 28,
             "merged_prs": 21,
             "time_to_first_review": {
               "avg": 17.8,
