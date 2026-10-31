@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T16:51:41.361859",
+  "generated_at": "2026-10-31T15:54:00.031982",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -292,7 +292,7 @@
         "Sprint 300": {
           "start_date": "2026-11-04",
           "duration": 21,
-          "total_items": 47,
+          "total_items": 46,
           "done_items": 0,
           "total_story_points": 32.0,
           "done_story_points": 0,
@@ -300,17 +300,17 @@
             "\ud83d\udcc5 Planned": 14,
             "None": 15,
             "\u23f3On Hold": 4,
-            "\ud83d\udccb Backlog": 11,
+            "\ud83d\udccb Backlog": 10,
             "\ud83d\udea7 In Progress": 3
           },
           "goals": {
-            "Uncategorized": 29,
+            "Uncategorized": 28,
             "Documentation": 1,
             "QE": 13,
             "Technical Debt": 4
           },
           "priorities": {
-            "None": 29,
+            "None": 28,
             "\ud83c\udfd5 Medium": 6,
             "\ud83c\udfdd Low": 5,
             "\ud83c\udf0b Urgent": 1,
@@ -330,7 +330,7 @@
             "SoniaSandler": 1
           },
           "repos": {
-            "podman-desktop": 26,
+            "podman-desktop": 25,
             "podman-desktop-internal": 6,
             "e2e": 5,
             "podman-desktop-hummingbird-ext": 4,
@@ -2100,7 +2100,7 @@
             }
           },
           "Sprint 299": {
-            "total_prs": 195,
+            "total_prs": 196,
             "merged_prs": 122,
             "time_to_first_review": {
               "avg": 13.8,
@@ -2219,9 +2219,9 @@
               "qe": 20,
               "ui-components": 19,
               "minikube": 9,
+              "podman-quadlet": 6,
               "bootc": 5,
               "kreate": 5,
-              "podman-quadlet": 5,
               "apple-container": 5,
               "kubernetes": 4,
               "dependency-update-minor": 4,
@@ -2576,14 +2576,14 @@
           "start_date": "2026-10-14",
           "duration": 21,
           "total_items": 95,
-          "done_items": 30,
+          "done_items": 31,
           "total_story_points": 0,
           "done_story_points": 0,
           "statuses": {
-            "Done": 30,
+            "\ud83d\udea7 In Progress": 12,
+            "Done": 31,
             "\ud83d\udea5 In Review": 13,
             "\ud83d\udccb Backlog": 32,
-            "\ud83d\udea7 In Progress": 13,
             "\u23f3On Hold": 3,
             "\ud83d\udcc5 Planned": 3,
             "\u23f1Postponed": 1
@@ -3464,12 +3464,12 @@
             }
           },
           "Sprint 299": {
-            "total_prs": 46,
-            "merged_prs": 32,
+            "total_prs": 47,
+            "merged_prs": 33,
             "time_to_first_review": {
-              "avg": 20.2,
-              "median": 3.7,
-              "count": 32
+              "avg": 19.8,
+              "median": 4.1,
+              "count": 33
             },
             "time_to_first_comment": {
               "avg": 28.1,
@@ -3477,9 +3477,9 @@
               "count": 12
             },
             "time_to_merge": {
-              "avg": 34.7,
-              "median": 2.0,
-              "count": 32
+              "avg": 33.8,
+              "median": 2.2,
+              "count": 33
             },
             "time_to_address_comments": {
               "avg": 36.1,
@@ -3534,7 +3534,7 @@
               "feloy": 9,
               "bmahabirbu": 8,
               "jeffmaury": 5,
-              "serbangeorge-m": 3,
+              "serbangeorge-m": 4,
               "benoitf": 2,
               "openkaiden-ai": 2,
               "fullsend-ai-coder": 1,
@@ -3543,8 +3543,8 @@
             },
             "reviewer_approvals": {
               "benoitf": 13,
+              "bmahabirbu": 12,
               "jeffmaury": 11,
-              "bmahabirbu": 11,
               "MarsKubeX": 7,
               "fbricon": 1
             },
@@ -3555,7 +3555,7 @@
             "engineer_avg_approval_bdays": {
               "jeffmaury": 0.56,
               "MarsKubeX": 1.04,
-              "bmahabirbu": 1.15,
+              "bmahabirbu": 1.08,
               "benoitf": 1.2,
               "fbricon": 1.21
             },
@@ -3570,6 +3570,12 @@
                 2,
                 2
               ],
+              "serbangeorge-m": [
+                2,
+                1,
+                2,
+                2
+              ],
               "jeffmaury": [
                 1,
                 2,
@@ -3581,11 +3587,6 @@
                 2
               ],
               "fbricon": [
-                2
-              ],
-              "serbangeorge-m": [
-                1,
-                2,
                 2
               ],
               "MarsKubeX": [
@@ -4381,10 +4382,10 @@
     "Sprint 300": {
       "total_working_days": 16,
       "engineer_count": 26,
-      "total_ooo_days": 4,
-      "total_available_days": 412,
+      "total_ooo_days": 8,
+      "total_available_days": 408,
       "total_capacity_days": 416,
-      "capacity_pct": 99.0,
+      "capacity_pct": 98.1,
       "engineers": {
         "Anton": {
           "ooo_days": 0,
@@ -4395,8 +4396,8 @@
           "available_days": 16
         },
         "Brian": {
-          "ooo_days": 0,
-          "available_days": 16
+          "ooo_days": 4,
+          "available_days": 12
         },
         "Charlie": {
           "ooo_days": 0,
@@ -4526,10 +4527,10 @@
             "Jeff",
             "Marcel"
           ],
-          "ooo_days": 0,
-          "available_days": 80,
+          "ooo_days": 4,
+          "available_days": 76,
           "member_count": 5,
-          "capacity_pct": 100.0
+          "capacity_pct": 95.0
         },
         "Other": {
           "members": [
@@ -4565,10 +4566,10 @@
     "Sprint 300": {
       "total_working_days": 16,
       "engineer_count": 26,
-      "total_ooo_days": 4,
-      "total_available_days": 412,
+      "total_ooo_days": 8,
+      "total_available_days": 408,
       "total_capacity_days": 416,
-      "capacity_pct": 99.0,
+      "capacity_pct": 98.1,
       "engineers": {
         "Anton": {
           "ooo_days": 0,
@@ -4579,8 +4580,8 @@
           "available_days": 16
         },
         "Brian": {
-          "ooo_days": 0,
-          "available_days": 16
+          "ooo_days": 4,
+          "available_days": 12
         },
         "Charlie": {
           "ooo_days": 0,
@@ -4710,10 +4711,10 @@
             "Jeff",
             "Marcel"
           ],
-          "ooo_days": 0,
-          "available_days": 80,
+          "ooo_days": 4,
+          "available_days": 76,
           "member_count": 5,
-          "capacity_pct": 100.0
+          "capacity_pct": 95.0
         },
         "Other": {
           "members": [
@@ -4747,10 +4748,10 @@
     "Sprint 301": {
       "total_working_days": 16,
       "engineer_count": 26,
-      "total_ooo_days": 8,
-      "total_available_days": 408,
+      "total_ooo_days": 9,
+      "total_available_days": 407,
       "total_capacity_days": 416,
-      "capacity_pct": 98.1,
+      "capacity_pct": 97.8,
       "engineers": {
         "Anton": {
           "ooo_days": 0,
@@ -4761,8 +4762,8 @@
           "available_days": 16
         },
         "Brian": {
-          "ooo_days": 0,
-          "available_days": 16
+          "ooo_days": 1,
+          "available_days": 15
         },
         "Charlie": {
           "ooo_days": 0,
@@ -4892,10 +4893,10 @@
             "Jeff",
             "Marcel"
           ],
-          "ooo_days": 3,
-          "available_days": 77,
+          "ooo_days": 4,
+          "available_days": 76,
           "member_count": 5,
-          "capacity_pct": 96.2
+          "capacity_pct": 95.0
         },
         "Other": {
           "members": [
