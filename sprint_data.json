@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T15:54:00.031982",
+  "generated_at": "2026-11-01T16:57:38.487416",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -2100,7 +2100,7 @@
             }
           },
           "Sprint 299": {
-            "total_prs": 196,
+            "total_prs": 198,
             "merged_prs": 122,
             "time_to_first_review": {
               "avg": 13.8,
@@ -2215,8 +2215,8 @@
             "domain_pr_count": {
               "foundations": 30,
               "containers": 28,
-              "extensibility": 25,
-              "qe": 20,
+              "extensibility": 26,
+              "qe": 21,
               "ui-components": 19,
               "minikube": 9,
               "podman-quadlet": 6,
