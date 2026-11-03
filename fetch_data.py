@@ -155,13 +155,15 @@ def fetch_github_project(token, org, project_number):
                 }
               }
               content {
+                __typename
                 ... on Issue {
-                  title number state
+                  title number state url
                   labels(first:5) { nodes { name } }
                   assignees(first:3) { nodes { login } }
                   repository { name }
                 }
-                ... on PullRequest { title number state }
+                ... on PullRequest { title number state url repository { name } }
+                ... on DraftIssue { title }
               }
             }
           }
@@ -207,6 +209,8 @@ def fetch_github_project(token, org, project_number):
                         "title": content.get("title"),
                         "number": content.get("number"),
                         "state": content.get("state"),
+                        "url": content.get("url"),
+                        "type": content.get("__typename"),
                         "repo": (
                             content.get("repository", {}).get("name")
                             if content.get("repository")
@@ -267,6 +271,23 @@ def fetch_github_project(token, org, project_number):
             "priorities": priorities,
             "assignees": dict(sorted(assignees.items(), key=lambda x: -x[1])[:15]),
             "repos": dict(sorted(repos.items(), key=lambda x: -x[1])),
+            # Item-level detail so the dashboard can drill into every count.
+            "items": [
+                {
+                    "number": i["number"],
+                    "title": i["title"],
+                    "repo": i["repo"],
+                    "url": i["url"],
+                    "type": i["type"],
+                    "status": i["status"],
+                    "state": i["state"],
+                    "goal": i["sprint_goal"],
+                    "priority": i["priority"],
+                    "points": i["story_points"],
+                    "assignees": i["assignees"],
+                }
+                for i in si
+            ],
         }
 
     return sprint_summaries, upcoming_sprints
@@ -551,7 +572,7 @@ def fetch_pr_data(token, org, sprint_windows):
         pullRequests(first: 50, after: $cursor, orderBy: {field: CREATED_AT, direction: DESC}) {
           pageInfo { hasNextPage endCursor }
           nodes {
-            number title state createdAt mergedAt closedAt isDraft
+            number title url state createdAt mergedAt closedAt isDraft
             author { login }
             labels(first: 15) { nodes { name } }
             reviews(first: 50) {
@@ -625,6 +646,7 @@ def fetch_pr_data(token, org, sprint_windows):
                     "repo": repo_name,
                     "number": pr["number"],
                     "title": pr["title"],
+                    "url": pr.get("url"),
                     "state": pr["state"],
                     "created_at": pr["createdAt"],
                     "merged_at": pr.get("mergedAt"),
@@ -642,6 +664,45 @@ def fetch_pr_data(token, org, sprint_windows):
             cursor = pr_data["pageInfo"]["endCursor"]
 
     return all_prs
+
+
+def pr_detail(pr):
+    """Compact per-PR record for dashboard drill-downs."""
+    reviews = sorted(pr["reviews"], key=lambda r: r["created_at"])
+    first_review = (
+        round(hours_between(pr["created_at"], reviews[0]["created_at"]), 1)
+        if reviews else None
+    )
+    merge_hours = (
+        round(hours_between(pr["created_at"], pr["merged_at"]), 1)
+        if pr["merged_at"] else None
+    )
+    rounds = None
+    if pr["merged_at"]:
+        rounds = len({
+            r["created_at"] for r in pr.get("review_requests", [])
+            if r["actor"] == pr["author"] and r["created_at"] <= pr["merged_at"]
+        })
+    return {
+        "repo": pr["repo"],
+        "number": pr["number"],
+        "title": pr["title"],
+        "url": pr.get("url"),
+        "author": pr["author"],
+        "state": pr["state"],
+        "is_draft": pr["is_draft"],
+        "created_at": pr["created_at"],
+        "merged_at": pr["merged_at"],
+        "domain": pr["domain"],
+        "first_review_hours": first_review,
+        "merge_hours": merge_hours,
+        "review_rounds": rounds,
+        # One entry per APPROVED review (matches reviewer_approvals counting).
+        "approvals": [
+            {"author": r["author"], "at": r["created_at"]}
+            for r in reviews if r["state"] == "APPROVED"
+        ],
+    }
 
 
 def compute_pr_metrics(all_prs, sprint_windows):
@@ -826,6 +887,7 @@ def compute_pr_metrics(all_prs, sprint_windows):
                 sorted(engineer_avg_approval.items(), key=lambda x: x[1])
             ),
             "author_review_rounds": author_review_rounds,
+            "prs": [pr_detail(pr) for pr in sprint_prs],
         }
 
     return {"sprints": metrics}
@@ -897,6 +959,11 @@ def main():
         for sn, sd in list(proj_data["sprints"].items()):
             if sn in prev_sprints and prev_sprints[sn].get("frozen_at"):
                 proj_data["sprints"][sn] = prev_sprints[sn]
+                # Snapshots frozen before item capture existed have no item list.
+                # Attach the live list (refreshed each run) so drill-downs still
+                # work; the dashboard labels it as current state, not the snapshot.
+                if "items" not in prev_sprints[sn]:
+                    proj_data["sprints"][sn]["items_live"] = sd.get("items", [])
                 # Keep this run's freshly computed PR metrics while the sprint is
                 # still within the PR fetch window (total_prs > 0); only fall back to
                 # the preserved snapshot once the sprint ages out and is no longer
