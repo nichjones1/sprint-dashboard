@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T17:54:54.481720",
+  "generated_at": "2026-11-03T18:03:31.410546",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -2295,7 +2295,6 @@
               "kubernetes-context": 4,
               "grype": 4,
               "github": 3,
-              "kubernetes-context": 3,
               "kind": 3,
               "technical-debt": 1,
               "docs": 1
@@ -2311,7 +2310,6 @@
               "containers": 2,
               "kreate": 2,
               "kind": 2,
-              "containers": 1,
               "docs": 1,
               "extensibility": 1,
               "apple-container": 1
@@ -3588,7 +3586,7 @@
             }
           },
           "Sprint 299": {
-            "total_prs": 57,
+            "total_prs": 58,
             "merged_prs": 34,
             "time_to_first_review": {
               "avg": 22.7,
