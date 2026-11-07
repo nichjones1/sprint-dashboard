@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T17:42:47.422662",
+  "generated_at": "2026-11-07T16:38:57.572495",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -12,9 +12,9 @@
           "total_story_points": 176.0,
           "done_story_points": 39.0,
           "statuses": {
-            "\ud83d\udea7 In Progress": 30,
+            "\ud83d\udea7 In Progress": 28,
             "\u2714\ufe0f Done": 37,
-            "\ud83d\udea5 In Review": 29,
+            "\ud83d\udea5 In Review": 31,
             "\ud83d\udcc5 Planned": 88,
             "\ud83d\udccb Backlog": 47,
             "\u23f3On Hold": 11,
@@ -3489,7 +3489,7 @@
               "repo": "podman-desktop-rhel-ext",
               "url": "https://github.com/redhat-developer/podman-desktop-rhel-ext/issues/760",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -3504,7 +3504,7 @@
               "repo": "podman-desktop-rhel-ext",
               "url": "https://github.com/redhat-developer/podman-desktop-rhel-ext/issues/762",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -7797,21 +7797,6 @@
           "frozen_at": "2026-09-22T17:00:43.973439",
           "items_live": [
             {
-              "number": 19213,
-              "title": "Navbar focus outline is invisible on selected item in HC themes",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19213",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "Bug Fix",
-              "priority": "\ud83c\udf0b Urgent",
-              "points": 1.0,
-              "assignees": [
-                "vancura"
-              ]
-            },
-            {
               "number": 18554,
               "title": "Re-design of download page on website",
               "repo": "podman-desktop",
@@ -8356,21 +8341,6 @@
               ]
             },
             {
-              "number": 19196,
-              "title": "Welcome page: toggling onboarding extension checkboxes has no effect",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19196",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": null,
-              "points": 1.0,
-              "assignees": [
-                "0xKalasi"
-              ]
-            },
-            {
               "number": 19305,
               "title": "README's of catalog not-installed extensions are no longer showing",
               "repo": "podman-desktop",
@@ -8382,21 +8352,6 @@
               "priority": "\ud83c\udfd4 High",
               "points": null,
               "assignees": []
-            },
-            {
-              "number": 1219,
-              "title": "Disable the e2e while we wait for for podman-desktop/podman-desktop#19271",
-              "repo": "crc-extension",
-              "url": "https://github.com/crc-org/crc-extension/issues/1219",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "axel7083"
-              ]
             },
             {
               "number": 19346,
@@ -22525,7 +22480,7 @@
           },
           "Sprint 299": {
             "total_prs": 243,
-            "merged_prs": 173,
+            "merged_prs": 174,
             "time_to_first_review": {
               "avg": 22.8,
               "median": 1.8,
@@ -22537,9 +22492,9 @@
               "count": 88
             },
             "time_to_merge": {
-              "avg": 59.7,
+              "avg": 59.8,
               "median": 16.1,
-              "count": 173
+              "count": 174
             },
             "time_to_address_comments": {
               "avg": 70.2,
@@ -22605,7 +22560,7 @@
               }
             },
             "author_merged_prs": {
-              "benoitf": 42,
+              "benoitf": 43,
               "gastoner": 16,
               "simonrey1": 15,
               "vancura": 14,
@@ -22807,19 +22762,6 @@
               "danivilla9": 3.4
             },
             "author_review_rounds": {
-              "axel7083": [
-                0,
-                0,
-                0,
-                0,
-                2,
-                1,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
               "benoitf": [
                 0,
                 0,
@@ -22834,6 +22776,7 @@
                 0,
                 0,
                 0,
+                0,
                 2,
                 2,
                 0,
@@ -22858,6 +22801,19 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "axel7083": [
+                0,
+                0,
+                0,
+                0,
+                2,
+                1,
                 0,
                 0,
                 0,
@@ -23042,14 +22998,14 @@
                 "title": "fix: resolve GHSA-mrwp-f3q8-3g9p in follow-redirects",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20036",
                 "author": "benoitf",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-03T21:42:05Z",
-                "merged_at": null,
+                "merged_at": "2026-11-06T22:42:47Z",
                 "domain": "foundations",
                 "first_review_hours": 0.0,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 73.0,
+                "review_rounds": 0,
                 "approvals": [
                   {
                     "author": "deboer-tim",
@@ -28612,8 +28568,8 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 57,
-            "merged_prs": 34,
+            "total_prs": 58,
+            "merged_prs": 36,
             "time_to_first_review": {
               "avg": 4.9,
               "median": 0.2,
@@ -28625,9 +28581,9 @@
               "count": 12
             },
             "time_to_merge": {
-              "avg": 5.8,
+              "avg": 6.3,
               "median": 0.3,
-              "count": 34
+              "count": 36
             },
             "time_to_address_comments": {
               "avg": 2.7,
@@ -28651,16 +28607,16 @@
               }
             },
             "author_merged_prs": {
+              "simonrey1": 14,
               "benoitf": 14,
-              "simonrey1": 13,
-              "feloy": 3,
+              "feloy": 4,
               "SoniaSandler": 1,
               "gastoner": 1,
               "ewerton336": 1,
               "DeviceDidWhat": 1
             },
             "reviewer_approvals": {
-              "benoitf": 22,
+              "benoitf": 23,
               "axel7083": 20,
               "feloy": 6,
               "simonrey1": 3,
@@ -28677,7 +28633,7 @@
             "domain_pr_count": {
               "foundations": 8,
               "qe": 8,
-              "containers": 5,
+              "containers": 6,
               "extensibility": 5,
               "kind": 5,
               "ui-components": 3,
@@ -28711,8 +28667,8 @@
               },
               "kubernetes": {},
               "ui-components": {
-                "benoitf": 50.0,
-                "vancura": 50.0
+                "benoitf": 66.7,
+                "vancura": 33.3
               },
               "containers": {
                 "benoitf": 50.0,
@@ -28764,7 +28720,7 @@
             "domain_avg_approval_hours": {
               "qe": 19.2,
               "kubernetes": 13.9,
-              "ui-components": 17.2,
+              "ui-components": 20.0,
               "containers": 15.2,
               "extensibility": 6.4,
               "foundations": 19.4,
@@ -28790,7 +28746,7 @@
               "kyetter": 0.09,
               "feloy": 0.11,
               "axel7083": 0.11,
-              "benoitf": 0.18,
+              "benoitf": 0.22,
               "dgolovin": 0.65,
               "vancura": 0.8,
               "cbr7": 0.85,
@@ -28799,15 +28755,32 @@
               "cdrage": 1.89
             },
             "author_review_rounds": {
+              "feloy": [
+                0,
+                1,
+                0,
+                0
+              ],
               "SoniaSandler": [
                 0
               ],
-              "gastoner": [
-                0
-              ],
-              "feloy": [
+              "simonrey1": [
                 1,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "gastoner": [
                 0
               ],
               "ewerton336": [
@@ -28831,24 +28804,25 @@
                 0,
                 0,
                 0
-              ],
-              "simonrey1": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
               ]
             },
             "prs": [
+              {
+                "repo": "podman-desktop",
+                "number": 20093,
+                "title": "fix(extension/podman): allow remote ssh tunnels to non-OpenSSH servers",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20093",
+                "author": "rufoa",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-07T04:01:41Z",
+                "merged_at": null,
+                "domain": "containers",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
               {
                 "repo": "podman-desktop",
                 "number": 20092,
@@ -28887,14 +28861,14 @@
                 "title": "fix(e2e): revert \"gate packaged app startup until Playwright attaches\"",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20090",
                 "author": "feloy",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-06T15:01:50Z",
-                "merged_at": null,
+                "merged_at": "2026-11-06T19:42:58Z",
                 "domain": "qe",
                 "first_review_hours": 0.2,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 4.7,
+                "review_rounds": 0,
                 "approvals": [
                   {
                     "author": "benoitf",
@@ -28928,7 +28902,7 @@
                 "title": "fix(main): authenticate privileged IPC senders",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20080",
                 "author": "brendandburns",
-                "state": "OPEN",
+                "state": "CLOSED",
                 "is_draft": false,
                 "created_at": "2026-11-05T23:50:15Z",
                 "merged_at": null,
@@ -29033,14 +29007,14 @@
                 "title": "test(ui): add a vitest setup file stubbing ResizeObserver",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20074",
                 "author": "simonrey1",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-05T17:42:34Z",
-                "merged_at": null,
+                "merged_at": "2026-11-06T19:26:42Z",
                 "domain": "ui-components",
                 "first_review_hours": 0.2,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 25.7,
+                "review_rounds": 1,
                 "approvals": [
                   {
                     "author": "benoitf",
@@ -29049,6 +29023,10 @@
                   {
                     "author": "vancura",
                     "at": "2026-11-06T12:03:15Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-06T19:25:23Z"
                   }
                 ]
               },
