@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T16:38:57.572495",
+  "generated_at": "2026-11-08T16:49:44.174313",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -28568,7 +28568,7 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 58,
+            "total_prs": 62,
             "merged_prs": 36,
             "time_to_first_review": {
               "avg": 4.9,
@@ -28631,10 +28631,10 @@
               "dgolovin": 1
             },
             "domain_pr_count": {
+              "containers": 9,
               "foundations": 8,
               "qe": 8,
-              "containers": 6,
-              "extensibility": 5,
+              "extensibility": 6,
               "kind": 5,
               "ui-components": 3,
               "minikube": 3,
@@ -28807,6 +28807,70 @@
               ]
             },
             "prs": [
+              {
+                "repo": "podman-desktop",
+                "number": 20097,
+                "title": "fix(container): keep empty and '='-containing env values for libpod",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20097",
+                "author": "ewerton336",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-08T15:39:04Z",
+                "merged_at": null,
+                "domain": "containers",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20096,
+                "title": "fix(main): cancel pending events reconnect when container connection is disposed",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20096",
+                "author": "DeviceDidWhat",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-08T10:53:41Z",
+                "merged_at": null,
+                "domain": "containers",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20095,
+                "title": "fix(ui): move the container logs clear button to the tab row",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20095",
+                "author": "Prince-5785",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-07T18:27:02Z",
+                "merged_at": null,
+                "domain": "containers",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20094,
+                "title": "feat(renderer): move Installed search below tabs",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20094",
+                "author": "JustMell0",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-07T16:36:47Z",
+                "merged_at": null,
+                "domain": "extensibility",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
               {
                 "repo": "podman-desktop",
                 "number": 20093,
