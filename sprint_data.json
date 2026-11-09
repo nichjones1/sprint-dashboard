@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T16:49:44.174313",
+  "generated_at": "2026-11-09T21:02:11.969502",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -7,33 +7,33 @@
         "Sprint 300": {
           "start_date": "2026-11-04",
           "duration": 21,
-          "total_items": 246,
-          "done_items": 37,
-          "total_story_points": 176.0,
-          "done_story_points": 39.0,
+          "total_items": 255,
+          "done_items": 45,
+          "total_story_points": 177.0,
+          "done_story_points": 40.0,
           "statuses": {
-            "\ud83d\udea7 In Progress": 28,
-            "\u2714\ufe0f Done": 37,
-            "\ud83d\udea5 In Review": 31,
-            "\ud83d\udcc5 Planned": 88,
-            "\ud83d\udccb Backlog": 47,
+            "\ud83d\udcc5 Planned": 86,
+            "\ud83d\udccb Backlog": 49,
+            "\ud83d\udea7 In Progress": 26,
+            "\u2714\ufe0f Done": 45,
+            "\ud83d\udea5 In Review": 33,
             "\u23f3On Hold": 11,
-            "None": 4
+            "None": 5
           },
           "goals": {
-            "Uncategorized": 161,
+            "Bug Fix": 5,
+            "Uncategorized": 170,
             "Documentation": 4,
             "QE": 61,
             "Design": 1,
             "Dashboard": 7,
-            "Bug Fix": 5,
             "Podify": 1,
             "Technical Debt": 6
           },
           "priorities": {
-            "None": 137,
-            "\ud83c\udfd4 High": 42,
             "Critical": 21,
+            "None": 146,
+            "\ud83c\udfd4 High": 42,
             "\ud83c\udfd5 Medium": 29,
             "\ud83c\udf0b Urgent": 10,
             "\ud83c\udfdd Low": 7
@@ -43,12 +43,12 @@
             "vancura": 21,
             "odockal": 15,
             "axel7083": 15,
-            "cdrage": 11,
+            "cdrage": 12,
+            "dgolovin": 12,
             "JustMell0": 11,
+            "SoniaSandler": 11,
             "ScrewTSW": 10,
-            "dgolovin": 10,
             "gastoner": 10,
-            "SoniaSandler": 10,
             "cbr7": 10,
             "amisskii": 8,
             "danivilla9": 7,
@@ -56,22 +56,23 @@
             "benoitf": 6
           },
           "repos": {
-            "podman-desktop": 127,
+            "podman-desktop": 134,
             "podman-desktop-internal": 44,
             "podman-desktop-extension-ai-lab": 11,
             "podman-desktop-hummingbird-ext": 8,
             "crc-extension": 6,
             "podman-desktop-redhat-account-ext": 5,
+            "podman-desktop-sandbox-ext": 5,
             "agent-skills": 5,
             "e2e": 4,
-            "podman-desktop-sandbox-ext": 4,
             "extension-bootc": 3,
+            "podman-desktop-rhel-ext": 3,
             "eslint-config": 3,
             "extension-grype": 3,
             "extension-podman-quadlet": 3,
-            "podman-desktop-rhel-ext": 3,
             "podman-desktop-catalog": 2,
             "extension-template-full": 2,
+            "minc-extension": 2,
             "gh-extensions-actions": 1,
             "extension-minikube": 1,
             "extension-apple-container": 1,
@@ -83,10 +84,39 @@
             "podman-desktop-redhat-lightspeed-ext": 1,
             "extension-kreate": 1,
             "extension-layers-explorer": 1,
-            "extension-postgresql": 1,
-            "minc-extension": 1
+            "extension-postgresql": 1
           },
           "items": [
+            {
+              "number": 19479,
+              "title": "Exitting the Podman Desktop with an autostarted Podman Machine with a container that had terminal opened throws a JS error on Mac OS",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/19479",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Bug Fix",
+              "priority": "Critical",
+              "points": 1.0,
+              "assignees": [
+                "simonrey1"
+              ]
+            },
+            {
+              "number": 19939,
+              "title": "Investigate Windows reports of containers disappearing after updating to 1.30.x",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/19939",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": "Critical",
+              "points": null,
+              "assignees": [
+                "simonrey1"
+              ]
+            },
             {
               "number": 1256,
               "title": "Sprint 300 Discord and Slack Feedback channel monitoring",
@@ -619,7 +649,7 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/19487",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -784,7 +814,7 @@
               "repo": "e2e",
               "url": "https://github.com/podman-desktop/e2e/issues/586",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": "QE",
               "priority": "\ud83c\udf0b Urgent",
@@ -799,7 +829,7 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/18119",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
+              "status": "\ud83d\udcc5 Planned",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -1169,21 +1199,6 @@
               ]
             },
             {
-              "number": 19047,
-              "title": "Podman Desktop on Mac throws a long Javascript error on restart with unreachable remote connection",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19047",
-              "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
-              "state": "OPEN",
-              "goal": null,
-              "priority": "\ud83c\udfd4 High",
-              "points": null,
-              "assignees": [
-                "SoniaSandler"
-              ]
-            },
-            {
               "number": 1174,
               "title": "Allow to select a Podman machine to subscribe when signing in",
               "repo": "podman-desktop-redhat-account-ext",
@@ -1322,7 +1337,7 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/11258",
               "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
+              "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
               "goal": "QE",
               "priority": "\ud83c\udfd5 Medium",
@@ -1337,7 +1352,7 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/19283",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": "QE",
               "priority": "\ud83c\udfd5 Medium",
@@ -1358,6 +1373,21 @@
               "priority": "\ud83c\udfd5 Medium",
               "points": 1.0,
               "assignees": []
+            },
+            {
+              "number": 19289,
+              "title": "Extension selection grid on the welcome/onboarding screen does not scale well",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/19289",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "atishay-kasliwal"
+              ]
             },
             {
               "number": 923,
@@ -1405,6 +1435,36 @@
               ]
             },
             {
+              "number": 762,
+              "title": "Capitalization need to be fixed for resources page",
+              "repo": "podman-desktop-rhel-ext",
+              "url": "https://github.com/redhat-developer/podman-desktop-rhel-ext/issues/762",
+              "type": "Issue",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
+              "goal": null,
+              "priority": "\ud83c\udfd4 High",
+              "points": null,
+              "assignees": [
+                "SoniaSandler"
+              ]
+            },
+            {
+              "number": 20114,
+              "title": "Make Docker compatibility guide link configurable",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20114",
+              "type": "Issue",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "SoniaSandler"
+              ]
+            },
+            {
               "number": 1195,
               "title": "Use openapi-fetch to use Red Hat Account Management API instead of unmaintained @rhaccm package",
               "repo": "crc-extension",
@@ -1414,6 +1474,21 @@
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd5 Medium",
+              "points": null,
+              "assignees": [
+                "SoniaSandler"
+              ]
+            },
+            {
+              "number": 19047,
+              "title": "Podman Desktop on Mac throws a long Javascript error on restart with unreachable remote connection",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/19047",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": "\ud83c\udfd4 High",
               "points": null,
               "assignees": [
                 "SoniaSandler"
@@ -1731,21 +1806,6 @@
               ]
             },
             {
-              "number": 19479,
-              "title": "Exitting the Podman Desktop with an autostarted Podman Machine with a container that had terminal opened throws a JS error on Mac OS",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19479",
-              "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
-              "state": "OPEN",
-              "goal": "Bug Fix",
-              "priority": "Critical",
-              "points": 1.0,
-              "assignees": [
-                "simonrey1"
-              ]
-            },
-            {
               "number": 19520,
               "title": "feat: replace a bundled extension having another id",
               "repo": "podman-desktop",
@@ -2054,7 +2114,7 @@
               "repo": "extension-grype",
               "url": "https://github.com/podman-desktop/extension-grype/issues/376",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": "QE",
               "priority": "\ud83c\udfd4 High",
@@ -2069,7 +2129,7 @@
               "repo": "extension-grype",
               "url": "https://github.com/podman-desktop/extension-grype/issues/377",
               "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": "QE",
               "priority": null,
@@ -2380,7 +2440,7 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/19757",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -2600,21 +2660,6 @@
               ]
             },
             {
-              "number": 1244,
-              "title": "[BUG] Creating a cluster without 'Start the VM now' toggled on does nothing",
-              "repo": "crc-extension",
-              "url": "https://github.com/crc-org/crc-extension/issues/1244",
-              "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
-              "state": "OPEN",
-              "goal": null,
-              "priority": "\ud83c\udfd5 Medium",
-              "points": null,
-              "assignees": [
-                "SoniaSandler"
-              ]
-            },
-            {
               "number": 19922,
               "title": "Initial testing and e2e tests investigation for feature: updating extensions in podman desktop",
               "repo": "podman-desktop",
@@ -2661,8 +2706,8 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/19929",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
-              "state": "OPEN",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
               "goal": "QE",
               "priority": null,
               "points": null,
@@ -3446,11 +3491,11 @@
               "repo": "podman-desktop-internal",
               "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1248",
               "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
-              "state": "OPEN",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
               "goal": "QE",
               "priority": "Critical",
-              "points": null,
+              "points": 1.0,
               "assignees": [
                 "amisskii"
               ]
@@ -3489,7 +3534,7 @@
               "repo": "podman-desktop-rhel-ext",
               "url": "https://github.com/redhat-developer/podman-desktop-rhel-ext/issues/760",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
+              "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -3499,15 +3544,15 @@
               ]
             },
             {
-              "number": 762,
-              "title": "Capitalization need to be fixed for resources page",
-              "repo": "podman-desktop-rhel-ext",
-              "url": "https://github.com/redhat-developer/podman-desktop-rhel-ext/issues/762",
+              "number": 1244,
+              "title": "[BUG] Creating a cluster without 'Start the VM now' toggled on does nothing",
+              "repo": "crc-extension",
+              "url": "https://github.com/crc-org/crc-extension/issues/1244",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
+              "status": "\ud83d\udccb Backlog",
               "state": "OPEN",
               "goal": null,
-              "priority": "\ud83c\udfd4 High",
+              "priority": "\ud83c\udfd5 Medium",
               "points": null,
               "assignees": [
                 "SoniaSandler"
@@ -3569,21 +3614,6 @@
               "points": null,
               "assignees": [
                 "gastoner"
-              ]
-            },
-            {
-              "number": 19939,
-              "title": "Investigate Windows reports of containers disappearing after updating to 1.30.x",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19939",
-              "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
-              "state": "OPEN",
-              "goal": null,
-              "priority": "Critical",
-              "points": null,
-              "assignees": [
-                "simonrey1"
               ]
             },
             {
@@ -3693,7 +3723,7 @@
             },
             {
               "number": 20068,
-              "title": "Add a submenu component for action menus",
+              "title": "Add a label to the dropdown menu",
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/20068",
               "type": "Issue",
@@ -3708,7 +3738,7 @@
             },
             {
               "number": 20069,
-              "title": "Display container ports in an Open Browser submenu",
+              "title": "Display container ports under an Open Browser label in the container menu",
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/20069",
               "type": "Issue",
@@ -3734,6 +3764,105 @@
               "points": 1.0,
               "assignees": [
                 "odockal"
+              ]
+            },
+            {
+              "number": 999,
+              "title": "fix(test): update extension status locators for PD UX redesign",
+              "repo": "podman-desktop-sandbox-ext",
+              "url": "https://github.com/redhat-developer/podman-desktop-sandbox-ext/pull/999",
+              "type": "PullRequest",
+              "status": "\u2714\ufe0f Done",
+              "state": "MERGED",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": []
+            },
+            {
+              "number": 20046,
+              "title": "fix(ci): use PODMAN_DESKTOP_BOT_TOKEN for e2e-full-pr dispatch",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/pull/20046",
+              "type": "PullRequest",
+              "status": "\u2714\ufe0f Done",
+              "state": "MERGED",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": []
+            },
+            {
+              "number": 20119,
+              "title": "Uri.parse keeps the leading # in fragment, so toString() produces ##",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20119",
+              "type": "Issue",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "vzhukovs"
+              ]
+            },
+            {
+              "number": 612,
+              "title": "fix(test): align extension status locators with PD UX redesign",
+              "repo": "minc-extension",
+              "url": "https://github.com/minc-org/minc-extension/pull/612",
+              "type": "PullRequest",
+              "status": "\u2714\ufe0f Done",
+              "state": "MERGED",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": []
+            },
+            {
+              "number": 20134,
+              "title": "Podman Desktop 1.31.0 Release Notes",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20134",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "dgolovin"
+              ]
+            },
+            {
+              "number": 20133,
+              "title": "Podman Desktop Release 1.31.0",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20133",
+              "type": "Issue",
+              "status": null,
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "dgolovin"
+              ]
+            },
+            {
+              "number": 20135,
+              "title": "Release image for Podman Desktop 1.31.0",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20135",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "cdrage"
               ]
             }
           ]
@@ -7828,21 +7957,6 @@
               ]
             },
             {
-              "number": 50,
-              "title": "Docs: Update README with screenshots + description + features, etc.",
-              "repo": "extension-kubernetes-dashboard",
-              "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/issues/50",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "cdrage"
-              ]
-            },
-            {
               "number": 855,
               "title": "Write a prompt/skill which will allow QE on Duty to get overview of actions needed",
               "repo": "podman-desktop-internal",
@@ -7883,21 +7997,6 @@
               "points": 1.0,
               "assignees": [
                 "ScrewTSW"
-              ]
-            },
-            {
-              "number": 17650,
-              "title": "[Windows]: command prompt windows flash when opening Podman Desktop",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/17650",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": "\ud83c\udfd4 High",
-              "points": null,
-              "assignees": [
-                "simonrey1"
               ]
             },
             {
@@ -7944,21 +8043,6 @@
               ]
             },
             {
-              "number": 18166,
-              "title": "Dependabot PRs are breaking the pnpm-lock file and the PR checks are passing",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/18166",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "Bug Fix",
-              "priority": "Critical",
-              "points": 1.0,
-              "assignees": [
-                "gastoner"
-              ]
-            },
-            {
               "number": 18969,
               "title": "Skip Kind cluster creation with custom config file when using CDP runner",
               "repo": "podman-desktop",
@@ -7971,21 +8055,6 @@
               "points": 1.0,
               "assignees": [
                 "cbr7"
-              ]
-            },
-            {
-              "number": 613,
-              "title": "Modify the podman-install Testing Farm script to use a fallback Podman version if the latest version has not yet been published for Fedora",
-              "repo": "e2e",
-              "url": "https://github.com/podman-desktop/e2e/issues/613",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "QE",
-              "priority": "\ud83c\udfd4 High",
-              "points": 1.0,
-              "assignees": [
-                "0xKalasi"
               ]
             },
             {
@@ -8094,21 +8163,6 @@
               ]
             },
             {
-              "number": 17568,
-              "title": "Correctly label built-in and pre-installed extensions.",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/17568",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": "\ud83c\udfd5 Medium",
-              "points": 3.0,
-              "assignees": [
-                "SoniaSandler"
-              ]
-            },
-            {
               "number": 18718,
               "title": "Migrate remaining modal/form footers to `ButtonRow`",
               "repo": "podman-desktop",
@@ -8165,21 +8219,6 @@
               "assignees": []
             },
             {
-              "number": 638,
-              "title": "Allow to run workflows without spot flag",
-              "repo": "e2e",
-              "url": "https://github.com/podman-desktop/e2e/issues/638",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "QE",
-              "priority": "\ud83c\udf0b Urgent",
-              "points": 1.0,
-              "assignees": [
-                "serbangeorge-m"
-              ]
-            },
-            {
               "number": 1098,
               "title": "Investigate what Integration/E2E tests to implement exclusive to RHbPD",
               "repo": "podman-desktop-internal",
@@ -8199,21 +8238,6 @@
               "title": "refactor(renderer): store VolumeInfoUI instead of VolumeListInfo",
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/18835",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": "\ud83c\udfd5 Medium",
-              "points": null,
-              "assignees": [
-                "vzhukovs"
-              ]
-            },
-            {
-              "number": 18834,
-              "title": "refactor(renderer): store NetworkInfoUI instead of NetworkInspectInfo",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/18834",
               "type": "Issue",
               "status": "\u2714\ufe0f Done",
               "state": "CLOSED",
@@ -22480,7 +22504,7 @@
           },
           "Sprint 299": {
             "total_prs": 243,
-            "merged_prs": 174,
+            "merged_prs": 176,
             "time_to_first_review": {
               "avg": 22.8,
               "median": 1.8,
@@ -22492,14 +22516,14 @@
               "count": 88
             },
             "time_to_merge": {
-              "avg": 59.8,
-              "median": 16.1,
-              "count": 174
+              "avg": 62.1,
+              "median": 16.8,
+              "count": 176
             },
             "time_to_address_comments": {
-              "avg": 70.2,
-              "median": 44.3,
-              "count": 21
+              "avg": 70.3,
+              "median": 44.5,
+              "count": 23
             },
             "weekly_extremes": {
               "2026-W41": {
@@ -22557,11 +22581,25 @@
                   "number": 1469,
                   "hours": 0.14
                 }
+              },
+              "2026-W45": {
+                "longest": {
+                  "title": "test(e2e): add dashboard layout manager tests",
+                  "repo": "podman-desktop",
+                  "number": 19938,
+                  "hours": 267.54
+                },
+                "shortest": {
+                  "title": "fix(main): send upgrade headers and zero Content-Length for podmanAttach",
+                  "repo": "podman-desktop",
+                  "number": 19944,
+                  "hours": 262.16
+                }
               }
             },
             "author_merged_prs": {
               "benoitf": 43,
-              "gastoner": 16,
+              "gastoner": 17,
               "simonrey1": 15,
               "vancura": 14,
               "feloy": 14,
@@ -22576,6 +22614,7 @@
               "maskjelly": 2,
               "0xKalasi": 2,
               "ewerton336": 1,
+              "peremunoz": 1,
               "amisskii": 1,
               "sundeep8967": 1,
               "ScrewTSW": 1,
@@ -22589,16 +22628,16 @@
               "faizjamal0111-svg": 1
             },
             "reviewer_approvals": {
-              "axel7083": 105,
-              "benoitf": 76,
+              "axel7083": 106,
+              "benoitf": 78,
               "simonrey1": 34,
               "jeffmaury": 24,
               "vancura": 22,
               "feloy": 16,
+              "danivilla9": 13,
               "deboer-tim": 12,
-              "danivilla9": 12,
+              "odockal": 12,
               "cbr7": 12,
-              "odockal": 11,
               "serbangeorge-m": 9,
               "cdrage": 9,
               "amisskii": 8,
@@ -22654,12 +22693,12 @@
               "docs": {
                 "kyetter": 100.0
               },
+              "containers": {
+                "axel7083": 69.4,
+                "benoitf": 30.6
+              },
               "extensibility": {
                 "benoitf": 100.0
-              },
-              "containers": {
-                "axel7083": 72.7,
-                "benoitf": 27.3
               },
               "qe": {
                 "danivilla9": 35.7,
@@ -22722,10 +22761,10 @@
             "domain_avg_approval_hours": {
               "foundations": 33.6,
               "docs": 10.5,
+              "containers": 97.9,
               "extensibility": 93.4,
-              "containers": 91.1,
               "qe": 61.7,
-              "ui-components": 71.4,
+              "ui-components": 77.6,
               "dependency-update-minor": 1.9,
               "minikube": 18.4,
               "bootc": 142.3,
@@ -22749,17 +22788,17 @@
               "kyetter": 1.26,
               "cbr7": 1.33,
               "simonrey1": 1.34,
-              "axel7083": 1.39,
-              "odockal": 1.39,
+              "axel7083": 1.44,
               "ScrewTSW": 1.47,
+              "odockal": 1.86,
               "vancura": 2.1,
               "gastoner": 2.27,
               "slemeur": 2.71,
               "SoniaSandler": 2.72,
-              "benoitf": 2.77,
               "MarsKubeX": 2.78,
+              "benoitf": 2.83,
               "cdrage": 2.93,
-              "danivilla9": 3.4
+              "danivilla9": 3.69
             },
             "author_review_rounds": {
               "benoitf": [
@@ -22883,10 +22922,14 @@
                 0,
                 0
               ],
+              "peremunoz": [
+                1
+              ],
               "amisskii": [
                 2
               ],
               "gastoner": [
+                2,
                 0,
                 1,
                 0,
@@ -23052,7 +23095,12 @@
                 "first_review_hours": 63.3,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T12:11:11Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -23178,11 +23226,11 @@
               {
                 "repo": "podman-desktop",
                 "number": 20023,
-                "title": "[draft, testing e2e] feat(config): add macOS plist managed preferences",
+                "title": "feat(config): add macOS plist managed preferences",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20023",
                 "author": "cdrage",
                 "state": "OPEN",
-                "is_draft": true,
+                "is_draft": false,
                 "created_at": "2026-11-03T15:04:36Z",
                 "merged_at": null,
                 "domain": "qe",
@@ -23765,15 +23813,24 @@
                 "title": "fix(main): send upgrade headers and zero Content-Length for podmanAttach",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/19944",
                 "author": "peremunoz",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-10-29T17:51:22Z",
-                "merged_at": null,
+                "merged_at": "2026-11-09T16:00:44Z",
                 "domain": "containers",
                 "first_review_hours": 21.4,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "merge_hours": 262.2,
+                "review_rounds": 1,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T12:32:35Z"
+                  },
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T16:00:29Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -23806,14 +23863,14 @@
                 "title": "test(e2e): add dashboard layout manager tests",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/19938",
                 "author": "gastoner",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-10-29T09:44:46Z",
-                "merged_at": null,
+                "merged_at": "2026-11-09T13:16:57Z",
                 "domain": "ui-components",
                 "first_review_hours": 131.2,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 267.5,
+                "review_rounds": 2,
                 "approvals": [
                   {
                     "author": "benoitf",
@@ -23822,6 +23879,14 @@
                   {
                     "author": "vancura",
                     "at": "2026-11-05T10:59:53Z"
+                  },
+                  {
+                    "author": "odockal",
+                    "at": "2026-11-09T10:23:10Z"
+                  },
+                  {
+                    "author": "danivilla9",
+                    "at": "2026-11-09T12:26:58Z"
                   }
                 ]
               },
@@ -24497,7 +24562,7 @@
                 "title": "chore(ui): enforce svelte 5 components",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/19877",
                 "author": "axel7083",
-                "state": "OPEN",
+                "state": "CLOSED",
                 "is_draft": true,
                 "created_at": "2026-10-26T09:13:44Z",
                 "merged_at": null,
@@ -24569,7 +24634,7 @@
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/19859",
                 "author": "daaain",
                 "state": "OPEN",
-                "is_draft": true,
+                "is_draft": false,
                 "created_at": "2026-10-25T17:39:14Z",
                 "merged_at": null,
                 "domain": "extensibility",
@@ -25893,7 +25958,7 @@
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/19749",
                 "author": "Sagar07Kr",
                 "state": "OPEN",
-                "is_draft": true,
+                "is_draft": false,
                 "created_at": "2026-10-19T09:32:10Z",
                 "merged_at": null,
                 "domain": "extensibility",
@@ -28568,27 +28633,27 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 62,
-            "merged_prs": 36,
+            "total_prs": 88,
+            "merged_prs": 52,
             "time_to_first_review": {
-              "avg": 4.9,
-              "median": 0.2,
-              "count": 40
+              "avg": 9.5,
+              "median": 0.6,
+              "count": 65
             },
             "time_to_first_comment": {
-              "avg": 11.6,
-              "median": 11.5,
-              "count": 12
+              "avg": 17.8,
+              "median": 10.5,
+              "count": 23
             },
             "time_to_merge": {
-              "avg": 6.3,
-              "median": 0.3,
-              "count": 36
+              "avg": 13.2,
+              "median": 1.6,
+              "count": 52
             },
             "time_to_address_comments": {
-              "avg": 2.7,
-              "median": 2.7,
-              "count": 1
+              "avg": 2.4,
+              "median": 1.7,
+              "count": 6
             },
             "weekly_extremes": {
               "2026-W44": {
@@ -28604,24 +28669,43 @@
                   "number": 252,
                   "hours": 0.01
                 }
+              },
+              "2026-W45": {
+                "longest": {
+                  "title": "fix(renderer): emit a new context instance on store updates",
+                  "repo": "podman-desktop",
+                  "number": 20043,
+                  "hours": 126.72
+                },
+                "shortest": {
+                  "title": "fix: format README and bump biome schema for biome 2.6.5",
+                  "repo": "eslint-plugin",
+                  "number": 211,
+                  "hours": 0.08
+                }
               }
             },
             "author_merged_prs": {
-              "simonrey1": 14,
-              "benoitf": 14,
-              "feloy": 4,
-              "SoniaSandler": 1,
-              "gastoner": 1,
-              "ewerton336": 1,
-              "DeviceDidWhat": 1
+              "benoitf": 17,
+              "simonrey1": 15,
+              "feloy": 7,
+              "gastoner": 4,
+              "SoniaSandler": 2,
+              "ewerton336": 2,
+              "vzhukovs": 1,
+              "rufoa": 1,
+              "DeviceDidWhat": 1,
+              "danivilla9": 1,
+              "cbr7": 1
             },
             "reviewer_approvals": {
-              "benoitf": 23,
-              "axel7083": 20,
-              "feloy": 6,
-              "simonrey1": 3,
-              "jeffmaury": 3,
-              "cbr7": 2,
+              "benoitf": 36,
+              "axel7083": 32,
+              "simonrey1": 8,
+              "feloy": 7,
+              "jeffmaury": 6,
+              "cbr7": 3,
+              "SoniaSandler": 2,
               "vancura": 2,
               "danivilla9": 2,
               "odockal": 2,
@@ -28631,54 +28715,59 @@
               "dgolovin": 1
             },
             "domain_pr_count": {
-              "containers": 9,
-              "foundations": 8,
-              "qe": 8,
-              "extensibility": 6,
+              "foundations": 12,
+              "containers": 12,
+              "qe": 10,
+              "extensibility": 9,
               "kind": 5,
+              "postgresql": 4,
               "ui-components": 3,
               "minikube": 3,
+              "kreate": 3,
+              "podman-quadlet": 3,
+              "grype": 3,
+              "kubernetes": 2,
+              "dependency-update-major": 2,
               "bootc": 2,
-              "postgresql": 2,
-              "podman-quadlet": 2,
+              "kubernetes-dashboard": 2,
               "github": 2,
               "apple-container": 2,
-              "kubernetes": 1,
+              "kubernetes-context": 2,
               "dependency-update-minor": 1,
-              "layers-explorer": 1,
-              "kreate": 1,
-              "kubernetes-dashboard": 1,
-              "kubernetes-context": 1,
-              "dependency-update-major": 1,
-              "grype": 1
+              "layers-explorer": 1
             },
             "domain_owner_authored": {
               "kind": 4,
-              "qe": 2,
+              "qe": 3,
               "minikube": 2,
+              "containers": 1,
               "podman-quadlet": 1,
               "apple-container": 1,
               "grype": 1
             },
             "domain_approval_ownership": {
+              "foundations": {
+                "benoitf": 100.0
+              },
+              "kubernetes": {},
+              "containers": {
+                "benoitf": 63.6,
+                "axel7083": 36.4
+              },
               "qe": {
                 "danivilla9": 50.0,
                 "odockal": 50.0
               },
-              "kubernetes": {},
+              "extensibility": {
+                "benoitf": 100.0
+              },
               "ui-components": {
                 "benoitf": 66.7,
                 "vancura": 33.3
               },
-              "containers": {
-                "benoitf": 50.0,
+              "dependency-update-major": {
+                "feloy": 50.0,
                 "axel7083": 50.0
-              },
-              "extensibility": {
-                "benoitf": 100.0
-              },
-              "foundations": {
-                "benoitf": 100.0
               },
               "dependency-update-minor": {
                 "simonrey1": 100.0
@@ -28696,100 +28785,98 @@
               },
               "kreate": {},
               "podman-quadlet": {
-                "axel7083": 66.7,
-                "benoitf": 33.3
+                "axel7083": 60.0,
+                "benoitf": 40.0
               },
-              "kubernetes-dashboard": {},
+              "kubernetes-dashboard": {
+                "jeffmaury": 100.0
+              },
               "github": {
                 "dgolovin": 100.0
               },
               "apple-container": {
                 "benoitf": 100.0
               },
-              "kubernetes-context": {},
+              "kubernetes-context": {
+                "jeffmaury": 100.0
+              },
               "kind": {
                 "benoitf": 100.0
-              },
-              "dependency-update-major": {
-                "axel7083": 100.0
               },
               "grype": {
                 "axel7083": 100.0
               }
             },
             "domain_avg_approval_hours": {
-              "qe": 19.2,
-              "kubernetes": 13.9,
+              "foundations": 15.6,
+              "kubernetes": 5.6,
+              "containers": 29.8,
+              "qe": 16.4,
+              "extensibility": 46.5,
               "ui-components": 20.0,
-              "containers": 15.2,
-              "extensibility": 6.4,
-              "foundations": 19.4,
+              "dependency-update-major": 0.7,
               "dependency-update-minor": 0.1,
               "minikube": 0.5,
               "bootc": 0.2,
               "layers-explorer": 0.2,
-              "postgresql": 0.3,
+              "postgresql": 0.6,
               "kreate": 0.2,
-              "podman-quadlet": 0.3,
-              "kubernetes-dashboard": 0.2,
+              "podman-quadlet": 0.9,
+              "kubernetes-dashboard": 0.7,
               "github": 4.0,
               "apple-container": 0.1,
-              "kubernetes-context": 0.2,
+              "kubernetes-context": 0.7,
               "kind": 0.1,
-              "dependency-update-major": 0.8,
-              "grype": 0.2
+              "grype": 1.8
             },
             "engineer_avg_approval_bdays": {
+              "SoniaSandler": 0.0,
               "deboer-tim": 0.01,
-              "simonrey1": 0.03,
-              "jeffmaury": 0.04,
+              "jeffmaury": 0.06,
+              "simonrey1": 0.08,
+              "feloy": 0.09,
               "kyetter": 0.09,
-              "feloy": 0.11,
-              "axel7083": 0.11,
-              "benoitf": 0.22,
+              "axel7083": 0.27,
+              "benoitf": 0.31,
+              "cbr7": 0.57,
               "dgolovin": 0.65,
               "vancura": 0.8,
-              "cbr7": 0.85,
               "odockal": 1.05,
               "danivilla9": 1.45,
               "cdrage": 1.89
             },
             "author_review_rounds": {
+              "vzhukovs": [
+                0
+              ],
+              "gastoner": [
+                1,
+                0,
+                3,
+                1
+              ],
+              "SoniaSandler": [
+                3,
+                0
+              ],
+              "ewerton336": [
+                0,
+                0
+              ],
+              "rufoa": [
+                0
+              ],
               "feloy": [
                 0,
                 1,
                 0,
-                0
-              ],
-              "SoniaSandler": [
+                0,
+                0,
+                0,
                 0
               ],
               "simonrey1": [
                 1,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              "gastoner": [
-                0
-              ],
-              "ewerton336": [
-                0
-              ],
-              "DeviceDidWhat": [
-                0
-              ],
-              "benoitf": [
                 2,
                 0,
                 0,
@@ -28804,24 +28891,316 @@
                 0,
                 0,
                 0
+              ],
+              "DeviceDidWhat": [
+                0
+              ],
+              "danivilla9": [
+                0
+              ],
+              "benoitf": [
+                1,
+                2,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "cbr7": [
+                0
               ]
             },
             "prs": [
+              {
+                "repo": "podman-desktop",
+                "number": 20132,
+                "title": "ci: skip the Podman version update workflow on forks",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20132",
+                "author": "simonrey1",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T17:09:16Z",
+                "merged_at": null,
+                "domain": "foundations",
+                "first_review_hours": 0.2,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T17:21:12Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T17:42:15Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20131,
+                "title": "feat(renderer): show lifecycle status and metadata on catalog cards",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20131",
+                "author": "JustMell0",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T17:03:43Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20130,
+                "title": "chore(kind): inline product.json into package.json",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20130",
+                "author": "benoitf",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T16:55:36Z",
+                "merged_at": null,
+                "domain": "kubernetes",
+                "first_review_hours": 0.0,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "simonrey1",
+                    "at": "2026-11-09T16:57:32Z"
+                  },
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T16:57:54Z"
+                  },
+                  {
+                    "author": "SoniaSandler",
+                    "at": "2026-11-09T17:00:21Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20129,
+                "title": "chore(compose): inline product.json into package.json",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20129",
+                "author": "benoitf",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T16:53:53Z",
+                "merged_at": null,
+                "domain": "containers",
+                "first_review_hours": 0.1,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T16:57:00Z"
+                  },
+                  {
+                    "author": "simonrey1",
+                    "at": "2026-11-09T16:58:15Z"
+                  },
+                  {
+                    "author": "SoniaSandler",
+                    "at": "2026-11-09T16:59:39Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20128,
+                "title": "feat(welcome): balance the extension grid and make the cards more compact",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20128",
+                "author": "atishay-kasliwal",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T16:29:45Z",
+                "merged_at": null,
+                "domain": "extensibility",
+                "first_review_hours": 1.3,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20127,
+                "title": "test(e2e): relaunch as soon as the first page loaded without its preload",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20127",
+                "author": "simonrey1",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T16:25:56Z",
+                "merged_at": null,
+                "domain": "qe",
+                "first_review_hours": 1.0,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T17:28:38Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T17:44:40Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20125,
+                "title": "fix(ui): keep details controls reachable in narrow windows",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20125",
+                "author": "FayezBast",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T15:55:21Z",
+                "merged_at": null,
+                "domain": "foundations",
+                "first_review_hours": 0.6,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20124,
+                "title": "feat(ui): add label, group and separator to the dropdown menu",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20124",
+                "author": "simonrey1",
+                "state": "OPEN",
+                "is_draft": true,
+                "created_at": "2026-11-09T15:43:56Z",
+                "merged_at": null,
+                "domain": "foundations",
+                "first_review_hours": 0.1,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20122,
+                "title": "fix(extension/podman): parse legacy uninstall commands",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20122",
+                "author": "odockal",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T15:12:52Z",
+                "merged_at": null,
+                "domain": "extensibility",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20121,
+                "title": "fix(main): keep uri fragment without leading hash",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20121",
+                "author": "vzhukovs",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T13:21:49Z",
+                "merged_at": "2026-11-09T18:11:40Z",
+                "domain": "foundations",
+                "first_review_hours": 0.8,
+                "merge_hours": 4.8,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T14:08:22Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20118,
+                "title": "fix(podman): show warning severity in onboarding preflight checks",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20118",
+                "author": "gastoner",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T11:40:54Z",
+                "merged_at": "2026-11-09T14:50:11Z",
+                "domain": "containers",
+                "first_review_hours": 0.3,
+                "merge_hours": 3.1,
+                "review_rounds": 1,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T14:40:44Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20115,
+                "title": "chore(podman): make the Docker compatibility guide link configurable",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20115",
+                "author": "SoniaSandler",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T04:10:02Z",
+                "merged_at": "2026-11-09T20:31:45Z",
+                "domain": "containers",
+                "first_review_hours": 3.4,
+                "merge_hours": 16.4,
+                "review_rounds": 3,
+                "approvals": [
+                  {
+                    "author": "simonrey1",
+                    "at": "2026-11-09T17:07:55Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T17:43:34Z"
+                  }
+                ]
+              },
               {
                 "repo": "podman-desktop",
                 "number": 20097,
                 "title": "fix(container): keep empty and '='-containing env values for libpod",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20097",
                 "author": "ewerton336",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-08T15:39:04Z",
-                "merged_at": null,
+                "merged_at": "2026-11-09T17:11:47Z",
                 "domain": "containers",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 16.0,
+                "merge_hours": 25.6,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T07:40:15Z"
+                  },
+                  {
+                    "author": "simonrey1",
+                    "at": "2026-11-09T16:44:16Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -28845,12 +29224,12 @@
                 "title": "fix(ui): move the container logs clear button to the tab row",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20095",
                 "author": "Prince-5785",
-                "state": "OPEN",
+                "state": "CLOSED",
                 "is_draft": false,
                 "created_at": "2026-11-07T18:27:02Z",
                 "merged_at": null,
                 "domain": "containers",
-                "first_review_hours": null,
+                "first_review_hours": 37.3,
                 "merge_hours": null,
                 "review_rounds": null,
                 "approvals": []
@@ -28866,10 +29245,23 @@
                 "created_at": "2026-11-07T16:36:47Z",
                 "merged_at": null,
                 "domain": "extensibility",
-                "first_review_hours": null,
+                "first_review_hours": 39.2,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T16:00:10Z"
+                  },
+                  {
+                    "author": "simonrey1",
+                    "at": "2026-11-09T16:18:46Z"
+                  },
+                  {
+                    "author": "cbr7",
+                    "at": "2026-11-09T16:58:51Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -28877,15 +29269,28 @@
                 "title": "fix(extension/podman): allow remote ssh tunnels to non-OpenSSH servers",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20093",
                 "author": "rufoa",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-07T04:01:41Z",
-                "merged_at": null,
+                "merged_at": "2026-11-09T10:46:03Z",
                 "domain": "containers",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 51.9,
+                "merge_hours": 54.7,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T07:53:21Z"
+                  },
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T10:19:10Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T10:45:48Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -28898,7 +29303,7 @@
                 "created_at": "2026-11-06T17:24:06Z",
                 "merged_at": null,
                 "domain": "foundations",
-                "first_review_hours": null,
+                "first_review_hours": 67.4,
                 "merge_hours": null,
                 "review_rounds": null,
                 "approvals": []
@@ -28914,10 +29319,15 @@
                 "created_at": "2026-11-06T17:08:49Z",
                 "merged_at": null,
                 "domain": "foundations",
-                "first_review_hours": null,
+                "first_review_hours": 72.7,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T17:50:16Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -29036,14 +29446,14 @@
               {
                 "repo": "podman-desktop",
                 "number": 20076,
-                "title": "fix(renderer): keep finished connection operations until tasks are cleared",
+                "title": "fix: keep finished connection operations until tasks are cleared",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20076",
                 "author": "SoniaSandler",
                 "state": "OPEN",
                 "is_draft": false,
                 "created_at": "2026-11-05T19:39:50Z",
                 "merged_at": null,
-                "domain": "foundations",
+                "domain": "extensibility",
                 "first_review_hours": 15.0,
                 "merge_hours": null,
                 "review_rounds": null,
@@ -29100,18 +29510,26 @@
                 "title": "fix(podman): remove stale API socket before starting a machine on Windows",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20072",
                 "author": "simonrey1",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-05T17:30:53Z",
-                "merged_at": null,
+                "merged_at": "2026-11-09T15:09:44Z",
                 "domain": "containers",
                 "first_review_hours": 16.4,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 93.7,
+                "review_rounds": 2,
                 "approvals": [
                   {
                     "author": "benoitf",
                     "at": "2026-11-06T17:24:50Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T13:15:48Z"
+                  },
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T13:57:54Z"
                   }
                 ]
               },
@@ -29121,7 +29539,7 @@
                 "title": "feat(ui): add a submenu to the dropdown menu",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20071",
                 "author": "simonrey1",
-                "state": "OPEN",
+                "state": "CLOSED",
                 "is_draft": true,
                 "created_at": "2026-11-05T15:54:29Z",
                 "merged_at": null,
@@ -29358,14 +29776,14 @@
                 "title": "fix(ci): use PODMAN_DESKTOP_BOT_TOKEN for e2e-full-pr dispatch",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20046",
                 "author": "danivilla9",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-04T16:01:56Z",
-                "merged_at": null,
+                "merged_at": "2026-11-09T12:12:41Z",
                 "domain": "qe",
                 "first_review_hours": 0.1,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 116.2,
+                "review_rounds": 0,
                 "approvals": [
                   {
                     "author": "benoitf",
@@ -29413,18 +29831,27 @@
               {
                 "repo": "podman-desktop",
                 "number": 20043,
-                "title": "fix(renderer): re-evaluate onboarding content when clauses on context updates",
+                "title": "fix(renderer): emit a new context instance on store updates",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20043",
                 "author": "gastoner",
-                "state": "OPEN",
-                "is_draft": true,
+                "state": "MERGED",
+                "is_draft": false,
                 "created_at": "2026-11-04T12:28:33Z",
-                "merged_at": null,
+                "merged_at": "2026-11-09T19:11:33Z",
                 "domain": "extensibility",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 119.9,
+                "merge_hours": 126.7,
+                "review_rounds": 3,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T17:13:19Z"
+                  },
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T17:22:26Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -29465,6 +29892,43 @@
               },
               {
                 "repo": "podman-desktop-catalog",
+                "number": 1483,
+                "title": "fix(deps): remove duplicated postcss entry from lock file",
+                "url": "https://github.com/podman-desktop/podman-desktop-catalog/pull/1483",
+                "author": "benoitf",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T09:02:05Z",
+                "merged_at": "2026-11-09T09:49:25Z",
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": 0.8,
+                "review_rounds": 1,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop-catalog",
+                "number": 1482,
+                "title": "chore: dedupe lockfile so parse5-parser-stream uses parse5 8.1.0",
+                "url": "https://github.com/podman-desktop/podman-desktop-catalog/pull/1482",
+                "author": "benoitf",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T08:26:21Z",
+                "merged_at": "2026-11-09T11:54:55Z",
+                "domain": "dependency-update-major",
+                "first_review_hours": 0.6,
+                "merge_hours": 3.5,
+                "review_rounds": 2,
+                "approvals": [
+                  {
+                    "author": "feloy",
+                    "at": "2026-11-09T09:02:41Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop-catalog",
                 "number": 1476,
                 "title": "chore: adapt to biome 2.6 markdown/yaml formatting",
                 "url": "https://github.com/podman-desktop/podman-desktop-catalog/pull/1476",
@@ -29483,6 +29947,22 @@
                     "at": "2026-11-06T14:56:20Z"
                   }
                 ]
+              },
+              {
+                "repo": "e2e",
+                "number": 726,
+                "title": "feat(e2e-runner): support authenticated Podman artifact downloads",
+                "url": "https://github.com/podman-desktop/e2e/pull/726",
+                "author": "danivilla9",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T11:45:01Z",
+                "merged_at": null,
+                "domain": "qe",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
               },
               {
                 "repo": "extension-minikube",
@@ -29653,6 +30133,43 @@
               },
               {
                 "repo": "extension-postgresql",
+                "number": 832,
+                "title": "chore: dedupe lockfile so parse5-parser-stream uses parse5 8.1.0",
+                "url": "https://github.com/podman-desktop/extension-postgresql/pull/832",
+                "author": "feloy",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T15:51:16Z",
+                "merged_at": null,
+                "domain": "postgresql",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "extension-postgresql",
+                "number": 831,
+                "title": "test: cover frontend credentials visibility",
+                "url": "https://github.com/podman-desktop/extension-postgresql/pull/831",
+                "author": "feloy",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T13:04:58Z",
+                "merged_at": "2026-11-09T15:40:20Z",
+                "domain": "postgresql",
+                "first_review_hours": 2.0,
+                "merge_hours": 2.6,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-09T15:08:02Z"
+                  }
+                ]
+              },
+              {
+                "repo": "extension-postgresql",
                 "number": 826,
                 "title": "chore(ci): use latest runner images",
                 "url": "https://github.com/podman-desktop/extension-postgresql/pull/826",
@@ -29707,6 +30224,38 @@
               },
               {
                 "repo": "extension-kreate",
+                "number": 1091,
+                "title": "chore: dedupe lockfile so parse5-parser-stream uses parse5 8.1.0",
+                "url": "https://github.com/podman-desktop/extension-kreate/pull/1091",
+                "author": "feloy",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T12:49:04Z",
+                "merged_at": null,
+                "domain": "kreate",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "extension-kreate",
+                "number": 1090,
+                "title": "update parse5 dependencies",
+                "url": "https://github.com/podman-desktop/extension-kreate/pull/1090",
+                "author": "feloy",
+                "state": "CLOSED",
+                "is_draft": false,
+                "created_at": "2026-11-09T08:29:56Z",
+                "merged_at": null,
+                "domain": "kreate",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "extension-kreate",
                 "number": 1076,
                 "title": "chore(eslint): adopt @podman-desktop/eslint-config",
                 "url": "https://github.com/podman-desktop/extension-kreate/pull/1076",
@@ -29731,6 +30280,31 @@
                   {
                     "author": "feloy",
                     "at": "2026-11-04T13:57:50Z"
+                  }
+                ]
+              },
+              {
+                "repo": "extension-podman-quadlet",
+                "number": 1941,
+                "title": "fix(tests): increase e2e timeouts to fix flaky smoke tests",
+                "url": "https://github.com/podman-desktop/extension-podman-quadlet/pull/1941",
+                "author": "simonrey1",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T16:41:08Z",
+                "merged_at": null,
+                "domain": "podman-quadlet",
+                "first_review_hours": 0.2,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T16:55:28Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T20:42:26Z"
                   }
                 ]
               },
@@ -29781,6 +30355,27 @@
                   {
                     "author": "simonrey1",
                     "at": "2026-11-04T10:45:08Z"
+                  }
+                ]
+              },
+              {
+                "repo": "extension-kubernetes-dashboard",
+                "number": 1536,
+                "title": "chore: dedupe lockfile so parse5-parser-stream uses parse5 8.1.0",
+                "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/1536",
+                "author": "feloy",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T12:53:01Z",
+                "merged_at": "2026-11-09T15:39:44Z",
+                "domain": "kubernetes-dashboard",
+                "first_review_hours": 2.2,
+                "merge_hours": 2.8,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-09T15:06:01Z"
                   }
                 ]
               },
@@ -29922,6 +30517,27 @@
               },
               {
                 "repo": "extension-kubernetes-contexts",
+                "number": 850,
+                "title": "chore: dedupe lockfile so parse5-parser-stream uses parse5 8.1.0",
+                "url": "https://github.com/podman-desktop/extension-kubernetes-contexts/pull/850",
+                "author": "feloy",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T12:51:08Z",
+                "merged_at": "2026-11-09T15:36:59Z",
+                "domain": "kubernetes-context",
+                "first_review_hours": 2.2,
+                "merge_hours": 2.8,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-09T15:05:34Z"
+                  }
+                ]
+              },
+              {
+                "repo": "extension-kubernetes-contexts",
                 "number": 835,
                 "title": "chore(eslint): adopt @podman-desktop/eslint-config",
                 "url": "https://github.com/podman-desktop/extension-kubernetes-contexts/pull/835",
@@ -30045,6 +30661,22 @@
               },
               {
                 "repo": "eslint-plugin",
+                "number": 211,
+                "title": "fix: format README and bump biome schema for biome 2.6.5",
+                "url": "https://github.com/podman-desktop/eslint-plugin/pull/211",
+                "author": "benoitf",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T08:02:35Z",
+                "merged_at": "2026-11-09T08:07:29Z",
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": 0.1,
+                "review_rounds": 0,
+                "approvals": []
+              },
+              {
+                "repo": "eslint-plugin",
                 "number": 206,
                 "title": "chore: apply biome 2.6 formatting",
                 "url": "https://github.com/podman-desktop/eslint-plugin/pull/206",
@@ -30082,6 +30714,48 @@
               },
               {
                 "repo": "extension-grype",
+                "number": 414,
+                "title": "chore(build): bump corepack to 0.34.6 for pnpm 12",
+                "url": "https://github.com/podman-desktop/extension-grype/pull/414",
+                "author": "cbr7",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T15:45:31Z",
+                "merged_at": "2026-11-09T16:10:24Z",
+                "domain": "grype",
+                "first_review_hours": 0.4,
+                "merge_hours": 0.4,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T16:10:15Z"
+                  }
+                ]
+              },
+              {
+                "repo": "extension-grype",
+                "number": 413,
+                "title": "chore(test): add test framework to grype extension",
+                "url": "https://github.com/podman-desktop/extension-grype/pull/413",
+                "author": "cbr7",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T10:19:43Z",
+                "merged_at": null,
+                "domain": "grype",
+                "first_review_hours": 0.0,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T16:36:34Z"
+                  }
+                ]
+              },
+              {
+                "repo": "extension-grype",
                 "number": 406,
                 "title": "chore(eslint): adopt @podman-desktop/eslint-config",
                 "url": "https://github.com/podman-desktop/extension-grype/pull/406",
@@ -30102,6 +30776,31 @@
                   {
                     "author": "benoitf",
                     "at": "2026-11-04T13:57:46Z"
+                  }
+                ]
+              },
+              {
+                "repo": "wslc",
+                "number": 2,
+                "title": "chore: add minimal extension scaffold",
+                "url": "https://github.com/podman-desktop/wslc/pull/2",
+                "author": "gastoner",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T12:03:08Z",
+                "merged_at": "2026-11-09T14:36:13Z",
+                "domain": "foundations",
+                "first_review_hours": 0.6,
+                "merge_hours": 2.5,
+                "review_rounds": 1,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-09T13:37:47Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T14:31:09Z"
                   }
                 ]
               }
@@ -30150,36 +30849,36 @@
         "Sprint 300": {
           "start_date": "2026-11-04",
           "duration": 21,
-          "total_items": 82,
-          "done_items": 16,
+          "total_items": 84,
+          "done_items": 18,
           "total_story_points": 0,
           "done_story_points": 0,
           "statuses": {
-            "Done": 16,
+            "\ud83d\udea7 In Progress": 11,
+            "Done": 18,
             "\ud83d\udea5 In Review": 13,
-            "\ud83d\udea7 In Progress": 9,
-            "\u23f3On Hold": 3,
-            "\ud83d\udccb Backlog": 37,
+            "\u23f3On Hold": 2,
+            "\ud83d\udccb Backlog": 36,
             "\ud83d\udcc5 Planned": 3,
             "\u23f1Postponed": 1
           },
           "goals": {
-            "Uncategorized": 82
+            "Uncategorized": 84
           },
           "priorities": {
-            "None": 82
+            "None": 84
           },
           "assignees": {
             "jeffmaury": 15,
             "serbangeorge-m": 15,
-            "bmahabirbu": 8,
+            "bmahabirbu": 10,
             "fbricon": 8,
             "benoitf": 8,
             "feloy": 7,
             "MarsKubeX": 6
           },
           "repos": {
-            "kaiden": 65,
+            "kaiden": 67,
             "None": 6,
             "podman-desktop-extension-ai-lab": 2,
             "kdn-old": 1,
@@ -30193,6 +30892,36 @@
             "podman-desktop-internal": 1
           },
           "items": [
+            {
+              "number": 3226,
+              "title": "Kaiden Workspace view is stale upon restart",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3226",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "bmahabirbu"
+              ]
+            },
+            {
+              "number": 3221,
+              "title": "Workspaces created enter unhealthy state and show errors after restarting Kaiden",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3221",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "bmahabirbu"
+              ]
+            },
             {
               "number": 3126,
               "title": "Enable the vm-driver as the default",
@@ -30788,8 +31517,8 @@
               "repo": "kaiden",
               "url": "https://github.com/openkaiden/kaiden/issues/3010",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
-              "state": "OPEN",
+              "status": "Done",
+              "state": "CLOSED",
               "goal": null,
               "priority": null,
               "points": null,
@@ -30978,13 +31707,41 @@
               ]
             },
             {
+              "number": 3183,
+              "title": "Add addon registration in extension API",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3183",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "bmahabirbu"
+              ]
+            },
+            {
+              "number": 4377,
+              "title": "feat: switch OpenVINO provider to llama.cpp with multi-backend recipes",
+              "repo": "podman-desktop-extension-ai-lab",
+              "url": "https://github.com/containers/podman-desktop-extension-ai-lab/pull/4377",
+              "type": "PullRequest",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": []
+            },
+            {
               "number": 3052,
               "title": "macOS: Kaiden cannot detect Podman machines without the socket symlink",
               "repo": "kaiden",
               "url": "https://github.com/openkaiden/kaiden/issues/3052",
               "type": "Issue",
-              "status": "\u23f3On Hold",
-              "state": "OPEN",
+              "status": "Done",
+              "state": "CLOSED",
               "goal": null,
               "priority": null,
               "points": null,
@@ -31086,7 +31843,7 @@
               "repo": "kaiden",
               "url": "https://github.com/openkaiden/kaiden/issues/3173",
               "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
+              "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -31171,21 +31928,6 @@
               ]
             },
             {
-              "number": 3183,
-              "title": "Add addon registration in extension API",
-              "repo": "kaiden",
-              "url": "https://github.com/openkaiden/kaiden/issues/3183",
-              "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
-              "state": "OPEN",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "bmahabirbu"
-              ]
-            },
-            {
               "number": 3184,
               "title": "Define the list of initial addons",
               "repo": "kaiden",
@@ -31259,19 +32001,6 @@
               "assignees": [
                 "MarsKubeX"
               ]
-            },
-            {
-              "number": 4377,
-              "title": "feat: switch OpenVINO provider to llama.cpp with multi-backend recipes",
-              "repo": "podman-desktop-extension-ai-lab",
-              "url": "https://github.com/containers/podman-desktop-extension-ai-lab/pull/4377",
-              "type": "PullRequest",
-              "status": "\ud83d\udccb Backlog",
-              "state": "OPEN",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": []
             },
             {
               "number": 3202,
@@ -36146,7 +36875,7 @@
           },
           "Sprint 298": {
             "total_prs": 84,
-            "merged_prs": 69,
+            "merged_prs": 70,
             "time_to_first_review": {
               "avg": 7.7,
               "median": 2.0,
@@ -36158,14 +36887,14 @@
               "count": 25
             },
             "time_to_merge": {
-              "avg": 47.1,
-              "median": 3.7,
-              "count": 69
+              "avg": 60.9,
+              "median": 3.9,
+              "count": 70
             },
             "time_to_address_comments": {
-              "avg": 46.5,
-              "median": 19.8,
-              "count": 9
+              "avg": 53.2,
+              "median": 22.5,
+              "count": 10
             },
             "weekly_extremes": {
               "2026-W38": {
@@ -36251,21 +36980,35 @@
                   "number": 3033,
                   "hours": 835.83
                 }
+              },
+              "2026-W45": {
+                "longest": {
+                  "title": "feat(openshell): sync profiles (gateway state changes, profiles registered/unregistered)",
+                  "repo": "kaiden",
+                  "number": 3011,
+                  "hours": 1014.33
+                },
+                "shortest": {
+                  "title": "feat(openshell): sync profiles (gateway state changes, profiles registered/unregistered)",
+                  "repo": "kaiden",
+                  "number": 3011,
+                  "hours": 1014.33
+                }
               }
             },
             "author_merged_prs": {
               "benoitf": 24,
               "feloy": 11,
               "bmahabirbu": 7,
+              "jeffmaury": 7,
               "fbricon": 6,
-              "jeffmaury": 6,
               "MarsKubeX": 6,
               "fullsend-ai-coder": 5,
               "serbangeorge-m": 3,
               "slemeur": 1
             },
             "reviewer_approvals": {
-              "benoitf": 29,
+              "benoitf": 30,
               "jeffmaury": 22,
               "bmahabirbu": 17,
               "MarsKubeX": 15,
@@ -36281,8 +37024,8 @@
               "jeffmaury": 0.65,
               "serbangeorge-m": 0.96,
               "bmahabirbu": 1.91,
-              "benoitf": 1.98,
-              "MarsKubeX": 2.23
+              "MarsKubeX": 2.23,
+              "benoitf": 2.92
             },
             "author_review_rounds": {
               "bmahabirbu": [
@@ -36325,6 +37068,7 @@
               "jeffmaury": [
                 3,
                 2,
+                3,
                 3,
                 2,
                 4,
@@ -36552,7 +37296,7 @@
                 "title": "fix(container): inspect Podman machines when shared socket is missing",
                 "url": "https://github.com/openkaiden/kaiden/pull/3053",
                 "author": "fullsend-ai-coder",
-                "state": "OPEN",
+                "state": "CLOSED",
                 "is_draft": true,
                 "created_at": "2026-10-07T01:25:06Z",
                 "merged_at": null,
@@ -37092,18 +37836,22 @@
                 "title": "feat(openshell): sync profiles (gateway state changes, profiles registered/unregistered)",
                 "url": "https://github.com/openkaiden/kaiden/pull/3011",
                 "author": "jeffmaury",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-09-28T10:43:10Z",
-                "merged_at": null,
+                "merged_at": "2026-11-09T17:03:12Z",
                 "domain": null,
                 "first_review_hours": 34.6,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 1014.3,
+                "review_rounds": 3,
                 "approvals": [
                   {
                     "author": "bmahabirbu",
                     "at": "2026-09-29T21:17:06Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T14:09:33Z"
                   }
                 ]
               },
@@ -39601,22 +40349,22 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 26,
-            "merged_prs": 21,
+            "total_prs": 32,
+            "merged_prs": 22,
             "time_to_first_review": {
-              "avg": 1.9,
-              "median": 0.6,
-              "count": 21
+              "avg": 1.7,
+              "median": 0.5,
+              "count": 23
             },
             "time_to_first_comment": {
-              "avg": 2.5,
-              "median": 1.3,
-              "count": 5
+              "avg": 2.1,
+              "median": 0.9,
+              "count": 6
             },
             "time_to_merge": {
-              "avg": 3.7,
-              "median": 2.4,
-              "count": 21
+              "avg": 3.6,
+              "median": 2.3,
+              "count": 22
             },
             "time_to_address_comments": {
               "avg": 4.3,
@@ -39637,18 +40385,32 @@
                   "number": 3196,
                   "hours": 0.16
                 }
+              },
+              "2026-W45": {
+                "longest": {
+                  "title": "chore: \ud83d\udce2 Bump version to 0.5.0",
+                  "repo": "kaiden",
+                  "number": 3236,
+                  "hours": 0.31
+                },
+                "shortest": {
+                  "title": "chore: \ud83d\udce2 Bump version to 0.5.0",
+                  "repo": "kaiden",
+                  "number": 3236,
+                  "hours": 0.31
+                }
               }
             },
             "author_merged_prs": {
               "benoitf": 9,
+              "openkaiden-ai": 5,
               "serbangeorge-m": 4,
-              "openkaiden-ai": 4,
               "fbricon": 2,
               "MarsKubeX": 1,
               "slemeur": 1
             },
             "reviewer_approvals": {
-              "benoitf": 9,
+              "benoitf": 10,
               "jeffmaury": 5,
               "bmahabirbu": 4,
               "MarsKubeX": 3,
@@ -39662,21 +40424,22 @@
               "fbricon": 0.01,
               "MarsKubeX": 0.08,
               "bmahabirbu": 0.08,
-              "benoitf": 0.1,
+              "benoitf": 0.09,
               "jeffmaury": 0.14
             },
             "author_review_rounds": {
+              "openkaiden-ai": [
+                2,
+                1,
+                2,
+                2,
+                0
+              ],
               "serbangeorge-m": [
                 1,
                 2,
                 1,
                 2
-              ],
-              "openkaiden-ai": [
-                1,
-                2,
-                2,
-                0
               ],
               "MarsKubeX": [
                 1
@@ -39701,6 +40464,107 @@
               ]
             },
             "prs": [
+              {
+                "repo": "kaiden",
+                "number": 3236,
+                "title": "chore: \ud83d\udce2 Bump version to 0.5.0",
+                "url": "https://github.com/openkaiden/kaiden/pull/3236",
+                "author": "openkaiden-ai",
+                "state": "MERGED",
+                "is_draft": false,
+                "created_at": "2026-11-09T20:15:09Z",
+                "merged_at": "2026-11-09T20:33:38Z",
+                "domain": null,
+                "first_review_hours": 0.2,
+                "merge_hours": 0.3,
+                "review_rounds": 2,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-09T20:30:00Z"
+                  }
+                ]
+              },
+              {
+                "repo": "kaiden",
+                "number": 3235,
+                "title": "feat(#3230): poll transitional workspaces until settled after gateway start",
+                "url": "https://github.com/openkaiden/kaiden/pull/3235",
+                "author": "fullsend-ai-coder",
+                "state": "CLOSED",
+                "is_draft": false,
+                "created_at": "2026-11-09T17:26:35Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "kaiden",
+                "number": 3234,
+                "title": "fix(main): wait for the previous openshell gateway to exit on startup",
+                "url": "https://github.com/openkaiden/kaiden/pull/3234",
+                "author": "bmahabirbu",
+                "state": "CLOSED",
+                "is_draft": false,
+                "created_at": "2026-11-09T17:25:58Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": 0.2,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "kaiden",
+                "number": 3233,
+                "title": "fix(#3227): increase gateway stop timeout to 60 seconds",
+                "url": "https://github.com/openkaiden/kaiden/pull/3233",
+                "author": "fullsend-ai-coder",
+                "state": "CLOSED",
+                "is_draft": false,
+                "created_at": "2026-11-09T17:16:55Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "kaiden",
+                "number": 3232,
+                "title": "fix(#3228): wait for ongoing gateway shutdown before restarting",
+                "url": "https://github.com/openkaiden/kaiden/pull/3232",
+                "author": "fullsend-ai-coder",
+                "state": "CLOSED",
+                "is_draft": false,
+                "created_at": "2026-11-09T17:15:34Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "kaiden",
+                "number": 3231,
+                "title": "fix(main): give the gateway stop button extra time before SIGKILL",
+                "url": "https://github.com/openkaiden/kaiden/pull/3231",
+                "author": "bmahabirbu",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-09T17:01:53Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
               {
                 "repo": "kaiden",
                 "number": 3224,
