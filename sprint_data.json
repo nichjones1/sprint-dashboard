@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T18:39:57.937079",
+  "generated_at": "2026-11-14T16:44:56.341168",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -13,9 +13,9 @@
           "done_story_points": 60.0,
           "statuses": {
             "\u2714\ufe0f Done": 74,
-            "\ud83d\udea7 In Progress": 27,
+            "\ud83d\udea7 In Progress": 28,
             "\ud83d\udea5 In Review": 24,
-            "\ud83d\udcc5 Planned": 79,
+            "\ud83d\udcc5 Planned": 78,
             "\ud83d\udccb Backlog": 39,
             "\u23f3On Hold": 13,
             "None": 5
@@ -3605,7 +3605,7 @@
               "repo": "agent-skills",
               "url": "https://github.com/podman-desktop/agent-skills/issues/5",
               "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
+              "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
               "goal": null,
               "priority": "Critical",
@@ -7441,19 +7441,6 @@
               "assignees": [
                 "benoitf"
               ]
-            },
-            {
-              "number": 685,
-              "title": "common.sh execute scripts function is using wrong path to find scripts on darwin",
-              "repo": "e2e",
-              "url": "https://github.com/podman-desktop/e2e/issues/685",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "QE",
-              "priority": "\ud83c\udfd4 High",
-              "points": 1.0,
-              "assignees": []
             },
             {
               "number": 1448,
@@ -28614,7 +28601,7 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 161,
+            "total_prs": 162,
             "merged_prs": 105,
             "time_to_first_review": {
               "avg": 11.5,
@@ -28714,11 +28701,11 @@
               "extensibility": 14,
               "grype": 7,
               "kind": 6,
+              "ui-components": 5,
               "bootc": 5,
               "postgresql": 5,
               "podman-quadlet": 5,
               "apple-container": 5,
-              "ui-components": 4,
               "minikube": 4,
               "kreate": 4,
               "docs": 3,
@@ -29015,6 +29002,22 @@
               ]
             },
             "prs": [
+              {
+                "repo": "podman-desktop",
+                "number": 20197,
+                "title": "feat(statusbar): add status bar color tokens for each theme",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20197",
+                "author": "0xKalasi",
+                "state": "OPEN",
+                "is_draft": true,
+                "created_at": "2026-11-13T21:52:31Z",
+                "merged_at": null,
+                "domain": "ui-components",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
               {
                 "repo": "podman-desktop",
                 "number": 20196,
@@ -42153,8 +42156,8 @@
               "slemeur": 1
             },
             "reviewer_approvals": {
+              "bmahabirbu": 15,
               "benoitf": 14,
-              "bmahabirbu": 13,
               "jeffmaury": 9,
               "MarsKubeX": 7,
               "fbricon": 5
@@ -42166,7 +42169,7 @@
             "engineer_avg_approval_bdays": {
               "fbricon": 0.01,
               "benoitf": 0.08,
-              "bmahabirbu": 0.23,
+              "bmahabirbu": 0.46,
               "MarsKubeX": 0.5,
               "jeffmaury": 0.51
             },
@@ -42373,6 +42376,14 @@
                   {
                     "author": "MarsKubeX",
                     "at": "2026-11-13T14:59:27Z"
+                  },
+                  {
+                    "author": "bmahabirbu",
+                    "at": "2026-11-13T19:06:12Z"
+                  },
+                  {
+                    "author": "bmahabirbu",
+                    "at": "2026-11-13T19:06:53Z"
                   }
                 ]
               },
