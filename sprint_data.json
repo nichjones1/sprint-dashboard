@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T16:31:31.857243",
+  "generated_at": "2026-11-17T19:22:12.944327",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -8,14 +8,14 @@
           "start_date": "2026-11-04",
           "duration": 21,
           "total_items": 262,
-          "done_items": 81,
+          "done_items": 82,
           "total_story_points": 187.0,
           "done_story_points": 64.0,
           "statuses": {
-            "\u2714\ufe0f Done": 81,
-            "\ud83d\udea7 In Progress": 27,
-            "\ud83d\udea5 In Review": 30,
-            "\ud83d\udcc5 Planned": 73,
+            "\u2714\ufe0f Done": 82,
+            "\ud83d\udea7 In Progress": 28,
+            "\ud83d\udea5 In Review": 29,
+            "\ud83d\udcc5 Planned": 72,
             "\ud83d\udccb Backlog": 33,
             "\u23f3On Hold": 13,
             "None": 5
@@ -889,8 +889,8 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/18541",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
-              "state": "OPEN",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
               "goal": null,
               "priority": null,
               "points": null,
@@ -2380,7 +2380,7 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/19479",
               "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
+              "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
               "goal": "Bug Fix",
               "priority": "Critical",
@@ -22468,7 +22468,7 @@
           },
           "Sprint 299": {
             "total_prs": 243,
-            "merged_prs": 186,
+            "merged_prs": 187,
             "time_to_first_review": {
               "avg": 23.6,
               "median": 1.8,
@@ -22480,9 +22480,9 @@
               "count": 89
             },
             "time_to_merge": {
-              "avg": 78.5,
+              "avg": 79.8,
               "median": 18.9,
-              "count": 186
+              "count": 187
             },
             "time_to_address_comments": {
               "avg": 67.2,
@@ -22568,15 +22568,15 @@
                   "hours": 708.11
                 },
                 "shortest": {
-                  "title": "feat(renderer): add Catalog install-status filter",
+                  "title": "docs(website): add truncate markers to blog posts",
                   "repo": "podman-desktop",
-                  "number": 19981,
-                  "hours": 338.0
+                  "number": 20035,
+                  "hours": 332.07
                 }
               }
             },
             "author_merged_prs": {
-              "benoitf": 43,
+              "benoitf": 44,
               "gastoner": 17,
               "simonrey1": 16,
               "vancura": 15,
@@ -22626,7 +22626,8 @@
               "dgolovin": 2,
               "MarsKubeX": 2,
               "ScrewTSW": 2,
-              "slemeur": 2
+              "slemeur": 2,
+              "rohit-redhat": 1
             },
             "domain_pr_count": {
               "foundations": 37,
@@ -22740,7 +22741,7 @@
             },
             "domain_avg_approval_hours": {
               "foundations": 33.6,
-              "docs": 10.5,
+              "docs": 117.6,
               "containers": 106.8,
               "extensibility": 134.9,
               "qe": 128.5,
@@ -22779,10 +22780,12 @@
               "odockal": 4.12,
               "danivilla9": 4.29,
               "cbr7": 4.43,
-              "dgolovin": 6.9
+              "dgolovin": 6.9,
+              "rohit-redhat": 9.83
             },
             "author_review_rounds": {
               "benoitf": [
+                0,
                 0,
                 0,
                 0,
@@ -23059,18 +23062,22 @@
                 "title": "docs(website): add truncate markers to blog posts",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20035",
                 "author": "benoitf",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-03T21:25:32Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T17:29:57Z",
                 "domain": "docs",
                 "first_review_hours": 20.8,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 332.1,
+                "review_rounds": 0,
                 "approvals": [
                   {
                     "author": "kyetter",
                     "at": "2026-11-04T18:16:06Z"
+                  },
+                  {
+                    "author": "rohit-redhat",
+                    "at": "2026-11-17T17:13:40Z"
                   }
                 ]
               },
@@ -28729,7 +28736,7 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 202,
+            "total_prs": 203,
             "merged_prs": 124,
             "time_to_first_review": {
               "avg": 14.1,
@@ -28820,15 +28827,15 @@
               "amisskii": 1
             },
             "reviewer_approvals": {
-              "benoitf": 76,
+              "benoitf": 78,
               "axel7083": 52,
               "simonrey1": 22,
               "feloy": 18,
               "jeffmaury": 15,
               "vancura": 9,
+              "kyetter": 7,
               "cbr7": 6,
               "odockal": 6,
-              "kyetter": 5,
               "cdrage": 4,
               "danivilla9": 4,
               "deboer-tim": 4,
@@ -28838,7 +28845,7 @@
             },
             "domain_pr_count": {
               "foundations": 32,
-              "containers": 23,
+              "containers": 24,
               "extensibility": 21,
               "qe": 17,
               "apple-container": 10,
@@ -28889,15 +28896,15 @@
                 "benoitf": 65.0,
                 "axel7083": 35.0
               },
+              "foundations": {
+                "benoitf": 100.0
+              },
               "extensibility": {
                 "benoitf": 100.0
               },
               "ui-components": {
                 "benoitf": 71.4,
                 "vancura": 28.6
-              },
-              "foundations": {
-                "benoitf": 100.0
               },
               "docs": {
                 "kyetter": 50.0,
@@ -28955,11 +28962,11 @@
               }
             },
             "domain_avg_approval_hours": {
-              "qe": 14.9,
+              "qe": 13.7,
               "containers": 53.0,
+              "foundations": 31.8,
               "extensibility": 49.7,
               "ui-components": 30.6,
-              "foundations": 32.1,
               "docs": 30.8,
               "kubernetes": 7.4,
               "dependency-update-major": 0.7,
@@ -28988,9 +28995,9 @@
               "simonrey1": 0.48,
               "dgolovin": 0.53,
               "cbr7": 0.57,
-              "benoitf": 0.78,
+              "benoitf": 0.77,
               "odockal": 0.92,
-              "kyetter": 1.24,
+              "kyetter": 0.97,
               "vancura": 1.25,
               "cdrage": 1.76,
               "danivilla9": 2.4
@@ -29168,6 +29175,22 @@
             "prs": [
               {
                 "repo": "podman-desktop",
+                "number": 20256,
+                "title": "fix: restore container TTY after restart and stop/start",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20256",
+                "author": "FayezBast",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T17:18:21Z",
+                "merged_at": null,
+                "domain": "containers",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
                 "number": 20255,
                 "title": "feat(statusbar): show providers as default, not as experimental option",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20255",
@@ -29184,6 +29207,14 @@
                   {
                     "author": "axel7083",
                     "at": "2026-11-17T13:57:41Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T16:58:03Z"
+                  },
+                  {
+                    "author": "kyetter",
+                    "at": "2026-11-17T17:25:14Z"
                   }
                 ]
               },
@@ -29222,7 +29253,12 @@
                 "first_review_hours": 3.7,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "kyetter",
+                    "at": "2026-11-17T18:07:09Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -29474,6 +29510,10 @@
                   {
                     "author": "axel7083",
                     "at": "2026-11-17T14:57:22Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T18:00:13Z"
                   }
                 ]
               },
@@ -43389,7 +43429,7 @@
               {
                 "repo": "kaiden",
                 "number": 3288,
-                "title": "feat(ci): publish redacted traces, videos and HTML report from Testing Farm",
+                "title": "ci(testing-farm): publish redacted traces, videos and HTML report",
                 "url": "https://github.com/openkaiden/kaiden/pull/3288",
                 "author": "serbangeorge-m",
                 "state": "OPEN",
