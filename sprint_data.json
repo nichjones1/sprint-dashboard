@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T20:42:52.254445",
+  "generated_at": "2026-11-17T16:31:31.857243",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -8,15 +8,15 @@
           "start_date": "2026-11-04",
           "duration": 21,
           "total_items": 262,
-          "done_items": 80,
+          "done_items": 81,
           "total_story_points": 187.0,
           "done_story_points": 64.0,
           "statuses": {
-            "\u2714\ufe0f Done": 80,
-            "\ud83d\udea7 In Progress": 26,
-            "\ud83d\udea5 In Review": 27,
-            "\ud83d\udcc5 Planned": 75,
-            "\ud83d\udccb Backlog": 36,
+            "\u2714\ufe0f Done": 81,
+            "\ud83d\udea7 In Progress": 27,
+            "\ud83d\udea5 In Review": 30,
+            "\ud83d\udcc5 Planned": 73,
+            "\ud83d\udccb Backlog": 33,
             "\u23f3On Hold": 13,
             "None": 5
           },
@@ -1159,7 +1159,7 @@
               "repo": "podman-desktop-internal",
               "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1113",
               "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -1500,7 +1500,7 @@
               "repo": "podman-desktop-sandbox-ext",
               "url": "https://github.com/redhat-developer/podman-desktop-sandbox-ext/issues/934",
               "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -1515,8 +1515,8 @@
               "repo": "podman-desktop-sandbox-ext",
               "url": "https://github.com/redhat-developer/podman-desktop-sandbox-ext/issues/613",
               "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
-              "state": "OPEN",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
               "points": null,
@@ -1545,7 +1545,7 @@
               "repo": "podman-desktop-sandbox-ext",
               "url": "https://github.com/redhat-developer/podman-desktop-sandbox-ext/issues/939",
               "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -3491,7 +3491,7 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/20004",
               "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -3590,7 +3590,7 @@
               "repo": "agent-skills",
               "url": "https://github.com/podman-desktop/agent-skills/issues/5",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
+              "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
               "goal": null,
               "priority": "Critical",
@@ -6516,21 +6516,6 @@
               ]
             },
             {
-              "number": 1147,
-              "title": "QE on duty responsibility on 21st to 25th of September (Week 39)",
-              "repo": "podman-desktop-internal",
-              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1147",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "cdrage"
-              ]
-            },
-            {
               "number": 19320,
               "title": "Release image for Podman Desktop 1.30.0",
               "repo": "podman-desktop",
@@ -6600,21 +6585,6 @@
               "state": "CLOSED",
               "goal": null,
               "priority": null,
-              "points": null,
-              "assignees": [
-                "cbr7"
-              ]
-            },
-            {
-              "number": 18848,
-              "title": "Fix Import/Pull icon collision on Images page",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/18848",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "Technical Debt",
-              "priority": "\ud83c\udfdd Low",
               "points": null,
               "assignees": [
                 "cbr7"
@@ -6921,21 +6891,6 @@
               ]
             },
             {
-              "number": 1266,
-              "title": "Red Hat SSO onboarding bug",
-              "repo": "podman-desktop-redhat-account-ext",
-              "url": "https://github.com/redhat-developer/podman-desktop-redhat-account-ext/issues/1266",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "SoniaSandler"
-              ]
-            },
-            {
               "number": 18909,
               "title": "Provide a timeouts to e2e jobs",
               "repo": "podman-desktop",
@@ -7204,71 +7159,10 @@
               ]
             },
             {
-              "number": 1131,
-              "title": "Testing of the bug fix release of Red Hat build of Podman Desktop 1.2.1",
-              "repo": "podman-desktop-internal",
-              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1131",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "QE",
-              "priority": "Critical",
-              "points": 2.0,
-              "assignees": [
-                "odockal"
-              ]
-            },
-            {
-              "number": 17465,
-              "title": "Onboarding: implement welcome screen with extension onboarding selection",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/17465",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": "\ud83c\udfd4 High",
-              "points": 5.0,
-              "assignees": [
-                "vancura",
-                "simonrey1"
-              ]
-            },
-            {
-              "number": 19175,
-              "title": "Storybook does not hot-reload when `packages/ui` component source changes",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19175",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "Bug Fix",
-              "priority": "\ud83c\udf0b Urgent",
-              "points": null,
-              "assignees": [
-                "vancura"
-              ]
-            },
-            {
               "number": 1348,
               "title": "tests: integration tests for dashboard API",
               "repo": "extension-kubernetes-dashboard",
               "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/issues/1348",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "vancura"
-              ]
-            },
-            {
-              "number": 19058,
-              "title": "Reconcile `action-button-*` and `button-*` color tokens",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19058",
               "type": "Issue",
               "status": "\u2714\ufe0f Done",
               "state": "CLOSED",
@@ -8085,15 +7979,15 @@
         "Sprint 301": {
           "start_date": "2026-11-25",
           "duration": 21,
-          "total_items": 65,
+          "total_items": 75,
           "done_items": 1,
           "total_story_points": 39.0,
           "done_story_points": 1.0,
           "statuses": {
             "\u23f3On Hold": 6,
-            "\ud83d\udcc5 Planned": 24,
+            "\ud83d\udcc5 Planned": 33,
             "None": 10,
-            "\ud83d\udccb Backlog": 21,
+            "\ud83d\udccb Backlog": 22,
             "\ud83d\udea7 In Progress": 3,
             "\u2714\ufe0f Done": 1
           },
@@ -8101,20 +7995,21 @@
             "Uncategorized": 24,
             "QE": 36,
             "Documentation": 1,
-            "Bug Fix": 4
+            "Bug Fix": 4,
+            "Technical Debt": 10
           },
           "priorities": {
             "None": 42,
             "\ud83c\udfd4 High": 3,
             "\ud83c\udfd5 Medium": 16,
-            "\ud83c\udfdd Low": 2,
+            "\ud83c\udfdd Low": 12,
             "\ud83c\udf0b Urgent": 1,
             "Critical": 1
           },
           "assignees": {
+            "axel7083": 12,
             "cdrage": 4,
             "odockal": 3,
-            "axel7083": 2,
             "dgolovin": 2,
             "danivilla9": 2,
             "vzhukovs": 2,
@@ -8125,7 +8020,7 @@
             "vancura": 1
           },
           "repos": {
-            "podman-desktop": 38,
+            "podman-desktop": 48,
             "podman-desktop-internal": 8,
             "e2e": 5,
             "extension-grype": 4,
@@ -9022,6 +8917,156 @@
               "priority": null,
               "points": null,
               "assignees": []
+            },
+            {
+              "number": 20244,
+              "title": "refactor(main): application scope Inversify container in Main",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20244",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20253,
+              "title": "refactor(main): make the dev app identity a startup service",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20253",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20245,
+              "title": "refactor(main): create the Inversify container in Main",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20245",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20246,
+              "title": "refactor(main): move the application scope files to app/",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20246",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20247,
+              "title": "refactor(main): bind the Electron app and the main window deferred in the app module",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20247",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20248,
+              "title": "refactor(main): make the api sender an injectable class",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20248",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20249,
+              "title": "refactor(main): resolve the ProtocolLauncher from the container",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20249",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20250,
+              "title": "refactor(main): send the protocol requests through the api sender",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20250",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20251,
+              "title": "refactor(main): make SecurityRestrictions a startup service",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20251",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
+            },
+            {
+              "number": 20252,
+              "title": "refactor(main): make the default protocol client a startup service",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/20252",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": "Technical Debt",
+              "priority": "\ud83c\udfdd Low",
+              "points": null,
+              "assignees": [
+                "axel7083"
+              ]
             }
           ]
         }
@@ -22385,7 +22430,7 @@
               {
                 "repo": "wslc",
                 "number": 1,
-                "title": "feat: added initial extension",
+                "title": "[Do NOT merge] feat: added initial extension",
                 "url": "https://github.com/podman-desktop/wslc/pull/1",
                 "author": "gastoner",
                 "state": "OPEN",
@@ -22563,8 +22608,8 @@
             },
             "reviewer_approvals": {
               "axel7083": 107,
-              "benoitf": 82,
-              "simonrey1": 37,
+              "benoitf": 83,
+              "simonrey1": 38,
               "vancura": 25,
               "jeffmaury": 24,
               "feloy": 16,
@@ -22696,8 +22741,8 @@
             "domain_avg_approval_hours": {
               "foundations": 33.6,
               "docs": 10.5,
-              "containers": 102.8,
-              "extensibility": 131.7,
+              "containers": 106.8,
+              "extensibility": 134.9,
               "qe": 128.5,
               "ui-components": 97.3,
               "dependency-update-minor": 1.9,
@@ -22723,14 +22768,14 @@
               "kyetter": 1.26,
               "axel7083": 1.47,
               "ScrewTSW": 1.47,
-              "simonrey1": 2.1,
               "gastoner": 2.27,
+              "simonrey1": 2.3,
               "slemeur": 2.71,
               "SoniaSandler": 2.72,
               "MarsKubeX": 2.78,
               "cdrage": 2.93,
-              "benoitf": 3.15,
               "vancura": 3.21,
+              "benoitf": 3.24,
               "odockal": 4.12,
               "danivilla9": 4.29,
               "cbr7": 4.43,
@@ -23047,6 +23092,10 @@
                   {
                     "author": "benoitf",
                     "at": "2026-11-09T12:11:11Z"
+                  },
+                  {
+                    "author": "simonrey1",
+                    "at": "2026-11-17T10:13:27Z"
                   }
                 ]
               },
@@ -23234,7 +23283,12 @@
                 "first_review_hours": 1.4,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T13:50:27Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -28675,27 +28729,27 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 196,
-            "merged_prs": 116,
+            "total_prs": 202,
+            "merged_prs": 124,
             "time_to_first_review": {
-              "avg": 12.9,
-              "median": 1.2,
-              "count": 137
+              "avg": 14.1,
+              "median": 1.6,
+              "count": 156
             },
             "time_to_first_comment": {
-              "avg": 23.1,
+              "avg": 23.9,
               "median": 13.5,
-              "count": 49
+              "count": 55
             },
             "time_to_merge": {
-              "avg": 19.3,
-              "median": 2.7,
-              "count": 116
+              "avg": 19.5,
+              "median": 3.1,
+              "count": 124
             },
             "time_to_address_comments": {
-              "avg": 15.0,
+              "avg": 15.1,
               "median": 2.7,
-              "count": 14
+              "count": 15
             },
             "weekly_extremes": {
               "2026-W44": {
@@ -28742,18 +28796,18 @@
               }
             },
             "author_merged_prs": {
-              "gastoner": 24,
+              "gastoner": 26,
               "simonrey1": 22,
               "benoitf": 20,
-              "axel7083": 13,
+              "axel7083": 18,
               "feloy": 9,
               "cbr7": 6,
+              "NopeCharon": 3,
               "DeviceDidWhat": 2,
               "JustMell0": 2,
               "SoniaSandler": 2,
               "ewerton336": 2,
               "deboer-tim": 2,
-              "NopeCharon": 2,
               "ScrewTSW": 1,
               "vancura": 1,
               "odockal": 1,
@@ -28766,27 +28820,27 @@
               "amisskii": 1
             },
             "reviewer_approvals": {
-              "benoitf": 69,
-              "axel7083": 49,
-              "simonrey1": 21,
-              "feloy": 13,
+              "benoitf": 76,
+              "axel7083": 52,
+              "simonrey1": 22,
+              "feloy": 18,
+              "jeffmaury": 15,
               "vancura": 9,
-              "jeffmaury": 9,
               "cbr7": 6,
               "odockal": 6,
               "kyetter": 5,
               "cdrage": 4,
               "danivilla9": 4,
               "deboer-tim": 4,
+              "SoniaSandler": 3,
               "serbangeorge-m": 2,
-              "SoniaSandler": 2,
               "dgolovin": 2
             },
             "domain_pr_count": {
-              "foundations": 31,
-              "containers": 21,
-              "extensibility": 20,
-              "qe": 16,
+              "foundations": 32,
+              "containers": 23,
+              "extensibility": 21,
+              "qe": 17,
               "apple-container": 10,
               "grype": 10,
               "kind": 7,
@@ -28826,24 +28880,24 @@
               "kubernetes-pack": 1
             },
             "domain_approval_ownership": {
-              "extensibility": {
-                "benoitf": 100.0
-              },
-              "ui-components": {
-                "benoitf": 60.0,
-                "vancura": 40.0
-              },
-              "foundations": {
-                "benoitf": 100.0
-              },
-              "containers": {
-                "benoitf": 66.7,
-                "axel7083": 33.3
-              },
               "qe": {
                 "odockal": 42.9,
                 "serbangeorge-m": 28.6,
                 "danivilla9": 28.6
+              },
+              "containers": {
+                "benoitf": 65.0,
+                "axel7083": 35.0
+              },
+              "extensibility": {
+                "benoitf": 100.0
+              },
+              "ui-components": {
+                "benoitf": 71.4,
+                "vancura": 28.6
+              },
+              "foundations": {
+                "benoitf": 100.0
               },
               "docs": {
                 "kyetter": 50.0,
@@ -28865,7 +28919,9 @@
                 "deboer-tim": 80.0,
                 "cdrage": 20.0
               },
-              "layers-explorer": {},
+              "layers-explorer": {
+                "jeffmaury": 100.0
+              },
               "postgresql": {
                 "jeffmaury": 100.0
               },
@@ -28880,7 +28936,8 @@
                 "jeffmaury": 100.0
               },
               "github": {
-                "dgolovin": 100.0
+                "dgolovin": 66.7,
+                "SoniaSandler": 33.3
               },
               "apple-container": {
                 "benoitf": 100.0
@@ -28898,40 +28955,40 @@
               }
             },
             "domain_avg_approval_hours": {
-              "extensibility": 50.8,
-              "ui-components": 20.6,
-              "foundations": 31.1,
-              "containers": 57.5,
-              "qe": 15.7,
+              "qe": 14.9,
+              "containers": 53.0,
+              "extensibility": 49.7,
+              "ui-components": 30.6,
+              "foundations": 32.1,
               "docs": 30.8,
               "kubernetes": 7.4,
               "dependency-update-major": 0.7,
               "dependency-update-minor": 0.1,
               "minikube": 0.6,
               "bootc": 1.8,
-              "layers-explorer": 0.7,
-              "postgresql": 3.0,
-              "kreate": 13.1,
+              "layers-explorer": 5.0,
+              "postgresql": 5.6,
+              "kreate": 13.5,
               "podman-quadlet": 9.2,
-              "kubernetes-dashboard": 0.9,
-              "github": 5.1,
-              "apple-container": 4.1,
-              "kubernetes-context": 0.9,
+              "kubernetes-dashboard": 4.6,
+              "github": 6.5,
+              "apple-container": 11.2,
+              "kubernetes-context": 4.6,
               "kind": 1.4,
               "kubernetes-pack": 1.4,
               "grype": 2.4
             },
             "engineer_avg_approval_bdays": {
-              "SoniaSandler": 0.0,
               "serbangeorge-m": 0.01,
               "deboer-tim": 0.12,
-              "feloy": 0.14,
-              "jeffmaury": 0.15,
+              "SoniaSandler": 0.19,
+              "feloy": 0.28,
+              "jeffmaury": 0.3,
               "axel7083": 0.31,
-              "simonrey1": 0.47,
+              "simonrey1": 0.48,
               "dgolovin": 0.53,
               "cbr7": 0.57,
-              "benoitf": 0.77,
+              "benoitf": 0.78,
               "odockal": 0.92,
               "kyetter": 1.24,
               "vancura": 1.25,
@@ -28939,11 +28996,44 @@
               "danivilla9": 2.4
             },
             "author_review_rounds": {
+              "gastoner": [
+                1,
+                2,
+                1,
+                0,
+                3,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                1
+              ],
               "DeviceDidWhat": [
                 0,
                 0
               ],
               "axel7083": [
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -29031,32 +29121,6 @@
               "vzhukovs": [
                 0
               ],
-              "gastoner": [
-                1,
-                0,
-                3,
-                2,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                2,
-                1
-              ],
               "SoniaSandler": [
                 3,
                 0
@@ -29097,10 +29161,101 @@
               ],
               "NopeCharon": [
                 0,
+                0,
                 0
               ]
             },
             "prs": [
+              {
+                "repo": "podman-desktop",
+                "number": 20255,
+                "title": "feat(statusbar): show providers as default, not as experimental option",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20255",
+                "author": "0xKalasi",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T13:35:37Z",
+                "merged_at": null,
+                "domain": "qe",
+                "first_review_hours": 0.4,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-17T13:57:41Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20254,
+                "title": "fix(main): reconnect container provider when the events stream drops",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20254",
+                "author": "armanossiloko",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T10:55:09Z",
+                "merged_at": null,
+                "domain": "containers",
+                "first_review_hours": 2.3,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-17T13:14:53Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20242,
+                "title": "feat(telemetry): turn telemetry off with PODMAN_DESKTOP_DISABLE_TELEMETRY",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20242",
+                "author": "BahaaMattar",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T08:44:22Z",
+                "merged_at": null,
+                "domain": "foundations",
+                "first_review_hours": 3.7,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20241,
+                "title": "fix(renderer): wait for network when it is already in the store",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20241",
+                "author": "BahaaMattar",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T08:33:49Z",
+                "merged_at": null,
+                "domain": "containers",
+                "first_review_hours": 0.0,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "podman-desktop",
+                "number": 20240,
+                "title": "feat(i18n): add localization framework and Japanese translations",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20240",
+                "author": "OPNUS-ryo",
+                "state": "OPEN",
+                "is_draft": true,
+                "created_at": "2026-11-17T08:24:40Z",
+                "merged_at": null,
+                "domain": "extensibility",
+                "first_review_hours": 0.2,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
               {
                 "repo": "podman-desktop",
                 "number": 20228,
@@ -29112,7 +29267,7 @@
                 "created_at": "2026-11-16T19:13:59Z",
                 "merged_at": null,
                 "domain": "extensibility",
-                "first_review_hours": null,
+                "first_review_hours": 14.8,
                 "merge_hours": null,
                 "review_rounds": null,
                 "approvals": []
@@ -29171,15 +29326,24 @@
                 "title": "fix(podman): increase number of VSock mounts in hyperv-prep command",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20224",
                 "author": "gastoner",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-16T14:00:02Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T10:09:38Z",
                 "domain": "containers",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 18.6,
+                "merge_hours": 20.2,
+                "review_rounds": 1,
+                "approvals": [
+                  {
+                    "author": "simonrey1",
+                    "at": "2026-11-17T08:37:47Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T08:58:33Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -29220,6 +29384,10 @@
                   {
                     "author": "vancura",
                     "at": "2026-11-16T12:43:12Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T13:56:29Z"
                   }
                 ]
               },
@@ -29245,14 +29413,14 @@
                 "title": "chore(renderer): add @dnd-kit/svelte dependency",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20217",
                 "author": "gastoner",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-16T08:10:13Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T11:43:10Z",
                 "domain": "extensibility",
                 "first_review_hours": 0.2,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 27.6,
+                "review_rounds": 2,
                 "approvals": [
                   {
                     "author": "axel7083",
@@ -29261,6 +29429,10 @@
                   {
                     "author": "vancura",
                     "at": "2026-11-16T09:24:10Z"
+                  },
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T10:36:17Z"
                   }
                 ]
               },
@@ -29294,7 +29466,16 @@
                 "first_review_hours": 13.5,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T13:56:07Z"
+                  },
+                  {
+                    "author": "axel7083",
+                    "at": "2026-11-17T14:57:22Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -29307,10 +29488,15 @@
                 "created_at": "2026-11-13T21:52:31Z",
                 "merged_at": null,
                 "domain": "ui-components",
-                "first_review_hours": null,
+                "first_review_hours": 84.7,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T10:36:46Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop",
@@ -30901,6 +31087,27 @@
               },
               {
                 "repo": "podman-desktop-catalog",
+                "number": 1501,
+                "title": "chore: add CRC extension 2.6.0",
+                "url": "https://github.com/podman-desktop/podman-desktop-catalog/pull/1501",
+                "author": "SoniaSandler",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T05:55:56Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": 0.2,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-17T06:06:24Z"
+                  }
+                ]
+              },
+              {
+                "repo": "podman-desktop-catalog",
                 "number": 1496,
                 "title": "feat: declare darwin/arm64 target platform for apple container",
                 "url": "https://github.com/podman-desktop/podman-desktop-catalog/pull/1496",
@@ -30910,10 +31117,15 @@
                 "created_at": "2026-11-16T19:14:03Z",
                 "merged_at": null,
                 "domain": null,
-                "first_review_hours": null,
+                "first_review_hours": 12.8,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-17T08:03:34Z"
+                  }
+                ]
               },
               {
                 "repo": "podman-desktop-catalog",
@@ -31386,15 +31598,24 @@
                 "title": "chore(Containerfile): align with the recommended pattern",
                 "url": "https://github.com/podman-desktop/extension-layers-explorer/pull/563",
                 "author": "axel7083",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-16T16:24:56Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T08:28:49Z",
                 "domain": "layers-explorer",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 15.7,
+                "merge_hours": 16.1,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-17T08:07:16Z"
+                  },
+                  {
+                    "author": "feloy",
+                    "at": "2026-11-17T08:28:40Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-layers-explorer",
@@ -31535,15 +31756,24 @@
                 "title": "chore(Containerfile): align with the recommended pattern",
                 "url": "https://github.com/podman-desktop/extension-postgresql/pull/846",
                 "author": "axel7083",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-16T16:28:35Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T08:25:25Z",
                 "domain": "postgresql",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 15.6,
+                "merge_hours": 15.9,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-17T08:04:14Z"
+                  },
+                  {
+                    "author": "feloy",
+                    "at": "2026-11-17T08:25:15Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-postgresql",
@@ -31668,15 +31898,20 @@
                 "title": "chore(Containerfile): align with the recommended pattern",
                 "url": "https://github.com/podman-desktop/extension-kreate/pull/1105",
                 "author": "axel7083",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-16T16:25:49Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T08:26:25Z",
                 "domain": "kreate",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 16.0,
+                "merge_hours": 16.0,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "feloy",
+                    "at": "2026-11-17T08:25:59Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-kreate",
@@ -31929,15 +32164,24 @@
                 "title": "chore(Containerfile): align with the recommended pattern",
                 "url": "https://github.com/podman-desktop/extension-kubernetes-dashboard/pull/1552",
                 "author": "axel7083",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-16T16:25:38Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T08:28:11Z",
                 "domain": "kubernetes-dashboard",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 15.7,
+                "merge_hours": 16.0,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-17T08:05:53Z"
+                  },
+                  {
+                    "author": "feloy",
+                    "at": "2026-11-17T08:28:03Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-kubernetes-dashboard",
@@ -32041,10 +32285,15 @@
                 "created_at": "2026-11-16T16:22:30Z",
                 "merged_at": null,
                 "domain": "github",
-                "first_review_hours": null,
+                "first_review_hours": 13.4,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "SoniaSandler",
+                    "at": "2026-11-17T05:48:01Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-github",
@@ -32128,10 +32377,15 @@
                 "created_at": "2026-11-16T19:14:00Z",
                 "merged_at": null,
                 "domain": "apple-container",
-                "first_review_hours": null,
+                "first_review_hours": 15.3,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T10:35:05Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-apple-container",
@@ -32197,15 +32451,20 @@
                 "title": "fix: set the Apple provider status once per status check",
                 "url": "https://github.com/podman-desktop/extension-apple-container/pull/615",
                 "author": "NopeCharon",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-15T11:39:28Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T13:15:50Z",
                 "domain": "apple-container",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 49.6,
+                "merge_hours": 49.6,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-17T13:15:36Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-apple-container",
@@ -32312,15 +32571,24 @@
                 "title": "chore(Containerfile): align with the recommended pattern",
                 "url": "https://github.com/podman-desktop/extension-kubernetes-contexts/pull/869",
                 "author": "axel7083",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-16T16:25:43Z",
-                "merged_at": null,
+                "merged_at": "2026-11-17T08:27:17Z",
                 "domain": "kubernetes-context",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 15.7,
+                "merge_hours": 16.0,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "jeffmaury",
+                    "at": "2026-11-17T08:05:14Z"
+                  },
+                  {
+                    "author": "feloy",
+                    "at": "2026-11-17T08:27:06Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-kubernetes-contexts",
@@ -32928,7 +33196,7 @@
                 "created_at": "2026-11-11T07:54:01Z",
                 "merged_at": null,
                 "domain": "foundations",
-                "first_review_hours": null,
+                "first_review_hours": 145.1,
                 "merge_hours": null,
                 "review_rounds": null,
                 "approvals": []
@@ -32952,7 +33220,7 @@
               {
                 "repo": "wslc",
                 "number": 16,
-                "title": "build: download and verify the pinned bridge release",
+                "title": "build: download the pinned bridge release",
                 "url": "https://github.com/podman-desktop/wslc/pull/16",
                 "author": "gastoner",
                 "state": "OPEN",
@@ -33221,38 +33489,38 @@
         "Sprint 300": {
           "start_date": "2026-11-04",
           "duration": 21,
-          "total_items": 91,
-          "done_items": 29,
+          "total_items": 94,
+          "done_items": 32,
           "total_story_points": 0,
           "done_story_points": 0,
           "statuses": {
-            "Done": 29,
-            "\ud83d\udea5 In Review": 14,
-            "\ud83d\udea7 In Progress": 13,
-            "\u23f3On Hold": 2,
-            "\ud83d\udccb Backlog": 28,
+            "\ud83d\udea7 In Progress": 14,
+            "Done": 32,
+            "\ud83d\udea5 In Review": 12,
+            "\u23f3On Hold": 5,
+            "\ud83d\udccb Backlog": 26,
             "\ud83d\udcc5 Planned": 4,
             "\u23f1Postponed": 1
           },
           "goals": {
-            "Uncategorized": 91
+            "Uncategorized": 94
           },
           "priorities": {
-            "None": 91
+            "None": 94
           },
           "assignees": {
-            "jeffmaury": 18,
-            "serbangeorge-m": 14,
+            "jeffmaury": 19,
+            "serbangeorge-m": 15,
             "bmahabirbu": 12,
             "benoitf": 9,
+            "MarsKubeX": 9,
             "fbricon": 8,
-            "MarsKubeX": 8,
             "feloy": 7
           },
           "repos": {
-            "kaiden": 72,
+            "kaiden": 74,
             "None": 6,
-            "podman-desktop-extension-ai-lab": 4,
+            "podman-desktop-extension-ai-lab": 5,
             "kdn-old": 1,
             "openshell-build-image": 1,
             "openshell-image-gemini": 1,
@@ -33264,6 +33532,66 @@
             "podman-desktop-internal": 1
           },
           "items": [
+            {
+              "number": 3275,
+              "title": "When the No gateways available banner is displayed, display is truncated",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3275",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "jeffmaury"
+              ]
+            },
+            {
+              "number": 3281,
+              "title": "On Windows don't process kaiden-local default gateway",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3281",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "jeffmaury"
+              ]
+            },
+            {
+              "number": 3285,
+              "title": "openshell-gateway-podman always pull image when starting a container",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3285",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "jeffmaury"
+              ]
+            },
+            {
+              "number": 3223,
+              "title": "Create a semantic resource when a semantic router is created",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3223",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "jeffmaury"
+              ]
+            },
             {
               "number": 3240,
               "title": "e2fsck should be bundled",
@@ -33615,6 +33943,21 @@
               ]
             },
             {
+              "number": 3103,
+              "title": "Improve documentation for AI agents",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3103",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "jeffmaury"
+              ]
+            },
+            {
               "number": 2545,
               "title": "Review knowledge implementation",
               "repo": "kaiden",
@@ -33806,6 +34149,51 @@
               ]
             },
             {
+              "number": 3187,
+              "title": "Add a new extension for registring addons",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3187",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "MarsKubeX"
+              ]
+            },
+            {
+              "number": 4981,
+              "title": "Allow configuring llama.cpp context size (--ctx-size) when creating an inference service",
+              "repo": "podman-desktop-extension-ai-lab",
+              "url": "https://github.com/containers/podman-desktop-extension-ai-lab/issues/4981",
+              "type": "Issue",
+              "status": "\ud83d\udea5 In Review",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "MarsKubeX"
+              ]
+            },
+            {
+              "number": 3278,
+              "title": "openshell-gateway-manager build grpc call to get runtime info should use the raw client",
+              "repo": "kaiden",
+              "url": "https://github.com/openkaiden/kaiden/issues/3278",
+              "type": "Issue",
+              "status": "\ud83d\udea7 In Progress",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "MarsKubeX"
+              ]
+            },
+            {
               "number": null,
               "title": "Create sandbox on OpenShift AI",
               "repo": null,
@@ -33979,7 +34367,7 @@
               "repo": "openshell-image-gemini",
               "url": "https://github.com/openkaiden/openshell-image-gemini/issues/3",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\u23f3On Hold",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -33994,7 +34382,7 @@
               "repo": "openshell-image-codex",
               "url": "https://github.com/openkaiden/openshell-image-codex/issues/3",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
+              "status": "Done",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -34009,7 +34397,7 @@
               "repo": "openshell-image-goose",
               "url": "https://github.com/openkaiden/openshell-image-goose/issues/2",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\u23f3On Hold",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -34024,8 +34412,8 @@
               "repo": "openshell-image-opencode",
               "url": "https://github.com/openkaiden/openshell-image-opencode/issues/3",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
-              "state": "OPEN",
+              "status": "Done",
+              "state": "CLOSED",
               "goal": null,
               "priority": null,
               "points": null,
@@ -34039,7 +34427,7 @@
               "repo": "openshell-image-claude",
               "url": "https://github.com/openkaiden/openshell-image-claude/issues/6",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
+              "status": "Done",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -34054,7 +34442,7 @@
               "repo": "openshell-image-openclaw",
               "url": "https://github.com/openkaiden/openshell-image-openclaw/issues/3",
               "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
+              "status": "\u23f3On Hold",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -34167,21 +34555,6 @@
               ]
             },
             {
-              "number": 3103,
-              "title": "Improve documentation for AI agents",
-              "repo": "kaiden",
-              "url": "https://github.com/openkaiden/kaiden/issues/3103",
-              "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
-              "state": "OPEN",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "jeffmaury"
-              ]
-            },
-            {
               "number": 3127,
               "title": "Remove the Kubernetes view and all K8s mentions",
               "repo": "kaiden",
@@ -34230,7 +34603,7 @@
               "repo": "kaiden",
               "url": "https://github.com/openkaiden/kaiden/issues/3145",
               "type": "Issue",
-              "status": "\ud83d\udea5 In Review",
+              "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -34305,7 +34678,7 @@
               "repo": "kaiden",
               "url": "https://github.com/openkaiden/kaiden/issues/3177",
               "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -34372,21 +34745,6 @@
               "points": null,
               "assignees": [
                 "benoitf"
-              ]
-            },
-            {
-              "number": 3187,
-              "title": "Add a new extension for registring addons",
-              "repo": "kaiden",
-              "url": "https://github.com/openkaiden/kaiden/issues/3187",
-              "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
-              "state": "OPEN",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "MarsKubeX"
               ]
             },
             {
@@ -34495,21 +34853,6 @@
               ]
             },
             {
-              "number": 3223,
-              "title": "Create a semantic resource when a semantic router is created",
-              "repo": "kaiden",
-              "url": "https://github.com/openkaiden/kaiden/issues/3223",
-              "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
-              "state": "OPEN",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "jeffmaury"
-              ]
-            },
-            {
               "number": 3245,
               "title": "Restore polling mechanism",
               "repo": "kaiden",
@@ -34540,36 +34883,6 @@
               ]
             },
             {
-              "number": 3275,
-              "title": "When the No gateways available banner is displayed, display is truncated",
-              "repo": "kaiden",
-              "url": "https://github.com/openkaiden/kaiden/issues/3275",
-              "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
-              "state": "OPEN",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "jeffmaury"
-              ]
-            },
-            {
-              "number": 3278,
-              "title": "openshell-gateway-manager build grpc call to get runtime info should use the raw client",
-              "repo": "kaiden",
-              "url": "https://github.com/openkaiden/kaiden/issues/3278",
-              "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
-              "state": "OPEN",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "MarsKubeX"
-              ]
-            },
-            {
               "number": 3279,
               "title": "Wrong supports mounts detection for unknown gateways",
               "repo": "kaiden",
@@ -34585,10 +34898,10 @@
               ]
             },
             {
-              "number": 3281,
-              "title": "On Windows don't start the default gateway",
+              "number": 3289,
+              "title": "Save Electron traces for failed e2e tests with redaction on all CI platforms",
               "repo": "kaiden",
-              "url": "https://github.com/openkaiden/kaiden/issues/3281",
+              "url": "https://github.com/openkaiden/kaiden/issues/3289",
               "type": "Issue",
               "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
@@ -34596,7 +34909,7 @@
               "priority": null,
               "points": null,
               "assignees": [
-                "jeffmaury"
+                "serbangeorge-m"
               ]
             }
           ]
@@ -36724,7 +37037,8 @@
           "total_story_points": 0,
           "done_story_points": 0,
           "statuses": {
-            "\ud83d\udccb Backlog": 3
+            "\ud83d\udea7 In Progress": 1,
+            "\ud83d\udccb Backlog": 2
           },
           "goals": {
             "Uncategorized": 3
@@ -36745,7 +37059,7 @@
               "repo": "kaiden",
               "url": "https://github.com/openkaiden/kaiden/issues/3203",
               "type": "Issue",
-              "status": "\ud83d\udccb Backlog",
+              "status": "\ud83d\udea7 In Progress",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -42882,12 +43196,12 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 62,
+            "total_prs": 67,
             "merged_prs": 42,
             "time_to_first_review": {
-              "avg": 8.6,
-              "median": 1.4,
-              "count": 46
+              "avg": 8.8,
+              "median": 1.6,
+              "count": 48
             },
             "time_to_first_comment": {
               "avg": 9.0,
@@ -42960,9 +43274,9 @@
               "slemeur": 1
             },
             "reviewer_approvals": {
-              "bmahabirbu": 16,
+              "bmahabirbu": 18,
               "benoitf": 14,
-              "MarsKubeX": 10,
+              "MarsKubeX": 11,
               "jeffmaury": 10,
               "fbricon": 6
             },
@@ -42973,9 +43287,9 @@
             "engineer_avg_approval_bdays": {
               "fbricon": 0.02,
               "benoitf": 0.08,
-              "bmahabirbu": 0.45,
+              "bmahabirbu": 0.48,
               "jeffmaury": 0.61,
-              "MarsKubeX": 0.9
+              "MarsKubeX": 0.89
             },
             "author_review_rounds": {
               "serbangeorge-m": [
@@ -43042,6 +43356,91 @@
             "prs": [
               {
                 "repo": "kaiden",
+                "number": 3291,
+                "title": "refactor(openshell-podman-gateway): bind mount cert output dir and auto-remove container",
+                "url": "https://github.com/openkaiden/kaiden/pull/3291",
+                "author": "jeffmaury",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T14:48:46Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "kaiden",
+                "number": 3290,
+                "title": "refactor(openshell-podman-gateway): bind mount cert output dir and auto-remove container",
+                "url": "https://github.com/openkaiden/kaiden/pull/3290",
+                "author": "jeffmaury",
+                "state": "CLOSED",
+                "is_draft": false,
+                "created_at": "2026-11-17T14:46:28Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "kaiden",
+                "number": 3288,
+                "title": "feat(ci): publish redacted traces, videos and HTML report from Testing Farm",
+                "url": "https://github.com/openkaiden/kaiden/pull/3288",
+                "author": "serbangeorge-m",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T14:29:42Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "kaiden",
+                "number": 3287,
+                "title": "fix(openshell-gateway-podman): skip image pull when image already exists locally",
+                "url": "https://github.com/openkaiden/kaiden/pull/3287",
+                "author": "fullsend-ai-coder",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T13:11:08Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
+              {
+                "repo": "kaiden",
+                "number": 3284,
+                "title": "fix(main): skip openshell default kaiden-local gateway on start on Windows",
+                "url": "https://github.com/openkaiden/kaiden/pull/3284",
+                "author": "jeffmaury",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-17T08:01:19Z",
+                "merged_at": null,
+                "domain": null,
+                "first_review_hours": 6.4,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "bmahabirbu",
+                    "at": "2026-11-17T14:26:24Z"
+                  }
+                ]
+              },
+              {
+                "repo": "kaiden",
                 "number": 3282,
                 "title": "fix(main): fall back to uploads on gateways Kaiden did not create",
                 "url": "https://github.com/openkaiden/kaiden/pull/3282",
@@ -43051,10 +43450,15 @@
                 "created_at": "2026-11-16T19:34:05Z",
                 "merged_at": null,
                 "domain": null,
-                "first_review_hours": null,
+                "first_review_hours": 20.3,
                 "merge_hours": null,
                 "review_rounds": null,
-                "approvals": []
+                "approvals": [
+                  {
+                    "author": "MarsKubeX",
+                    "at": "2026-11-17T15:52:00Z"
+                  }
+                ]
               },
               {
                 "repo": "kaiden",
@@ -43111,6 +43515,10 @@
                   {
                     "author": "fbricon",
                     "at": "2026-11-16T11:41:46Z"
+                  },
+                  {
+                    "author": "bmahabirbu",
+                    "at": "2026-11-17T14:25:47Z"
                   }
                 ]
               },
