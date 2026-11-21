@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T18:49:01.807850",
+  "generated_at": "2026-11-21T17:48:34.729383",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -5955,21 +5955,6 @@
               ]
             },
             {
-              "number": 1217,
-              "title": "[BUG] CRC binary cannot be installed from PD",
-              "repo": "crc-extension",
-              "url": "https://github.com/crc-org/crc-extension/issues/1217",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "SoniaSandler"
-              ]
-            },
-            {
               "number": 18527,
               "title": "Add a generate attributes step to the e2e test GHA workflows to display the attributes in ReportPortal",
               "repo": "podman-desktop",
@@ -6085,21 +6070,6 @@
               "goal": null,
               "priority": "\ud83c\udfd5 Medium",
               "points": 3.0,
-              "assignees": [
-                "cdrage"
-              ]
-            },
-            {
-              "number": 2544,
-              "title": "UI: Updated dashboard (BootC)",
-              "repo": "extension-bootc",
-              "url": "https://github.com/podman-desktop/extension-bootc/issues/2544",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": "Design",
-              "priority": "\ud83c\udfd4 High",
-              "points": 8.0,
               "assignees": [
                 "cdrage"
               ]
@@ -6462,21 +6432,6 @@
               "points": 1.0,
               "assignees": [
                 "odockal"
-              ]
-            },
-            {
-              "number": 19307,
-              "title": "feat: adding `overriding` property to ExtensionInfo",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19307",
-              "type": "Issue",
-              "status": "\u2714\ufe0f Done",
-              "state": "CLOSED",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "axel7083"
               ]
             },
             {
@@ -21682,11 +21637,11 @@
           },
           "Sprint 299": {
             "total_prs": 243,
-            "merged_prs": 193,
+            "merged_prs": 194,
             "time_to_first_review": {
-              "avg": 25.1,
+              "avg": 27.5,
               "median": 1.8,
-              "count": 225
+              "count": 226
             },
             "time_to_first_comment": {
               "avg": 40.6,
@@ -21694,9 +21649,9 @@
               "count": 90
             },
             "time_to_merge": {
-              "avg": 93.1,
-              "median": 20.4,
-              "count": 193
+              "avg": 95.6,
+              "median": 20.7,
+              "count": 194
             },
             "time_to_address_comments": {
               "avg": 68.7,
@@ -21818,7 +21773,8 @@
               "rohit-redhat": 1,
               "SoniaSandler": 1,
               "serbangeorge-m": 1,
-              "faizjamal0111-svg": 1
+              "faizjamal0111-svg": 1,
+              "rrabelloo": 1
             },
             "reviewer_approvals": {
               "axel7083": 111,
@@ -21837,7 +21793,7 @@
               "kyetter": 7,
               "SoniaSandler": 5,
               "gastoner": 4,
-              "dgolovin": 2,
+              "dgolovin": 3,
               "MarsKubeX": 2,
               "ScrewTSW": 2,
               "slemeur": 2,
@@ -21936,7 +21892,8 @@
                 "jeffmaury": 100.0
               },
               "github": {
-                "SoniaSandler": 100.0
+                "SoniaSandler": 66.7,
+                "dgolovin": 33.3
               },
               "apple-container": {
                 "benoitf": 100.0
@@ -21968,7 +21925,7 @@
               "kreate": 11.4,
               "podman-quadlet": 3.5,
               "kubernetes-dashboard": 4.3,
-              "github": 35.6,
+              "github": 168.2,
               "apple-container": 66.3,
               "kubernetes-context": 2.1,
               "kind": 90.4,
@@ -21994,8 +21951,8 @@
               "cbr7": 4.43,
               "odockal": 4.62,
               "danivilla9": 5.64,
-              "dgolovin": 6.9,
-              "rohit-redhat": 9.83
+              "rohit-redhat": 9.83,
+              "dgolovin": 10.13
             },
             "author_review_rounds": {
               "benoitf": [
@@ -22242,6 +22199,9 @@
                 0
               ],
               "faizjamal0111-svg": [
+                0
+              ],
+              "rrabelloo": [
                 0
               ],
               "NopeCharon": [
@@ -27489,15 +27449,20 @@
                 "title": "chore: correct typos in GitHub authentication prompt",
                 "url": "https://github.com/podman-desktop/extension-github/pull/350",
                 "author": "rrabelloo",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-10-28T10:17:34Z",
-                "merged_at": null,
+                "merged_at": "2026-11-21T00:15:23Z",
                 "domain": "github",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 566.0,
+                "merge_hours": 566.0,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "dgolovin",
+                    "at": "2026-11-21T00:15:10Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-github",
@@ -27999,12 +27964,12 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 234,
-            "merged_prs": 149,
+            "total_prs": 235,
+            "merged_prs": 151,
             "time_to_first_review": {
-              "avg": 18.6,
-              "median": 2.1,
-              "count": 189
+              "avg": 18.5,
+              "median": 2.2,
+              "count": 190
             },
             "time_to_first_comment": {
               "avg": 27.0,
@@ -28012,9 +27977,9 @@
               "count": 73
             },
             "time_to_merge": {
-              "avg": 25.0,
+              "avg": 25.5,
               "median": 4.7,
-              "count": 149
+              "count": 151
             },
             "time_to_address_comments": {
               "avg": 16.6,
@@ -28066,10 +28031,10 @@
               }
             },
             "author_merged_prs": {
-              "gastoner": 36,
+              "gastoner": 37,
               "simonrey1": 25,
+              "axel7083": 20,
               "benoitf": 20,
-              "axel7083": 19,
               "feloy": 9,
               "cbr7": 6,
               "JustMell0": 3,
@@ -28099,20 +28064,20 @@
               "feloy": 20,
               "vancura": 15,
               "jeffmaury": 15,
-              "kyetter": 8,
+              "kyetter": 9,
               "odockal": 7,
               "cdrage": 6,
               "cbr7": 6,
               "danivilla9": 6,
               "deboer-tim": 5,
+              "dgolovin": 4,
               "SoniaSandler": 3,
               "serbangeorge-m": 2,
-              "dgolovin": 2,
               "gastoner": 1,
               "rohit-redhat": 1
             },
             "domain_pr_count": {
-              "foundations": 39,
+              "foundations": 40,
               "containers": 26,
               "extensibility": 26,
               "qe": 18,
@@ -28210,8 +28175,8 @@
                 "jeffmaury": 100.0
               },
               "github": {
-                "dgolovin": 66.7,
-                "SoniaSandler": 33.3
+                "dgolovin": 80.0,
+                "SoniaSandler": 20.0
               },
               "apple-container": {
                 "benoitf": 100.0
@@ -28230,7 +28195,7 @@
             },
             "domain_avg_approval_hours": {
               "containers": 66.2,
-              "foundations": 36.2,
+              "foundations": 41.6,
               "extensibility": 53.2,
               "ui-components": 26.5,
               "qe": 12.8,
@@ -28245,7 +28210,7 @@
               "kreate": 13.5,
               "podman-quadlet": 9.2,
               "kubernetes-dashboard": 4.6,
-              "github": 6.5,
+              "github": 19.8,
               "apple-container": 11.2,
               "kubernetes-context": 4.6,
               "kind": 1.4,
@@ -28258,15 +28223,15 @@
               "feloy": 0.28,
               "jeffmaury": 0.3,
               "axel7083": 0.52,
-              "dgolovin": 0.53,
               "cbr7": 0.57,
               "deboer-tim": 0.73,
               "simonrey1": 0.75,
               "odockal": 0.8,
               "gastoner": 0.82,
-              "kyetter": 0.9,
               "benoitf": 0.98,
+              "dgolovin": 1.09,
               "vancura": 1.71,
+              "kyetter": 1.73,
               "danivilla9": 1.92,
               "cdrage": 2.02,
               "rohit-redhat": 7.01
@@ -28297,6 +28262,7 @@
                 0,
                 0,
                 1,
+                0,
                 0,
                 0,
                 0,
@@ -28360,6 +28326,7 @@
               ],
               "axel7083": [
                 1,
+                0,
                 0,
                 0,
                 0,
@@ -28473,6 +28440,22 @@
               ]
             },
             "prs": [
+              {
+                "repo": "podman-desktop",
+                "number": 20303,
+                "title": "feat(pull-image): percentage progress reporting for image pulls tasks",
+                "url": "https://github.com/podman-desktop/podman-desktop/pull/20303",
+                "author": "dgolovin",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-20T22:39:44Z",
+                "merged_at": null,
+                "domain": "foundations",
+                "first_review_hours": null,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": []
+              },
               {
                 "repo": "podman-desktop",
                 "number": 20301,
@@ -29738,6 +29721,10 @@
                   {
                     "author": "rohit-redhat",
                     "at": "2026-11-19T10:03:15Z"
+                  },
+                  {
+                    "author": "kyetter",
+                    "at": "2026-11-20T19:13:20Z"
                   }
                 ]
               },
@@ -32219,15 +32206,20 @@
                 "title": "chore(ci): pin GitHub Actions to full commit SHAs",
                 "url": "https://github.com/podman-desktop/extension-github/pull/373",
                 "author": "gastoner",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-20T08:27:19Z",
-                "merged_at": null,
+                "merged_at": "2026-11-21T00:07:53Z",
                 "domain": "github",
-                "first_review_hours": null,
-                "merge_hours": null,
-                "review_rounds": null,
-                "approvals": []
+                "first_review_hours": 15.7,
+                "merge_hours": 15.7,
+                "review_rounds": 0,
+                "approvals": [
+                  {
+                    "author": "dgolovin",
+                    "at": "2026-11-21T00:07:41Z"
+                  }
+                ]
               },
               {
                 "repo": "extension-github",
@@ -32235,18 +32227,22 @@
                 "title": "chore(Containerfile): align with the recommended pattern",
                 "url": "https://github.com/podman-desktop/extension-github/pull/367",
                 "author": "axel7083",
-                "state": "OPEN",
+                "state": "MERGED",
                 "is_draft": false,
                 "created_at": "2026-11-16T16:22:30Z",
-                "merged_at": null,
+                "merged_at": "2026-11-21T00:20:10Z",
                 "domain": "github",
                 "first_review_hours": 13.4,
-                "merge_hours": null,
-                "review_rounds": null,
+                "merge_hours": 104.0,
+                "review_rounds": 0,
                 "approvals": [
                   {
                     "author": "SoniaSandler",
                     "at": "2026-11-17T05:48:01Z"
+                  },
+                  {
+                    "author": "dgolovin",
+                    "at": "2026-11-21T00:20:02Z"
                   }
                 ]
               },
