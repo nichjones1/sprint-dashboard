@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T17:48:34.729383",
+  "generated_at": "2026-11-22T18:03:26.170991",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -27964,12 +27964,12 @@
             ]
           },
           "Sprint 300": {
-            "total_prs": 235,
+            "total_prs": 236,
             "merged_prs": 151,
             "time_to_first_review": {
-              "avg": 18.5,
-              "median": 2.2,
-              "count": 190
+              "avg": 18.4,
+              "median": 2.1,
+              "count": 191
             },
             "time_to_first_comment": {
               "avg": 27.0,
@@ -28058,7 +28058,7 @@
               "jeefy": 1
             },
             "reviewer_approvals": {
-              "benoitf": 96,
+              "benoitf": 97,
               "axel7083": 65,
               "simonrey1": 26,
               "feloy": 20,
@@ -28098,7 +28098,8 @@
               "layers-explorer": 3,
               "dependency-update-major": 2,
               "dependency-update-minor": 2,
-              "kubernetes-pack": 1
+              "kubernetes-pack": 1,
+              "dependency-new": 1
             },
             "domain_owner_authored": {
               "qe": 6,
@@ -28191,6 +28192,9 @@
               "grype": {
                 "simonrey1": 60.0,
                 "axel7083": 40.0
+              },
+              "dependency-new": {
+                "benoitf": 100.0
               }
             },
             "domain_avg_approval_hours": {
@@ -28215,7 +28219,8 @@
               "kubernetes-context": 4.6,
               "kind": 1.4,
               "kubernetes-pack": 1.4,
-              "grype": 2.4
+              "grype": 2.4,
+              "dependency-new": 1.3
             },
             "engineer_avg_approval_bdays": {
               "serbangeorge-m": 0.01,
@@ -28228,7 +28233,7 @@
               "simonrey1": 0.75,
               "odockal": 0.8,
               "gastoner": 0.82,
-              "benoitf": 0.98,
+              "benoitf": 0.97,
               "dgolovin": 1.09,
               "vancura": 1.71,
               "kyetter": 1.73,
@@ -33111,6 +33116,27 @@
               },
               {
                 "repo": "extension-wslc",
+                "number": 37,
+                "title": "chore(deps): add zod dependency",
+                "url": "https://github.com/podman-desktop/extension-wslc/pull/37",
+                "author": "gastoner",
+                "state": "OPEN",
+                "is_draft": false,
+                "created_at": "2026-11-22T16:21:04Z",
+                "merged_at": null,
+                "domain": "dependency-new",
+                "first_review_hours": 1.3,
+                "merge_hours": null,
+                "review_rounds": null,
+                "approvals": [
+                  {
+                    "author": "benoitf",
+                    "at": "2026-11-22T17:38:25Z"
+                  }
+                ]
+              },
+              {
+                "repo": "extension-wslc",
                 "number": 34,
                 "title": "test: add the @podman-desktop/api mock for vitest",
                 "url": "https://github.com/podman-desktop/extension-wslc/pull/34",
@@ -33251,7 +33277,7 @@
                 "url": "https://github.com/podman-desktop/extension-wslc/pull/18",
                 "author": "gastoner",
                 "state": "OPEN",
-                "is_draft": true,
+                "is_draft": false,
                 "created_at": "2026-11-11T07:54:01Z",
                 "merged_at": null,
                 "domain": "foundations",
