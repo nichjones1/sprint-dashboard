@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T18:00:56.190803",
+  "generated_at": "2026-11-23T22:15:07.226356",
   "projects": {
     "Podman Desktop": {
       "github_org": "podman-desktop",
@@ -7,25 +7,25 @@
         "Sprint 300": {
           "start_date": "2026-11-04",
           "duration": 21,
-          "total_items": 117,
-          "done_items": 116,
-          "total_story_points": 90.0,
-          "done_story_points": 89.0,
+          "total_items": 119,
+          "done_items": 118,
+          "total_story_points": 92.0,
+          "done_story_points": 91.0,
           "statuses": {
-            "\u2714\ufe0f Done": 116,
+            "\u2714\ufe0f Done": 118,
             "\u23f3On Hold": 1
           },
           "goals": {
             "Uncategorized": 78,
             "Documentation": 1,
             "Dashboard": 1,
-            "QE": 30,
+            "QE": 32,
             "Bug Fix": 3,
             "Technical Debt": 4
           },
           "priorities": {
             "Critical": 8,
-            "None": 77,
+            "None": 79,
             "\ud83c\udfd4 High": 17,
             "\ud83c\udf0b Urgent": 5,
             "\ud83c\udfd5 Medium": 8,
@@ -34,8 +34,8 @@
           "assignees": {
             "simonrey1": 30,
             "axel7083": 10,
+            "odockal": 10,
             "vancura": 8,
-            "odockal": 8,
             "SoniaSandler": 6,
             "cbr7": 6,
             "cdrage": 5,
@@ -50,7 +50,7 @@
           },
           "repos": {
             "podman-desktop": 49,
-            "podman-desktop-internal": 14,
+            "podman-desktop-internal": 16,
             "podman-desktop-hummingbird-ext": 7,
             "podman-desktop-sandbox-ext": 5,
             "podman-desktop-extension-ai-lab": 4,
@@ -1150,6 +1150,36 @@
               "points": null,
               "assignees": [
                 "amisskii"
+              ]
+            },
+            {
+              "number": 1237,
+              "title": "Podman Desktop 1.31.0 with Podman 6.1.4 Linux Tar",
+              "repo": "podman-desktop-internal",
+              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1237",
+              "type": "Issue",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
+              "goal": "QE",
+              "priority": null,
+              "points": 1.0,
+              "assignees": [
+                "odockal"
+              ]
+            },
+            {
+              "number": 1236,
+              "title": "Podman Desktop 1.31.0 with Podman 6.1.4 Linux Flatpak",
+              "repo": "podman-desktop-internal",
+              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1236",
+              "type": "Issue",
+              "status": "\u2714\ufe0f Done",
+              "state": "CLOSED",
+              "goal": "QE",
+              "priority": null,
+              "points": 1.0,
+              "assignees": [
+                "odockal"
               ]
             },
             {
@@ -5410,23 +5440,22 @@
         "Sprint 301": {
           "start_date": "2026-11-25",
           "duration": 21,
-          "total_items": 178,
-          "done_items": 1,
-          "total_story_points": 137.0,
+          "total_items": 180,
+          "done_items": 2,
+          "total_story_points": 136.0,
           "done_story_points": 2.0,
           "statuses": {
-            "\ud83d\udea7 In Progress": 35,
-            "\u23f3On Hold": 2,
-            "\ud83d\udcc5 Planned": 88,
-            "\ud83d\udea5 In Review": 21,
-            "\ud83d\udccb Backlog": 24,
-            "\u2714\ufe0f Done": 1,
-            "\u23f1Postponed": 1,
-            "None": 6
+            "\ud83d\udea7 In Progress": 31,
+            "\u2714\ufe0f Done": 2,
+            "\ud83d\udcc5 Planned": 90,
+            "\ud83d\udea5 In Review": 23,
+            "\ud83d\udccb Backlog": 31,
+            "\u23f3On Hold": 1,
+            "None": 2
           },
           "goals": {
-            "QE": 75,
-            "Uncategorized": 78,
+            "QE": 73,
+            "Uncategorized": 82,
             "Dashboard": 2,
             "Documentation": 5,
             "Design": 2,
@@ -5435,16 +5464,16 @@
             "Bug Fix": 3
           },
           "priorities": {
-            "None": 88,
+            "None": 91,
             "\ud83c\udfd4 High": 26,
             "\ud83c\udf0b Urgent": 3,
-            "\ud83c\udfd5 Medium": 36,
+            "\ud83c\udfd5 Medium": 35,
             "Critical": 13,
             "\ud83c\udfdd Low": 12
           },
           "assignees": {
             "axel7083": 19,
-            "odockal": 19,
+            "odockal": 17,
             "cbr7": 12,
             "vancura": 11,
             "simonrey1": 10,
@@ -5461,18 +5490,18 @@
           },
           "repos": {
             "podman-desktop": 105,
-            "podman-desktop-internal": 44,
+            "podman-desktop-internal": 47,
             "e2e": 7,
             "extension-grype": 4,
             "podman-desktop-redhat-account-ext": 3,
             "podman-desktop-hummingbird-ext": 3,
             "crc-extension": 2,
-            "agent-skills": 2,
             "extension-lima": 1,
             "podman-desktop-extension-ai-lab": 1,
             "podman-desktop-catalog": 1,
             "extension-podman-quadlet": 1,
             "podman-desktop-rhel-ext": 1,
+            "agent-skills": 1,
             "podman-desktop-sandbox-ext": 1,
             "gh-extensions-actions": 1,
             "eslint-config": 1
@@ -5514,7 +5543,7 @@
               "repo": "extension-lima",
               "url": "https://github.com/podman-desktop/extension-lima/issues/4",
               "type": "Issue",
-              "status": "\u23f3On Hold",
+              "status": "\u2714\ufe0f Done",
               "state": "CLOSED",
               "goal": null,
               "priority": null,
@@ -6267,19 +6296,6 @@
               ]
             },
             {
-              "number": 19212,
-              "title": "[EPIC] Disable telemetry based on environment",
-              "repo": "podman-desktop",
-              "url": "https://github.com/podman-desktop/podman-desktop/issues/19212",
-              "type": "Issue",
-              "status": "\ud83d\udcc5 Planned",
-              "state": "OPEN",
-              "goal": null,
-              "priority": "\ud83c\udfd5 Medium",
-              "points": null,
-              "assignees": []
-            },
-            {
               "number": 19234,
               "title": "Investigate failures from the e2e tests that are run with system forwarding proxy",
               "repo": "podman-desktop",
@@ -6308,6 +6324,19 @@
               "assignees": [
                 "Khushboo1206"
               ]
+            },
+            {
+              "number": 19262,
+              "title": "feat: define explicit env variable to disable telemetry (E.g. `PODMAN_DESKTOP_DISABLE_TELEMETRY`)",
+              "repo": "podman-desktop",
+              "url": "https://github.com/podman-desktop/podman-desktop/issues/19262",
+              "type": "Issue",
+              "status": "\ud83d\udcc5 Planned",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": []
             },
             {
               "number": 19271,
@@ -6583,7 +6612,9 @@
               "goal": "Documentation",
               "priority": "\ud83c\udfd4 High",
               "points": 1.0,
-              "assignees": []
+              "assignees": [
+                "rohit-redhat"
+              ]
             },
             {
               "number": 1135,
@@ -6596,7 +6627,9 @@
               "goal": "Documentation",
               "priority": "\ud83c\udfd4 High",
               "points": 1.0,
-              "assignees": []
+              "assignees": [
+                "rohit-redhat"
+              ]
             },
             {
               "number": 1143,
@@ -7046,7 +7079,7 @@
               "repo": "podman-desktop-internal",
               "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1215",
               "type": "Issue",
-              "status": "\u23f1Postponed",
+              "status": "\ud83d\udcc5 Planned",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -7119,7 +7152,7 @@
               "repo": "podman-desktop-internal",
               "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1216",
               "type": "Issue",
-              "status": null,
+              "status": "\ud83d\udccb Backlog",
               "state": "OPEN",
               "goal": "QE",
               "priority": null,
@@ -7242,36 +7275,6 @@
               "points": null,
               "assignees": [
                 "danivilla9"
-              ]
-            },
-            {
-              "number": 1237,
-              "title": "Podman Desktop 1.31.0 with Podman 6.1.4 Linux Tar",
-              "repo": "podman-desktop-internal",
-              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1237",
-              "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
-              "state": "OPEN",
-              "goal": "QE",
-              "priority": null,
-              "points": 1.0,
-              "assignees": [
-                "odockal"
-              ]
-            },
-            {
-              "number": 1236,
-              "title": "Podman Desktop 1.31.0 with Podman 6.1.4 Linux Flatpak",
-              "repo": "podman-desktop-internal",
-              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1236",
-              "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
-              "state": "OPEN",
-              "goal": "QE",
-              "priority": null,
-              "points": null,
-              "assignees": [
-                "odockal"
               ]
             },
             {
@@ -7413,7 +7416,7 @@
               "repo": "podman-desktop-rhel-ext",
               "url": "https://github.com/redhat-developer/podman-desktop-rhel-ext/issues/760",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": null,
               "priority": "\ud83c\udfd4 High",
@@ -7421,19 +7424,6 @@
               "assignees": [
                 "SoniaSandler"
               ]
-            },
-            {
-              "number": 3,
-              "title": "[Epic] skills installable in any coding agent with npx skills",
-              "repo": "agent-skills",
-              "url": "https://github.com/podman-desktop/agent-skills/issues/3",
-              "type": "Issue",
-              "status": null,
-              "state": "OPEN",
-              "goal": null,
-              "priority": null,
-              "points": null,
-              "assignees": []
             },
             {
               "number": 6,
@@ -7688,7 +7678,7 @@
               "repo": "podman-desktop-internal",
               "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1247",
               "type": "Issue",
-              "status": null,
+              "status": "\ud83d\udccb Backlog",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -7701,7 +7691,7 @@
               "repo": "gh-extensions-actions",
               "url": "https://github.com/podman-desktop/gh-extensions-actions/issues/30",
               "type": "Issue",
-              "status": null,
+              "status": "\ud83d\udccb Backlog",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -7800,11 +7790,11 @@
             },
             {
               "number": 1270,
-              "title": "Cloud providers and CI system secret seys and access tokens rotation",
+              "title": "Cloud providers and CI system secret keys and access tokens rotation",
               "repo": "podman-desktop-internal",
               "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1270",
               "type": "Issue",
-              "status": "\ud83d\udea7 In Progress",
+              "status": "\ud83d\udea5 In Review",
               "state": "OPEN",
               "goal": "QE",
               "priority": null,
@@ -7819,7 +7809,7 @@
               "repo": "podman-desktop",
               "url": "https://github.com/podman-desktop/podman-desktop/issues/20215",
               "type": "Issue",
-              "status": null,
+              "status": "\ud83d\udcc5 Planned",
               "state": "OPEN",
               "goal": null,
               "priority": null,
@@ -8077,6 +8067,77 @@
               "points": 2.0,
               "assignees": [
                 "vancura"
+              ]
+            },
+            {
+              "number": 1285,
+              "title": "Audit  & Clean up epics",
+              "repo": "podman-desktop-internal",
+              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1285",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "nichjones1"
+              ]
+            },
+            {
+              "number": 1286,
+              "title": "Assess domains - ensure we have appropriate coverage (Nichole)",
+              "repo": "podman-desktop-internal",
+              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1286",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "nichjones1"
+              ]
+            },
+            {
+              "number": 1287,
+              "title": "Sprint 301 Issue Triage and Github discussion Monitoring",
+              "repo": "podman-desktop-internal",
+              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1287",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": []
+            },
+            {
+              "number": 1288,
+              "title": "Sprint 301 Discord and Slack Feedback channel monitoring",
+              "repo": "podman-desktop-internal",
+              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1288",
+              "type": "Issue",
+              "status": "\ud83d\udccb Backlog",
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": []
+            },
+            {
+              "number": 1289,
+              "title": "Monitor approved/not merged pr's - Nichole",
+              "repo": "podman-desktop-internal",
+              "url": "https://github.com/redhat-developer/podman-desktop-internal/issues/1289",
+              "type": "Issue",
+              "status": null,
+              "state": "OPEN",
+              "goal": null,
+              "priority": null,
+              "points": null,
+              "assignees": [
+                "nichjones1"
               ]
             }
           ]
@@ -15850,7 +15911,7 @@
                 "title": "feat(main): add context: resolver to declarative configuration defaults",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/19566",
                 "author": "simonrey1",
-                "state": "OPEN",
+                "state": "CLOSED",
                 "is_draft": true,
                 "created_at": "2026-10-07T13:20:59Z",
                 "merged_at": null,
@@ -22547,7 +22608,7 @@
                 "title": "feat(extension/podman): add default option to Windows machine provider ",
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/19984",
                 "author": "simonrey1",
-                "state": "OPEN",
+                "state": "CLOSED",
                 "is_draft": true,
                 "created_at": "2026-11-02T13:47:18Z",
                 "merged_at": null,
@@ -27931,8 +27992,8 @@
               "jeffmaury": 15,
               "kyetter": 9,
               "danivilla9": 8,
+              "cdrage": 8,
               "odockal": 7,
-              "cdrage": 7,
               "cbr7": 6,
               "deboer-tim": 6,
               "dgolovin": 4,
@@ -28063,7 +28124,7 @@
               }
             },
             "domain_avg_approval_hours": {
-              "foundations": 43.7,
+              "foundations": 50.2,
               "ui-components": 29.5,
               "containers": 66.6,
               "extensibility": 54.4,
@@ -28102,8 +28163,8 @@
               "dgolovin": 1.09,
               "kyetter": 1.73,
               "vancura": 1.78,
-              "cdrage": 2.3,
               "danivilla9": 2.48,
+              "cdrage": 3.2,
               "rohit-redhat": 7.01
             },
             "author_review_rounds": {
@@ -29682,6 +29743,10 @@
                   {
                     "author": "kyetter",
                     "at": "2026-11-20T19:13:20Z"
+                  },
+                  {
+                    "author": "cdrage",
+                    "at": "2026-11-23T20:41:29Z"
                   }
                 ]
               },
@@ -29936,7 +30001,7 @@
                 "url": "https://github.com/podman-desktop/podman-desktop/pull/20124",
                 "author": "simonrey1",
                 "state": "OPEN",
-                "is_draft": true,
+                "is_draft": false,
                 "created_at": "2026-11-09T15:43:56Z",
                 "merged_at": null,
                 "domain": "foundations",
@@ -33239,7 +33304,7 @@
                 "url": "https://github.com/podman-desktop/extension-wslc/pull/20",
                 "author": "gastoner",
                 "state": "OPEN",
-                "is_draft": true,
+                "is_draft": false,
                 "created_at": "2026-11-11T07:54:07Z",
                 "merged_at": null,
                 "domain": "foundations",
@@ -33271,7 +33336,7 @@
                 "url": "https://github.com/podman-desktop/extension-wslc/pull/18",
                 "author": "gastoner",
                 "state": "OPEN",
-                "is_draft": false,
+                "is_draft": true,
                 "created_at": "2026-11-11T07:54:01Z",
                 "merged_at": null,
                 "domain": "foundations",
